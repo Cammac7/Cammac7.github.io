@@ -1,0 +1,59 @@
+/** Custom Stylesheet 
+Cameron MacArthur
+**/
+
+.navbar {
+    background-color: #004300;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+    color: #5BAD5B;
+}
+
+.triUp {
+    -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+.triDown {
+    -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+
+.dontwantpadding {
+    margin: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 10px;
+}
+.wrap {
+  width: 100%;
+  height: 600px;
+  position:relative;
+}
+.cover {
+    top: 0;
+    z-index: 10;
+    position:absolute; 
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section {
+  float: left;
+  height: 600px;
+  width: 33.33333%;
+}
+.one {
+  background: url(http://placehold.it/200x300/ccc/666/&text=img+1) no-repeat;
+  background-size: 100%;
+}
+.two {
+  background: url(http://placehold.it/200x300/666/ccc/&text=img+2) no-repeat;
+  background-size: 100%;
+}
+.three {
+  background: url(http://placehold.it/200x300/ccc/666/&text=img+3) no-repeat;
+  background-size: 100%;
+}
