@@ -25,35 +25,33 @@ Cameron MacArthur
     padding-left: 0 !important;
     padding-right: 0 !important;
     padding-top: 10px;
+    position: absolute;
 }
-.wrap {
-  width: 100%;
-  height: 600px;
-  position:relative;
-}
+
 .cover {
-    top: 0;
-    z-index: 10;
-    position:absolute; 
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
 }
-.section {
-  float: left;
-  height: 600px;
+header {
+    position: relative;
+}
+
+header > [class^=section]{
+  position: absolute;
+  background: none 50% / cover;
+  top: 0;
+  bottom: 0;
+  height: auto;
   width: 33.33333%;
 }
-.one {
-  background: url(http://placehold.it/200x300/ccc/666/&text=img+1) no-repeat;
-  background-size: 100%;
+header > .section-one {
+  background-image: url(http://placehold.it/300x400/ccc);
+  left:0;
 }
-.two {
-  background: url(http://placehold.it/200x300/666/ccc/&text=img+2) no-repeat;
-  background-size: 100%;
+header > .section-two {
+  background-image: url(http://placehold.it/300x400/666/cf6);
+  left: 33.33333%;
 }
-.three {
-  background: url(http://placehold.it/200x300/ccc/666/&text=img+3) no-repeat;
-  background-size: 100%;
+header > .section-three {
+  background-image: url(http://placehold.it/300x400/2f2);
+  left: 66.66666%;
 }
