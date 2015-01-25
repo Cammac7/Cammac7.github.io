@@ -63,14 +63,34 @@ header > [class^=section]{
   width: 33.33333%;
 }
 header > .section-one {
-  background-image: url(http://placehold.it/300x400/ccc);
+  background-image: url(../img/music.png);
   left:0;
 }
 header > .section-two {
-  background-image: url(http://placehold.it/300x400/666/cf6);
+  background-image: url(../img/code.png);
   left: 33.33333%;
 }
 header > .section-three {
   background-image: url(http://placehold.it/300x400/2f2);
   left: 66.66666%;
+}
+
+p {
+    text-align: left;
+}
+
+.btn-1 {
+    color: black;
+    background-color: rgb(192,192,192);
+}
+
+.close-modal {
+    z-index: 10;
+}
+
+#object {
+    align-self: center;
+}
+.img-photo {
+    max-height: 4em;
 }
