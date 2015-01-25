@@ -75,10 +75,6 @@ header > .section-three {
   left: 66.66666%;
 }
 
-p {
-    text-align: left;
-}
-
 .btn-1 {
     color: black;
     background-color: rgb(192,192,192);
@@ -91,6 +87,8 @@ p {
 #object {
     align-self: center;
 }
-.img-photo {
-    max-height: 4em;
+.playtext {
+    text-align: left;
+    font-family: Times;
 }
+
