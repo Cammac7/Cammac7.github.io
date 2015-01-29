@@ -15,20 +15,21 @@ Cameron MacArthur
     -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
     clip-path: polygon(50% 0, 0 100%, 100% 100%);
     clip-path: url(#clipUp);
-    -webkit-clip-path: url(#clipUp);
+   /* -webkit-clip-path: url(#clipUp);
     -moz-clip-path: url(#clipUp);
-    -o-clip-path: url(#clipUp);
+    -o-clip-path: url(#clipUp);*/
 }
 
 .tri-Down {
     -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
     clip-path: polygon(0 0, 50% 100%, 100% 0);
-    clip-path: url(#clipDown);
+    /*clip-path: url(#clipDown);
     -webkit-clip-path: url(#clipDown);
     -moz-clip-path: url(#clipDown);
-    -o-clip-path: url(#clipDown);
+    -o-clip-path: url(#clipDown);*/
 }
 
+/*
 .portfolio-item {
     background-image: url(../img/portfolio/BLM.png);
     width: 300px;
@@ -36,6 +37,7 @@ Cameron MacArthur
     background-size: cover;
     clip-path: url("#clipUp");
 }
+*/
 
 .dontwantpadding {
     margin: 0;

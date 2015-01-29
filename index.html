@@ -19,8 +19,8 @@
     <link href="css/styles.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<!--    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">-->
-<!--    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">-->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,6 +32,20 @@
 </head>
 
 <body id="page-top" class="index">
+    
+    <!--<svg>
+        <defs>
+            <clipPath id="clipDown">
+                <polygon points="0, 50 100, 100 0, 0">
+                </polygon>
+            </clipPath>
+            <clipPath id="clipUp">
+                <polygon points="100,0 0,200 200,200">
+                </polygon>
+            </clipPath>
+        </defs>
+    </svg>-->
+
     
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -97,7 +111,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 portfolio-item dontwantpadding tri-Up">
+                <div class="col-sm-4 portfolio-item dontwantpadding">
                     <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             Caption
@@ -105,6 +119,7 @@
                                 <i class="fa fa-3x">Black Label Media</i>
                             </div>
                         </div>
+                        <img src="img/portfolio/BLM.png" class="tri-Up img-responsive" alt="">
                     </a>
                 </div>
                 <div class="col-sm-4 portfolio-item dontwantpadding">
@@ -560,23 +575,20 @@
         </div>
     </div>
         
-        
-
-    <svg width="0" height="0">
-        <defs>
-            <clipPath id="clipDown">
-                <polygon points="0, 50 100, 100 0, 0">
-                </polygon>
-            </clipPath>
-            <clipPath id="clipUp">
-                <polygon points="50, 0 100, 100 100, 0">
-                </polygon>
-            </clipPath>
-        </defs>
-    </svg>
-
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+        
+    <!--<script>
+        $(document).ready(function() {
+            $('.portfolio-item').css({"clip-path": 'url("#clipUp")'});
+        });
+        $(window).resize(function() {
+            var width = $('.portfolio-item').width();
+            $('#clipUp').html('<polygon points="' + width/4 + ',0' 
+                              + ' 0,' + width/2
+                              + ' ' + width/2 + ',' + width/2 + '"></polygon>');
+        });
+    </script>-->
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
