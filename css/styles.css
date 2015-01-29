@@ -14,39 +14,36 @@ Cameron MacArthur
 .tri-Up {
     -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
     clip-path: polygon(50% 0, 0 100%, 100% 100%);
+    clip-path: url(#clipUp);
+    -webkit-clip-path: url(#clipUp);
+    -moz-clip-path: url(#clipUp);
+    -o-clip-path: url(#clipUp);
 }
-
 
 .tri-Down {
     -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
     clip-path: polygon(0 0, 50% 100%, 100% 0);
-}
-/*div[class^=tri-]{
-  position:relative;
-  width:200px;
-  height:200px;
-  line-height:200px;
-  text-align:center;
-}
-div.tri-Up:after{
-  position:absolute;
-  z-index:-1;
-  left:0; top:0;
-  height: 0px; width: 0px;
-  content:"";
-  background:#cf5;
-  border-color: white white transparent;
-  border-style: solid;
-  border-width: 0px 100px 160px 100px;
-  background: url(//cammac7.github.io/img/portfolio/ALS.jpg) 50%;
-}*/
-.dontwantpadding {
-    margin: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    padding-top: 10px;
+    clip-path: url(#clipDown);
+    -webkit-clip-path: url(#clipDown);
+    -moz-clip-path: url(#clipDown);
+    -o-clip-path: url(#clipDown);
 }
 
+.portfolio-item {
+    background-image: url(../img/portfolio/BLM.png);
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    clip-path: url("#clipUp");
+}
+
+.dontwantpadding {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+}
+    
 .cover {
     position: relative;
 }
@@ -92,3 +89,17 @@ header > .section-three {
     font-family: Times;
 }
 
+
+#portfolio .portfolio-item {
+    margin-bottom: 0px;
+}
+
+.portfolio-item:first-child {
+    position: relative;
+    left: 15%;
+}
+
+.portfolio-item:last-child {
+    position: relative;
+    left: -15%;
+}
