@@ -14,7 +14,8 @@ Cameron MacArthur
 .tri-Up {
     -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
     clip-path: polygon(50% 0, 0 100%, 100% 100%);
-    clip-path: url(#clipUp);
+    transition: 2s;
+    /*clip-path: url(#clipUp);*/
    /* -webkit-clip-path: url(#clipUp);
     -moz-clip-path: url(#clipUp);
     -o-clip-path: url(#clipUp);*/
@@ -23,12 +24,17 @@ Cameron MacArthur
 .tri-Down {
     -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
     clip-path: polygon(0 0, 50% 100%, 100% 0);
+    transition: 2s;
     /*clip-path: url(#clipDown);
     -webkit-clip-path: url(#clipDown);
     -moz-clip-path: url(#clipDown);
     -o-clip-path: url(#clipDown);*/
 }
-
+a:hover .tri-Up,
+a:focus .tri-Up {
+  -webkit-clip-path:circle(50%,50%,75%);
+  clip-path: circle(50%,50%,75%);
+}
 /*
 .portfolio-item {
     background-image: url(../img/portfolio/BLM.png);
@@ -104,4 +110,8 @@ header > .section-three {
 .portfolio-item:last-child {
     position: relative;
     left: -15%;
+}
+
+.tweet_bird iframe{
+    display:none !important;
 }
