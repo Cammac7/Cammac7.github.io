@@ -125,10 +125,12 @@ header > .section-three {
 	animation: fly 0.2s steps(3) 0 infinite;
 }
 
-.twitter-bird:hover {
-	-webkit-animation: fly 0.2s steps(3) 0 infinite;
-	-moz-animation: fly 0.2s steps(3) 0 infinite;
-	animation: fly 0.2s steps(3) 0 infinite;
+.twitter-bird:hover + .twitter-text {
+    display: inline;
+}
+
+.twitter-text {
+    display: none;
 }
 
 @-webkit-keyframes fly {
