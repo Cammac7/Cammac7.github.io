@@ -112,6 +112,34 @@ header > .section-three {
     left: -15%;
 }
 
-.tweet_bird iframe{
-    display:none !important;
+.twitter-bird {
+	background-image: url(../media/twitter-bird-sprite.png);
+	cursor: pointer;
+	display: inline-block;
+    position: fixed;
+	height: 150px;
+  margin: 50px -30% 0 0;
+	width: 150px;
+    -webkit-animation: fly 0.2s steps(3) 0 infinite;
+	-moz-animation: fly 0.2s steps(3) 0 infinite;
+	animation: fly 0.2s steps(3) 0 infinite;
+}
+
+.twitter-bird:hover {
+	-webkit-animation: fly 0.2s steps(3) 0 infinite;
+	-moz-animation: fly 0.2s steps(3) 0 infinite;
+	animation: fly 0.2s steps(3) 0 infinite;
+}
+
+@-webkit-keyframes fly {
+	from { background-position: 0 0; }
+    to { background-position: -450px 0; }
+}
+@-moz-keyframes fly {
+	from { background-position: 0 0; }
+    to { background-position: -450px 0; }
+}
+@keyframes fly {
+	from { background-position: 0 0; }
+    to { background-position: -450px 0; }
 }
