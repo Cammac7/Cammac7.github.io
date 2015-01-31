@@ -20,10 +20,15 @@ function animateDiv(){
     var newq = makeNewPosition();
     var oldq = $('.twitter-bird').offset();
     var speed = calcSpeed([oldq.top, oldq.left], newq);
-    if (newq[1] < oldq[1]) {
+    if (newq[1] < oldq.left) {
         var myElement = document.querySelector("#twitter");
-myElement.style.backgroundColor = "#D93600";
-    };
+            /*myElement.style.backgroundColor = "blue";*/
+    }
+    else {
+        var myElement = document.querySelector("#twitter");
+            var myElement = document.querySelector("#twitter");
+            /*myElement.style.backgroundColor = "red";*/
+    }
     $('.twitter-bird').animate({ top: newq[0], left: newq[1] }, speed, function(){
       animateDiv();        
     });
