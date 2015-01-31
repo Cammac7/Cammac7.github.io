@@ -22,12 +22,12 @@ function animateDiv(){
     var speed = calcSpeed([oldq.top, oldq.left], newq);
     if (newq[1] < oldq.left) {
         var myElement = document.querySelector("#twitter");
-            /*myElement.style.backgroundColor = "blue";*/
+            myElement.style.backgroundImage = "url(../media/twitter-bird-sprite-left.png)";
     }
     else {
         var myElement = document.querySelector("#twitter");
             var myElement = document.querySelector("#twitter");
-            /*myElement.style.backgroundColor = "red";*/
+            myElement.style.backgroundImage = "url(../media/twitter-bird-sprite.png)";
     }
     $('.twitter-bird').animate({ top: newq[0], left: newq[1] }, speed, function(){
       animateDiv();        
