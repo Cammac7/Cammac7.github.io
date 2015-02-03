@@ -76,7 +76,7 @@ header > .section-two {
   left: 33.33333%;
 }
 header > .section-three {
-  background-image: url(http://placehold.it/300x400/2f2);
+  background-image: url(../img/car.png);
   left: 66.66666%;
 }
 
