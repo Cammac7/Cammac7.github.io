@@ -118,7 +118,7 @@ header > .section-three {
 	display: inline-block;
     position: fixed;
 	height: 150px;
-  margin: 50px -30% 0 0;
+    margin: 30px -30% 0 0;
 	width: 150px;
     -webkit-animation: fly 0.2s steps(3) 0 infinite;
 	-moz-animation: fly 0.2s steps(3) 0 infinite;

@@ -15,19 +15,18 @@ function makeNewPosition(){
     return [nh,nw];    
     
 }
-
 function animateDiv(){
     var newq = makeNewPosition();
     var oldq = $('.twitter-bird').offset();
     var speed = calcSpeed([oldq.top, oldq.left], newq);
     if (newq[1] < oldq.left) {
         var myElement = document.querySelector("#twitter");
-            myElement.style.backgroundImage = "url(../media/twitter-bird-sprite-left.png)";
+            myElement.style.backgroundImage = "url(media/twitter-bird-sprite-left.png)";
     }
     else {
         var myElement = document.querySelector("#twitter");
             var myElement = document.querySelector("#twitter");
-            myElement.style.backgroundImage = "url(../media/twitter-bird-sprite.png)";
+            myElement.style.backgroundImage = "url(media/twitter-bird-sprite.png)";
     }
     $('.twitter-bird').animate({ top: newq[0], left: newq[1] }, speed, function(){
       animateDiv();        
