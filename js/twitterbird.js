@@ -17,18 +17,18 @@ function makeNewPosition(){
 }
 function animateDiv(){
     var newq = makeNewPosition();
-    var oldq = $('.twitter-bird').offset();
+    var oldq = $('#tw-3').offset();
     var speed = calcSpeed([oldq.top, oldq.left], newq);
     if (newq[1] < oldq.left) {
-        var myElement = document.querySelector("#twitter");
+        var myElement = document.querySelector("#twitter-bird");
             myElement.style.backgroundImage = "url(media/twitter-bird-sprite-left.png)";
     }
     else {
-        var myElement = document.querySelector("#twitter");
-            var myElement = document.querySelector("#twitter");
+        var myElement = document.querySelector("#twitter-bird");
+            var myElement = document.querySelector("#twitter-bird");
             myElement.style.backgroundImage = "url(media/twitter-bird-sprite.png)";
     }
-    $('.twitter-bird').animate({ top: newq[0], left: newq[1] }, speed, function(){
+    $('#tw-3').animate({ top: newq[0], left: newq[1] }, speed, function(){
       animateDiv();        
     });
     
@@ -41,10 +41,16 @@ function calcSpeed(prev, next) {
     
     var greatest = x > y ? x : y;
     
-    var speedModifier = 0.1;
+    var speedModifier = 0.05;
 
     var speed = Math.ceil(greatest/speedModifier);
 
     return speed;
 
 }
+$("#tw-3").hover(function(){
+   $(this).stop(); //Stop the animation when mouse in
+},
+function(){
+   animateDiv(); //Start the animation when mouse out
+});

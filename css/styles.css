@@ -3,7 +3,7 @@ Cameron MacArthur
 **/
 
 .navbar {
-    background-color: #004300;
+    background-color: #00003D;
 }
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
@@ -39,6 +39,9 @@ Cameron MacArthur
 .navbar .nav li:last-child a {
     border-right: 0;
     border-radius: 0 3px 3px 0;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    font-family: 'Source Code Pro';
 }
 .tri-Up {
     -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
@@ -140,26 +143,35 @@ header > .section-three {
     position: relative;
     left: -15%;
 }
+/*Twitter Bird!!*/
+    #tw-3 {
+      height:150px;
+      width: 150px;
+    }
+    #twitter-bird, .tw-click { cursor:pointer; display:block; position:absolute; width:0%; 
+        transition:0.3s ease all;
+    }
+#twitter-bird            {z-index:10; }
+   
+    #tw-3 .tw-click           { background:#42e7ff; opacity:0; padding:10px 10px 5px; margin-top:55px; margin-left:-40px; padding-left:30px; width:auto; 
+        border-top-right-radius:5px; border-bottom-right-radius:5px;
+    }
+    #tw-3:hover #twitter-bird {
+        margin-left:-100px;
+        -webkit-animation: none;
+	-moz-animation: none;
+	animation: none}
 
-.twitter-bird {
-	background-image: url(../media/twitter-bird-sprite.png);
-	cursor: pointer;
-	display: inline-block;
-    position: fixed;
-	height: 150px;
-    margin: 30px -30% 0 0;
+    #tw-3:hover .tw-click     { opacity:1; margin-left:-20px; }
+    
+#twitter-bird {
+  background-image: url(http://minimalmonkey.com/lab/css3-animations/twitter-bird-sprite.png);
+  height: 150px;
+   /* margin: 30px -30% 0 0;*/
 	width: 150px;
     -webkit-animation: fly 0.2s steps(3) 0 infinite;
 	-moz-animation: fly 0.2s steps(3) 0 infinite;
 	animation: fly 0.2s steps(3) 0 infinite;
-}
-
-.twitter-bird:hover + .twitter-text {
-    display: inline;
-}
-
-.twitter-text {
-    display: none;
 }
 
 @-webkit-keyframes fly {
@@ -175,6 +187,11 @@ header > .section-three {
     to { background-position: -450px 0; }
 }
 
+#tw-3 {
+	cursor: pointer;
+	display: inline-block;
+    position: fixed;
+}
 /*Header Soften*/
 hr.soften {
   height: 3px;
@@ -198,15 +215,21 @@ hr.soften-white {
 
 .name {
     text-shadow: 0 0 0.2em black, 0 0 0.2em black,
-        0 0 0.2em black;
+        0 0 2.0em black;
+    font-family: 'Source Code Pro';
+    
 }
 header .intro-text .name {
-    font-family: Futura;
-    font-weight: 100;
+font-family: 'Source Code Pro';
+    font-weight: 600;
 }
 .skills {
     text-shadow: 0 0 0.2em black, 0 0 0.2em black,
         0 0 0.2em black;
-    font-family: Futura;
+    font-family: 'Source Code Pro';
     text-transform: uppercase;
+
+}
+header .intro-text .skills {
+            font-weight: 400;
 }
