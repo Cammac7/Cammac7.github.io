@@ -144,7 +144,7 @@ header > .section-three {
     left: -15%;
 }
 /*Twitter Bird!!*/
-    #tw-3 {
+    #tw {
       height:150px;
       width: 150px;
     }
@@ -153,16 +153,16 @@ header > .section-three {
     }
 #twitter-bird            {z-index:10; }
    
-    #tw-3 .tw-click           { background:#42e7ff; opacity:0; padding:10px 10px 5px; margin-top:55px; margin-left:-40px; padding-left:30px; width:auto; 
+    #tw .tw-click           { background:#42e7ff; opacity:0; padding:10px 10px 5px; margin-top:55px; margin-left:-40px; padding-left:30px; width:auto; 
         border-top-right-radius:5px; border-bottom-right-radius:5px;
     }
-    #tw-3:hover #twitter-bird {
+    #tw:hover #twitter-bird {
         margin-left:-100px;
         -webkit-animation: none;
 	-moz-animation: none;
 	animation: none}
 
-    #tw-3:hover .tw-click     { opacity:1; margin-left:-20px; }
+    #tw:hover .tw-click     { opacity:1; margin-left:-20px; }
     
 #twitter-bird {
   background-image: url(http://minimalmonkey.com/lab/css3-animations/twitter-bird-sprite.png);
@@ -187,7 +187,7 @@ header > .section-three {
     to { background-position: -450px 0; }
 }
 
-#tw-3 {
+#tw {
 	cursor: pointer;
 	display: inline-block;
     position: fixed;
@@ -216,7 +216,6 @@ hr.soften-white {
 .name {
     text-shadow: 0 0 0.2em black, 0 0 0.2em black,
         0 0 2.0em black;
-    font-family: 'Source Code Pro';
     
 }
 header .intro-text .name {

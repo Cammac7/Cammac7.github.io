@@ -17,7 +17,7 @@ function makeNewPosition(){
 }
 function animateDiv(){
     var newq = makeNewPosition();
-    var oldq = $('#tw-3').offset();
+    var oldq = $('#tw').offset();
     var speed = calcSpeed([oldq.top, oldq.left], newq);
     if (newq[1] < oldq.left) {
         var myElement = document.querySelector("#twitter-bird");
@@ -28,7 +28,7 @@ function animateDiv(){
             var myElement = document.querySelector("#twitter-bird");
             myElement.style.backgroundImage = "url(media/twitter-bird-sprite.png)";
     }
-    $('#tw-3').animate({ top: newq[0], left: newq[1] }, speed, function(){
+    $('#tw').animate({ top: newq[0], left: newq[1] }, speed, function(){
       animateDiv();        
     });
     
@@ -48,7 +48,7 @@ function calcSpeed(prev, next) {
     return speed;
 
 }
-$("#tw-3").hover(function(){
+$("#tw").hover(function(){
    $(this).stop(); //Stop the animation when mouse in
 },
 function(){
