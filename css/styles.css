@@ -170,7 +170,7 @@ header > .section-three {
     #tw:hover .tw-click     { opacity:1; margin-left:-20px; }
     
 #twitter-bird {
-  background-image: url(http://minimalmonkey.com/lab/css3-animations/twitter-bird-sprite.png);
+  background-image: url(../media/twitter-bird-sprite.png);
   height: 150px;
    /* margin: 30px -30% 0 0;*/
 	width: 150px;
@@ -224,13 +224,13 @@ hr.soften-white {
     
 }
 header .intro-text .name {
-font-family: 'Source Code Pro';
+font-family: 'Source Code Pro',"Helvetica Neue";
     font-weight: 600;
 }
 .skills {
     text-shadow: 0 0 0.2em black, 0 0 0.2em black,
         0 0 0.2em black;
-    font-family: 'Source Code Pro';
+    font-family: 'Source Code Pro',"Helvetica Neue";
     text-transform: uppercase;
 
 }
