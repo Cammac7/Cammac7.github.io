@@ -7,7 +7,7 @@ Cameron MacArthur
 }
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-    color: #5BAD5B;
+    color: #B0B0B0;
 }
 /* Customize the navbar links to be fill the entire space of the .navbar */
 .navbar .navbar-inner {
@@ -43,6 +43,11 @@ Cameron MacArthur
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     font-family: 'Source Code Pro';
 }
+
+footer .footer-below {
+        background-color: #00003D;
+}
+
 .tri-Up {
     -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
     clip-path: polygon(50% 0, 0 100%, 100% 100%);
@@ -231,4 +236,8 @@ font-family: 'Source Code Pro';
 }
 header .intro-text .skills {
             font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Source Code Pro';
 }
