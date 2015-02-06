@@ -1,7 +1,7 @@
 /** Custom Stylesheet 
 Cameron MacArthur
 **/
-
+font-family: 'Open Sans', sans-serif;
 .navbar {
     background-color: #00003D;
 }
@@ -240,12 +240,20 @@ header .intro-text .skills {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Source Code Pro',"Helvetica Neue";
+    font-weight: 500;
 }
 
-section.success {
+#resume {
     background-color: #73A39F;
 }
+#about {
+    background-color: #8FC996;
+}
 
+body {
+    font-family: 'Open Sans';
+    color: black;
+}
 
 
 
