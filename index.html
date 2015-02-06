@@ -19,8 +19,6 @@
     <link href="css/styles.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <!--<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">-->
     <link href='http://fonts.googleapis.com/css?family=Quicksand|Source+Code+Pro:300,400,500' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -29,25 +27,12 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <!-- Smooth Scroll -->
+<!--<script src="js/smooth-scroll.js"></script>-->
+    
 </head>
 
 <body id="page-top" class="index">
-    
-    <!--<svg>
-        <defs>
-            <clipPath id="clipDown">
-                <polygon points="0, 50 100, 100 0, 0">
-                </polygon>
-            </clipPath>
-            <clipPath id="clipUp">
-                <polygon points="100,0 0,200 200,200">
-                </polygon>
-            </clipPath>
-        </defs>
-    </svg>-->
-
-    
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -66,16 +51,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li class="page-scroll">
-                        <a href="#portfolio">Work</a>
+                        <a data-scroll href="#portfolio">Work</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#resume">Résumé</a>
+                        <a data-scroll href="#resume">Résumé</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">About</a>
+                        <a data-scroll href="#about">About</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#footer">Contact</a>
+                        <a data-scroll href="#footer">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -119,19 +104,16 @@
             </div>
             <div class="row">
                 <div class="col-sm-4 portfolio-item dontwantpadding">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                     <svg width="100%" height="100%" viewBox="0 0 100 87">
-                    
                              <clipPath id="clipTriangleUp">
                                 <polygon points="0 87,100 87,50 0"/>
                              </clipPath>
+                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                                 <image clip-path="url(#clipTriangleUp)" preserveAspectRatio="none" width="100%" height="100%" xlink:href="img/portfolio/BLM.png" style="z-index: 500;"/>
-                    
+                    </a>
                         </svg>
-                </div>
-                   </a> 
+                </div> 
                 <div class="col-sm-4 portfolio-item dontwantpadding">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                         <!--<div class="caption tri-Down">
                             <div class="caption-content">
                                 <i class="fa fa-3x">Bubble Soccer</i>
@@ -142,10 +124,11 @@
                               <clipPath id="clipTriangleDown">
                                 <polygon points="0 0,100 0,50 87"/>
                               </clipPath>
-                              <image clip-path="url(#clipTriangleDown)" preserveAspectRatio="none" width="100%" height="100%" xlink:href="img/portfolio/BubbleSoccer.jpg"/><!--your src-->
+                                <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                              <image clip-path="url(#clipTriangleDown)" preserveAspectRatio="none" width="100%" height="100%" xlink:href="img/portfolio/BubbleSoccer.jpg"/>
+                                    </a>
                             </svg>
                         </div>
-                    </a>
                 </div>
                 <div class="col-sm-4 portfolio-item dontwantpadding">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
@@ -661,8 +644,8 @@
 -->
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
-    <!-- Smooth Scroll -->
-    <script src="js/smoothscrool.js"></script>
+    <!-- Smooth Scroll-->
+    <!--<script>smoothScroll.init();</script>-->
     <!-- Twitter Bird Javascript -->
     <script src="js/twitterbird.js"></script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
