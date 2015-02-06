@@ -253,7 +253,9 @@ body {
     font-family: 'Open Sans';
     color: black;
 }
-
+strong {
+    font-weight: bold;
+}
 
 
 
