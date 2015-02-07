@@ -46,8 +46,8 @@ Cameron MacArthur
 footer .footer-below {
         background-color: #00003D;
 }
-
-/*.tri-Up {
+/*
+.tri-Up {
     -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
     clip-path: polygon(50% 0, 0 100%, 100% 100%);
     transition: 2s;*/
@@ -60,8 +60,8 @@ footer .footer-below {
 .tri-Down {
     -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
     clip-path: polygon(0 0, 50% 100%, 100% 0);
-    transition: 2s;*/
-    /*clip-path: url(#clipDown);
+    transition: 2s;
+    clip-path: url(#clipDown);
     -webkit-clip-path: url(#clipDown);
     -moz-clip-path: url(#clipDown);
     -o-clip-path: url(#clipDown);
@@ -256,7 +256,12 @@ body {
 strong {
     font-weight: bold;
 }
-
+#test1 {
+    z-index: 500;
+}
+#test2 {
+    z-index: 10;
+}
 
 
 /* MOBILE   */
@@ -269,5 +274,4 @@ strong {
         position: relative;
         left: 0%;   
     }
-    .tri-up svg .circmask
 }
