@@ -155,16 +155,22 @@ header > .section-three {
     #twitter-bird, .tw-click { cursor:pointer; display:block; position:absolute; width:0%; 
         transition:0.3s ease all;
     }
-#twitter-bird            {z-index:10; }
+#twitter-bird {
+    z-index:10;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+}
    
     #tw .tw-click           { background:#42e7ff; opacity:0; padding:10px 10px 5px; margin-top:55px; margin-left:-40px; padding-left:30px; width:auto; 
         border-top-right-radius:5px; border-bottom-right-radius:5px;
     }
     #tw:hover #twitter-bird {
         margin-left:-100px;
-        -webkit-animation: none;
-	-moz-animation: none;
-	animation: none}
+        -webkit-animation: fly 0.2s steps(3) 0 infinite;
+	   -moz-animation: fly 0.2s steps(3) 0 infinite;
+	   animation: fly 0.2s steps(3) 0 infinite;
+    }
 
     #tw:hover .tw-click     { opacity:1; margin-left:-20px; }
     
@@ -173,9 +179,9 @@ header > .section-three {
   height: 150px;
    /* margin: 30px -30% 0 0;*/
 	width: 150px;
-    -webkit-animation: fly 0.2s steps(3) 0 infinite;
+    /*-webkit-animation: fly 0.2s steps(3) 0 infinite;
 	-moz-animation: fly 0.2s steps(3) 0 infinite;
-	animation: fly 0.2s steps(3) 0 infinite;
+	animation: fly 0.2s steps(3) 0 infinite;*/
 }
 
 @-webkit-keyframes fly {
