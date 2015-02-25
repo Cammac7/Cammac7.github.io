@@ -163,9 +163,14 @@ header > .section-three {
     }
     #tw:hover #twitter-bird {
         margin-left:-100px;
+        /*Animate only on hover
         -webkit-animation: none;
-	-moz-animation: none;
-	animation: none}
+	    -moz-animation: none;
+	    animation: none*/
+        -webkit-animation: fly 0.2s steps(3) 0 3;
+	    -moz-animation: fly 0.2s steps(3) 0 3;
+	    animation: fly 0.2s steps(3) 0 3;
+    }
 
     #tw:hover .tw-click     { opacity:1; margin-left:-20px; }
     
@@ -174,9 +179,11 @@ header > .section-three {
   height: 150px;
    /* margin: 30px -30% 0 0;*/
 	width: 150px;
+    /*Constant animation removed, only animate on hover
     -webkit-animation: fly 0.2s steps(3) 0 infinite;
 	-moz-animation: fly 0.2s steps(3) 0 infinite;
 	animation: fly 0.2s steps(3) 0 infinite;
+    */
 }
 
 @-webkit-keyframes fly {
@@ -196,6 +203,8 @@ header > .section-three {
 	cursor: pointer;
 	display: inline-block;
     position: fixed;
+    top: 10%; /*Added to lock to corner, removed script*/
+    left: 85%; /*Added to lock to corner, removed script*/
 }
 /*Header Soften*/
 hr.soften {
