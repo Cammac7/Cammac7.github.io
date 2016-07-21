@@ -204,7 +204,7 @@ header > .section-three {
 	display: inline-block;
     position: fixed;
     top: 10%; /*Added to lock to corner, removed script*/
-    left: 85%; /*Added to lock to corner, removed script*/
+    left: 80%; /*Added to lock to corner, removed script*/
 }
 /*Header Soften*/
 hr.soften {
@@ -286,4 +286,12 @@ strong {
    padding-left: 20%;
    padding-right: 20%;
 }
+/*Music Modal (3) Hot click blocks*/
+.hotBlock {
+    padding: 1px;
+    color: white;
+    background-color: #414447;
+    border-radius: 10px;
+}
+    
 }

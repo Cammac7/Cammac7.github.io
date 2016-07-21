@@ -27,11 +27,16 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <!-- Javascript -->
+    
     <!-- Smooth Scroll -->
-<script src="js/smooth-scroll.js"></script>
+    <script src="js/smooth-scroll.js"></script>
 
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     
+    <!--Loading Music Block effects -->
+    <script src="js/MusicBlocks.js"></script>
     
 </head>
 
@@ -124,7 +129,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <img src="img/CameronMacArthurR%C3%A9sum%C3%A9.jpg" class="img-responsive img-centered item-pic" alt="">
+                    <img src="img/CameronMacArthurR%C3%A9sum%C3%A9.png" class="img-responsive img-centered item-pic" alt="">
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <a href="media/CameronMacArthurR%C3%A9sum%C3%A9.pdf" class="btn btn-lg btn-outline" download>
@@ -147,7 +152,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <p>I'm a junior at Northwestern, double majoring in Computer Science and Communications Studies. I'm an eclectic creative with a love for product management and design.</p>
+                    <p>I'm a recent Northwestern graduate with a double major in Computer Science and Communications Studies. I'm an eclectic creative with a love for product management and design.</p>
                 </div>
             </div>
         </div>
@@ -272,20 +277,37 @@
             </div>
             <div class="container">
                 <div class="row">
-                    
+                    <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
-                            <h2>Black Label Media Website</h2>
+                            <h2>Pianimals</h2>
                             <hr>
-                            <div class="col-md-4">
-                            <img src="img/portfolio/BLM.png" class="img-responsive img-centered item-pic" alt="">
-                                <button type="button" cslass="btn-1 btn btn-default" data-dismiss="modal" onclick="window.open('blmwebsite/index.html','_blank')">Explore the full website</button>
+                            <div class="col-md-12">
+                                <div id="Pianimalsvideo">
+                                    <object align="center">
+                                        <video width="640" height="360" id="Pianimals" src="media/Pianimals.mp4" controls></video>
+                                    </object>
                                 </div>
-                            <div class="col-md-8">
-                            <p style="text-align: left;">Over the summer I worked at a Production Company called Black Label Media. Its producer, Molly Smith, is famous for <i>The Blind Side</i>, and while I was there the company released <i>Begin Again</i> and <i>The Good Lie</i>. <br><br>In my downtime I worked on a website for them as a personal project. It was challenging working with a dark theme, but by using thinner fonts and allowing for more blank space I acheived a very clean, simplistic look that I am happy with. Limitations in the content that the company had on hand (images, videos, etc) prevented me from finishing the site, but it was a fun project nontheless.</p>
+                            </div>
+                            <div class="col-md-12">
+                            <p style="text-align: left;">Pianimals was a project done with a few friends to explore computer vision systems and how they could be used to create new kinds of interaction.<br><br>
+
+                            <h3 style="text-align:left;">Prototype One</h3><p style="text-align:left;">Our first prototype was a camera above a full keyboard that simply videotaped the user’s hands and displayed them in landscape under sheet music on an iPad. It also lit up on the sheet music what the next note to be played was. The goal was to prevent people from having to look back and forth from their hands to the sheet music as they learned. We were able to prototype this in incredibly low fidelity by holding a webcam above user’s hands and connecting the keyboard to an app called Synthesia.<br>
+
+                            We quickly leaned from this that users didn’t care much about being able to see their hands, and focused much more on the visual feedback from the notes they were playing, and the notes to come on the music staff.</p><br><br>
+
+                            <h3 style="text-align:left;">Prototypes Two and Three</h3><p style="text-align:left;">
+                            We pivoted to a younger user population and focused on imparting an understanding of intervals and relative pitch instead of strict sight-reading. After a third prototype that added a learn-a-song mode, users began to give a lot of positive feedback, and research showed that a system like this could be very effective in teaching children some of the foundations of music.</p>
+
+<p style="text-align:left;">Read our paper below!</p>
+                        <div id="PianimalsPaper">
+                          <object width="795.6" height="1029.6" type="application/pdf" data="media/Group3_Pianimals_FinalPaper.pdf" id="pdf_content">
+                            <p>PDF cannot be displayed on Chrome Mobile Broswer</p>
+                          </object>
+                        </div>
                             </div>
                     </div>
                 </div>
-                  <ul class="list-inline item-details">
+                  <!--<ul class="list-inline item-details">
                                 <li>Client:
                                     <strong>Black Label Media
                                     </strong>
@@ -298,7 +320,8 @@
                                     <strong>Web Development
                                     </strong>
                                 </li>
-                            </ul>
+                            </ul>-->
+                </div>
             </div>
         </div>
     </div>
@@ -312,39 +335,48 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
-                            <h2>Sigma Nu Bubble Soccer</h2>
+                            <h2>Invasion of the Energy Monsters</h2>
                             <hr>
-                            <div id="video">
-                                <object class="img-centered"> <embed src="http://www.northwesternsigmanu.org/wp-content/uploads/BubbleSoccer.html" width="900" height="600">  </object></div><br><br>
-                            <p style="text-align:center;">"Bubble Soccer" was a philanthropy event put on by my fraternity to raise money for the Evanston Animal Shelter. The entire campaign I envisioned consisted of very minimalist photos (profile pictures and cover photos on social media) with YouTube links to different Bubble Soccer videos, and the website built above.<br>We coupled this with some live interest-generation by having brothers stand at different spots on campus wearing the inflated bubbles, completely covered in flyers. Meanehile, non-bubbled brothers spoke to people passing by and encouraging them to attend.<br><br>The campaign was wildly successful, with just under 200 people braving the weather in December to attend. Hundreds of dollars were raised.</p>
+                            <div class="col-md-8">
+                                    <p style="text-align:left;">Invasion of the Energy Monsters is a project that I’ve been working on for two years now, first as work with a professor, and now as a free-time project.</p>
+
+<h3 style="text-align:left;">The Game</h3>
+<p style="text-align:left;">Energy Monsters started as an educational game where two teams (Human Heros and Energy Monsters) faced off in a “haunted” house composed of individual room tiles. Energy Monsters played cards to attack, or turn on appliances in rooms and grow stronger on the “wasted electricity”. Humans could then turn the same appliances off to save electricity and turn the tides in their favor before their own attacks.
+The lab saw some commercial potential in the game and I was told:
+“Well right now it’s pretty fun, but it’s not really fun”.
+    I set out to make it really  fun.</p><br>
+
+<h3 style="text-align:left;">The Rules</h3><p style="text-align:left;">I played Energy Monsters constantly, with every friend that I could recruit, and tweaked the rules. I gradually discovered that the game could be stalled out by either team, and there wasn’t enough speed to the game by having teams only play cards (often in far-away rooms) to shift the playing field. So, I implemented my first major rule change: when a monster entered the room, it automatically turned on the “lights” in that room and added 50 watts of wasted electricity. When a human entered a room, they automatically turned any “on” lights off, and reduced wattage by 50. <a href="media/rules_Cam.pdf">Read my first updated version of the rules here.</a>
+<br>
+This added chase element made the game much more exciting to play. Players always had a move they could make, even if it was just turning off or on some lights while they bided their time for a bigger play.</p>
+<br>
+<h3 style="text-align:left;">The Problem</h3>
+<p style="text-align:left;">As with most things, with the new solution came a new problem. players were having to flip over multiples tiles every turn to signify that lights were on or off in specific rooms. This drastically slowed the game down and was annoying. Using tokens or the like to signify “lights on” was no better because it cluttered up the board. The new lights rule also meant that players had to be adding and subtracting small amounts of wattage to the spinner every turn, which was tedious. I set out to solve all of these problems.</p>
+<br>
+<h3 style="text-align:left;">The Board</h3>
+<p style="text-align:left;">My idea was to build a board that the tiles would sit on. I wanted to use magnets in the pieces to trigger LEDs in the board to turn on or off depending on whether the piece was a monster or a human. I set off learning about circuits, an area I knew nothing about, and finally came to a solution. Using magnetic-field-sensing hall effect sensors connected to an arduino, and magnets in the playing pieces oriented towards different polarities, I was able to make pieces turn on and off lights in each room, and automatically track the change in wattage with the arduino. The feedback was instant and very satisfying.<br>
+
+This process was a journey though. There aren’t enough pins in the Arduino to manage all of the sensors and lights on the 5x3 board. Once I managed my goal with just a couple rooms I had to learn about and implement multiplexors for the sensors. The LEDs needed different multiplexors because they need to hold their state even after the player’s magnetized piece moved to a different tile. Magnetizing the pieces themselves was also a challenge. I solved it by having the idea to 3d-print a hollow space into the token, drop the magnet in, and 3d-print the space closed.
+Now the board tracks players paths as they move about, and dynamically updates the house wattage from the lights. I’m being published for my work with the board, and will be demoing it at the Games+Learning+Society Conference in Madison this August.
+</p>
+<br>                                 
+<h3 style="text-align:left;">The Future</h3>
+<p style="text-align:left;">Another prototype is already underway that will add wifi connectivity to the board. After that, I plan on approaching a way to track the use and play of the cards themselves. Using an RFID reader and an antennae array, I hope to identify individual pieces (by adding RFID chips to them) and where they are on the board when at rest. Because RFID takes a few seconds, the hall-effect systems will still be needed to track movement. I will also add RFID chips to the cards themselves, and create a discard section of the board where cards are played. This way, when a person plays a card, the board itself will be able to determine where the respective piece is, and if the play is legal. If it is, the board will be able to alter the wattage accordingly on the house. In this way, all of the wattage tracking will be taken care of automatically and digitally, and the players can focus on the fun of the game, and still get the satisfaction of spinning a real spinner, rolling real die, and moving real pieces. This connection of digital convenience with physical feedback and motion is where I think all boardgame design is destined to end up.</p>
+                            </div>
+                            <div class="col-md-4">
+                                 <div id="EnergyMonstvideo">
+                                     <object align="right">
+                                        <video width="281.25" height="500" id="EnergyMonstersDemo" src="media/EnergyMonstersDemo.mp4" autoplay loop muted></video>
+                                     </object>
+                                 </div>
+                            </div>
                             
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-8">
-                    <img src="img/bubbbleSoccer/bubblecover.jpg" class="img-responsive" alt="Bubble Cover Photo">
-                    </div>
-                    <div class="col-md-4">
-                    <img src="img/bubbbleSoccer/bubbleprofile.jpg" class="img-responsive" alt="Bubble Profile Picture">
-                    </div>
-                </div>
-                <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong>Sigma Nu
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong>Winter 2014
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong>Ad Campaign
-                                    </strong>
-                                </li>
-                            </ul>
+                
             </div>
     </div>
     </div>
@@ -358,55 +390,47 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-12">
                         <div class="modal-body">
                             <h2>Music</h2>
                             <hr>
-                            <p>I have been a musician for my entire life. I've sung for presidents, with world-class orchestras, and on-stage with Beyoncé at the 77th Academy Awards. I write music for piano and guitar, and have a hobby of writing songs with comedy lyrics, or re-writing existing song's lyrics.</p><p>I believe that the music is often the most important part of an advertisement.</p><br><p>These are just two specific and more professional projects that I very much enjoyed creating.</p>
+                            <p>I have been a musician for my entire life. I've sung for presidents, with world-class orchestras, and on-stage with Beyoncé at the 77th Academy Awards. I write music for piano and guitar, and have a hobby of writing songs with comedy lyrics, or re-writing existing song's lyrics.</p><br><p>These are just a few of the many projects that I've had fun creating.</p>
+                            
+                            <div class="col-md-8">
+                                <div id="loverunsoutpdf">
+                                    <embed src="media/LoveRunsOutFinal.pdf" width="100%" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+                                </div>
+
+                                <div id="jealouspdf">
+                                    <embed src="media/Jealous_Upload.pdf" width="100%" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+                                </div>
+
+                                <div id="girlcrushpdf">
+                                    <embed src="media/GirlCrush_Upload.pdf" width="100%" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div id="lroblock">
+                                    <div class="hotBlock" id="lroClick">
+                                    <h3 style="margin-bottom:0px; margin-top">Love Runs Out</h3>
+                                    <h4 style="margin-top:0px; margin-bottom:25.270px;">by One Republic</h4>
+                                    </div>
+                                    <div id="lromp3">
+                                        <p style="text-align: left;">One of my favorite songs my a cappella group ever did, this arrangent focuses on a driving tenor melody with a sort of mystic support.</p>
+                                        <br>
+                                        <audio controls>
+                                <source src="media/LoveRunsOutFinal.mp3" type="audio/mpeg">Your browser does not support the audio element.
+                                        </audio>
+                                    </div>
+                                </div>
+                        <br><br>
+                                
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                <div class="col-sm-6">
-                    <p>As just a small part of a project for a class, I was tasked with finding music to be played with the reading of a scene from Tennessee Williams' <i>The Glass Menagerie</i>. I was unable to find music that I felt fit the scene perfectly, so I arranged some of my own using GarageBand.</p>
-                    <br>
-    <audio controls>
-            <source src="media/GlassMenagerie.mp3" type="audio/mpeg">Your browser does not support the audio element.
-                    </audio>
-                    <div class="playtext">
-                    <blockquote> 
-        <p>[MUSIC]</p>
-      </blockquote>
-                    <p>The play is memory.</p><p>Being a memory play, it is dimly lighted, it is sentimental, it is not 
-        realistic.</p><p>In memory everything seems to happen to music. That explains the fiddle 
-        in the wings.</p><p>I am the narrator of the play, and also a character in it. The other 
-        characters are my mother Amanda, my sister Laura and a gentleman caller 
-        who appears in the final scenes.</p><p>He is the most realistic character in the play, being an emissary from 
-        a world of reality that we were somehow set apart from. But since I have 
-        a poet's weakness for symbols, I am using this character also as a symbol; 
-        he is the long-delayed but always expected something that we live for. 
-        There is a fifth character in the play who doesn't appear except in this 
-        larger-than-life-size photograph over the mantel.</p><p>This is our father who left us a long time ago.He was a telephone man 
-        who fell in love with long distances; he gave up his job with the telephone 
-        company and skipped the light fantastic out of town. . . .The last we 
-        heard of him was a picture postcard from Mazatlan, on the Pacific coast 
-        of Mexico, containing a message of two words -<br>
-        'Hello - Good-bye!' and no address.</p><p>I think the rest of the play will explain itself ...</p><blockquote> 
-        <p><i>[AMANDA's voice becomes audible through the portières. </i></p>
-      </blockquote></div>
-                    </div>
-                <div class="col-sm-6">
-                    <p>I'm a Music Director and member of Extreme Measures a cappella at Northwestern. Below is my most recent arrangment for the group: <i>Love Runs Out</i> by One Republic.</p>
-                    <br>
-                    <audio controls>
-            <source src="media/LoveRunsOutFinal.mp3" type="audio/mpeg">Your browser does not support the audio element.
-                    </audio>
-                    <br><br>
-                    <embed src="media/LoveRunsOutFinal.pdf" width="100%" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
-
-                    
-                    </div>
-                            </div>
             </div>
         </div>
     </div>
@@ -549,6 +573,7 @@
         
         <!--Loading SVG -->
         <script src="js/svg.js"></script>
+        
         
 </body>
 
