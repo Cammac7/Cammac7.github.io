@@ -71,4 +71,8 @@ $(document).ready(function() {
         $('#glassleft').show();
         $('#bubbleleft').hide();
 	});
+    
+    $('.hotBlock').click(function() {    
+    $(this).parent().prepend($(this));
+});
 });
