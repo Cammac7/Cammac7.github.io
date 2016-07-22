@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	$('#lroClick').on('click', function(){
+        $("#lroClick").prependTo("#breakLine1");
         $('#lromp3').toggle();
         $('#jealousmp3').hide();
         $('#girlcrushmp3').hide();
@@ -28,6 +29,7 @@ $(document).ready(function() {
 	});
     
     $('#girlcrushClick').on('click', function(){
+        $("#lroClick").prependTo("#breakLine1");
         $('#jealousmp3').hide();
         $('#lromp3').hide();
         $('#girlcrushmp3').toggle();
