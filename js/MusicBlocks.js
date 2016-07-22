@@ -1,10 +1,5 @@
 $(document).ready(function() {
 	$('#lroClick').on('click', function(){
-        $('#lroClick').css("display", "table-header-group");
-        $('#jealousClick').css("display", "table-row-group");
-        $('#girlcrushClick').css("display", "table-row-group");
-        $('#bubbleClick').css("display", "table-row-group");
-        $('#glassClick').css("display", "table-row-group");
         
         $('#lromp3').toggle();
         $('#jealousmp3').hide();
@@ -20,11 +15,6 @@ $(document).ready(function() {
 	});
     
     $('#jealousClick').on('click', function(){
-        $('#lroClick').css("display", "table-row-group");
-        $('#jealousClick').css("display", "table-header-group");
-        $('#girlcrushClick').css("display", "table-row-group");
-        $('#bubbleClick').css("display", "table-row-group");
-        $('#glassClick').css("display", "table-row-group");
         
         $('#jealousmp3').toggle();
         $('#lromp3').hide();
@@ -40,11 +30,6 @@ $(document).ready(function() {
 	});
     
     $('#girlcrushClick').on('click', function(){
-        $('#lroClick').css("display", "table-row-group");
-        $('#jealousClick').css("display", "table-row-group");
-        $('#girlcrushClick').css("display", "table-header-group");
-        $('#bubbleClick').css("display", "table-row-group");
-        $('#glassClick').css("display", "table-row-group");
         
         $('#jealousmp3').hide();
         $('#lromp3').hide();
