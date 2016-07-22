@@ -72,7 +72,9 @@ $(document).ready(function() {
         $('#bubbleleft').hide();
 	});
     
-    $('.hotBlock').click(function() {    
+    $('.bigblock').click(function() {    
     $(this).parent().prepend($(this));
 });
+    
 });
+
