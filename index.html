@@ -354,60 +354,7 @@ Now the board tracks players paths as they move about, and dynamically updates t
             </div>
         </div>
     </div>
-    <!--<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 col-lg-offset-1">
-                        <div class="modal-body">
-                            <h2>Invasion of the Energy Monsters</h2>
-                            <hr>
-                            <div class="col-md-8">
-                                    <p style="text-align:left;">Invasion of the Energy Monsters is a project that I’ve been working on for two years now, first as work with a professor, and now as a free-time project.</p>
-
-<h3 style="text-align:left;">The Game</h3>
-<p style="text-align:left;">Energy Monsters started as an educational game where two teams (Human Heros and Energy Monsters) faced off in a “haunted” house composed of individual room tiles. Energy Monsters played cards to attack, or turn on appliances in rooms and grow stronger on the “wasted electricity”. Humans could then turn the same appliances off to save electricity and turn the tides in their favor before their own attacks.
-The lab saw some commercial potential in the game and I was told:
-“Well right now it’s pretty fun, but it’s not really fun”. <br>I set out to make it really  fun.</p><br>
-
-<h3 style="text-align:left;">The Rules</h3><p style="text-align:left;">I played Energy Monsters constantly, with every friend that I could recruit, and tweaked the rules. I gradually discovered that the game could be stalled out by either team, and there wasn’t enough speed to the game by having teams only play cards (often in far-away rooms) to shift the playing field. So, I implemented my first major rule change: when a monster entered the room, it automatically turned on the “lights” in that room and added 50 watts of wasted electricity. When a human entered a room, they automatically turned any “on” lights off, and reduced wattage by 50. <a href="media/rules_Cam.pdf">Read my first updated version of the rules here.</a>
-<br>
-This added chase element made the game much more exciting to play. Players always had a move they could make, even if it was just turning off or on some lights while they bided their time for a bigger play.</p>
-<br>
-<h3 style="text-align:left;">The Problem</h3>
-<p style="text-align:left;">As with most things, with the new solution came a new problem. players were having to flip over multiples tiles every turn to signify that lights were on or off in specific rooms. This drastically slowed the game down and was annoying. Using tokens or the like to signify “lights on” was no better because it cluttered up the board. The new lights rule also meant that players had to be adding and subtracting small amounts of wattage to the spinner every turn, which was tedious. I set out to solve all of these problems.</p>
-<br>
-<h3 style="text-align:left;">The Board</h3>
-<p style="text-align:left;">My idea was to build a board that the tiles would sit on. I wanted to use magnets in the pieces to trigger LEDs in the board to turn on or off depending on whether the piece was a monster or a human. I set off learning about circuits, an area I knew nothing about, and finally came to a solution. Using magnetic-field-sensing hall effect sensors connected to an arduino, and magnets in the playing pieces oriented towards different polarities, I was able to make pieces turn on and off lights in each room, and automatically track the change in wattage with the arduino. The feedback was instant and very satisfying.<br>
-
-This process was a journey though. There aren’t enough pins in the Arduino to manage all of the sensors and lights on the 5x3 board. Once I managed my goal with just a couple rooms I had to learn about and implement multiplexors for the sensors. The LEDs needed different multiplexors because they need to hold their state even after the player’s magnetized piece moved to a different tile. Magnetizing the pieces themselves was also a challenge. I solved it by having the idea to 3d-print a hollow space into the token, drop the magnet in, and 3d-print the space closed.
-Now the board tracks players paths as they move about, and dynamically updates the house wattage from the lights. I’m being published for my work with the board, and will be demoing it at the Games+Learning+Society Conference in Madison this August.
-</p>
-<br>                                 
-<h3 style="text-align:left;">The Future</h3>
-<p style="text-align:left;">Another prototype is already underway that will add wifi connectivity to the board. After that, I plan on approaching a way to track the use and play of the cards themselves. Using an RFID reader and an antennae array, I hope to identify individual pieces (by adding RFID chips to them) and where they are on the board when at rest. Because RFID takes a few seconds, the hall-effect systems will still be needed to track movement. I will also add RFID chips to the cards themselves, and create a discard section of the board where cards are played. This way, when a person plays a card, the board itself will be able to determine where the respective piece is, and if the play is legal. If it is, the board will be able to alter the wattage accordingly on the house. In this way, all of the wattage tracking will be taken care of automatically and digitally, and the players can focus on the fun of the game, and still get the satisfaction of spinning a real spinner, rolling real die, and moving real pieces. This connection of digital convenience with physical feedback and motion is where I think all boardgame design is destined to end up.</p>
-                            </div>
-                            <div class="col-md-4">
-                                 <div id="EnergyMonstvideo">
-                                     <object align="right">
-                                        <video width="281.25" height="500" id="EnergyMonstersDemo" src="media/EnergyMonstersDemo.mp4" autoplay loop muted></video>
-                                     </object>
-                                 </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-    </div>
-    </div>-->
+    
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -424,7 +371,7 @@ Now the board tracks players paths as they move about, and dynamically updates t
                             <hr>
                             <p>I have been a musician for my entire life. I've sung for presidents, with world-class orchestras, and on-stage with Beyoncé at the 77th Academy Awards. I write music for piano and guitar, and have a hobby of writing songs with comedy lyrics, or re-writing existing song's lyrics.</p><br><p>These are just a few of the many projects that I've had fun creating.</p>
                             <br><br><br>
-                            <div class="col-md-8">
+                            <div id="leftside" class="col-md-7">
                                 <div id="loverunsoutpdf">
                                     <embed src="media/LoveRunsOutFinal.pdf" width="100%" height="500" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
                                 </div>
@@ -498,11 +445,10 @@ Now the board tracks players paths as they move about, and dynamically updates t
                     </audio>     
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div id="rightside" class="col-md-5">
                                 <div id="lroblock" class="bigblock">
                                         <div style="cursor: pointer" class="hotBlock" id="lroClick">
-                                            <h3 style="margin-bottom:0px; margin-top">Love Runs Out</h3>
-                                            <h4 style="margin-top:0px; margin-bottom:25.270px;">by One Republic</h4>
+                                            <p style="margin-bottom:0px;"><span style="font-family:'Source Code Pro';font-size:25px; ">Love Runs Out</span> <span style="font-size:15px;">by One Republic</span></p>
                                         </div>
                                     <div id="lromp3">
                                         <p style="text-align: left;">One of my favorite songs my a cappella group ever did, this arrangent focuses on a driving tenor melody with a sort of mystic support.</p>
@@ -514,8 +460,7 @@ Now the board tracks players paths as they move about, and dynamically updates t
                                 </div>
                                 <div id="jealousblock" class="bigblock">
                                         <div style="cursor: pointer" class="hotBlock" id="jealousClick">
-                                            <h3 style="margin-bottom:0px; margin-top">Jealous</h3>
-                                            <h4 style="margin-top:0px; margin-bottom:25.270px;">by Nick Jonas</h4>
+                                            <p style="margin-bottom:0px;"><span style="font-family:'Source Code Pro';font-size:25px; ">Jealous</span> <span style="font-size:15px;">by Nick Jonas</span></p>
                                         </div>
                                     <div id="jealousmp3" style="display:none;">
                                         <p style="text-align: left;">Arranging modern pop songs for a cappella is always a bit of a challenge to get the right synth-like sounds. I am particularly proud of this arrangement's success with that.</p>
@@ -527,8 +472,7 @@ Now the board tracks players paths as they move about, and dynamically updates t
                                 </div>
                                 <div id="girlcrushblock" class="bigblock">
                                         <div style="cursor: pointer" class="hotBlock" id="girlcrushClick">
-                                            <h3 style="margin-bottom:0px; margin-top">Girl Crush</h3>
-                                            <h4 style="margin-top:0px; margin-bottom:25.270px;">by Little Big Town</h4>
+                                            <p style="margin-bottom:0px;"><span style="font-family:'Source Code Pro';font-size:25px; ">Girl Crush</span> <span style="font-size:15px;">by Little Big Town</span></p>
                                         </div>
                                     <div id="girlcrushmp3" style="display:none;">
                                         <p style="text-align: left;">I wanted to try an arrangement around a female vocalist, and picked Girl Crush. It was more difficult, and also the first country song I arranged. However, I think the country style really lends itself well to a cappella voices.</p>
@@ -540,8 +484,7 @@ Now the board tracks players paths as they move about, and dynamically updates t
                                 </div>
                                 <div id="glassblock" class="bigblock">
                                         <div style="cursor: pointer" class="hotBlock" id="glassClick">
-                                            <h3 style="margin-bottom:0px; margin-top">Glass Menagerie</h3>
-                                            <h4 style="margin-top:0px; margin-bottom:25.270px;">(Music)</h4>
+                                            <p style="margin-bottom:0px;"><span style="font-family:'Source Code Pro';font-size:25px; ">Glass Menagerie</span><br><span style="font-size:15px;">(Music)</span></p>
                                         </div>
                                     <div id="glassmp3" style="display:none;">
                                         <p style="text-align: left;">As just a small part of a project for a class, I was tasked with finding music to be played with the reading of a scene from Tennessee Williams' <i>The Glass Menagerie</i>. I was unable to find music that I felt fit the scene perfectly, so I arranged some of my own using GarageBand.</p>
@@ -551,12 +494,11 @@ Now the board tracks players paths as they move about, and dynamically updates t
                                 
                                 <div id="bubbleblock" class="bigblock">
                                         <div style="cursor: pointer" class="hotBlock" id="bubbleClick">
-                                            <h3 style="margin-bottom:0px; margin-top">Bubble Turtle Adventure</h3>
-                                            <h4 style="margin-top:0px; margin-bottom:25.270px;">(Music)</h4>
+                                            <p style="margin-bottom:0px;"><span style="font-family:'Source Code Pro';font-size:25px; ">Bubble Turtle Adventure</span><br><span style="font-size:15px;">(Music)</span></p>
                                         </div>
                                     <div id="bubblemp3" style="display:none;">
                                         <p style="text-align: left;">As a way to explore Unity game design, two friends and I made a scrolling computer game called Bubble Turtle Adventure. I ended up becoming much more interested in designing sprite sheets and characters in Adobe Flash for the game, as well as writing and recording the music.<br>
-                                        The game features a cute turtle in a desolate wasteland. I thought it would be funny to record all of the music and effects with only my voice, to play off of the opening menu scene in "Halo". It was as hilarious as I had hoped.</p>
+                                        The game features a cute turtle in a desolate wasteland. Because the game is intended to poke fun at itself, I recorded all of the music and effects with only my voice (playing off of the opening menu scene in "Halo"). It was as hilarious as I had hoped.</p>
                                     </div>
                                     <br>
                                 </div>
