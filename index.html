@@ -284,7 +284,7 @@
                                     <p style="text-align:left;">Invasion of the Energy Monsters is a project that I’ve been working on for two years now, first as work with a professor, and now as a free-time project.</p><br>
 
 <h3 style="text-align:left;">The Game</h3>
-<p style="text-align:left;">Energy Monsters started as an educational game where two teams (Human Heros and Monsters) faced off in a “haunted” house composed of individual room tiles. Monsters played cards to attack, or turn on appliances in rooms and grow stronger on the “wasted electricity”. Humans could then turn the same appliances off to save electricity and turn the tides in their favor before their own attacks.
+<p style="text-align:left;">Energy Monsters started as an educational game where two teams (Human Heros and Energy Monsters) faced off in a “haunted” house composed of individual room tiles. Energy Monsters played cards to attack, or turn on appliances in rooms and grow stronger on the “wasted electricity”. Humans could then turn the same appliances off to save electricity and turn the tides in their favor before their own attacks.
 The lab saw some commercial potential in the game and I was told:
 “Well right now it’s pretty fun, but it’s not really fun”. <br>I set out to make it really  fun.</p><br>
                                 </div>
@@ -300,7 +300,7 @@ The lab saw some commercial potential in the game and I was told:
                                 
                             <div class="col-md-8">
 
-<h3 style="text-align:left;">The Rules</h3><p style="text-align:left;">I played Energy Monsters with every friend that I could recruit, and tweaked the rules. I  discovered that the game could be stalled out by either team, and there wasn’t enough speed to the game by having teams only play cards (often in far-away rooms) to shift the playing field. So, I implemented my first major rule change: when a monster entered the room, it automatically turned on the “lights” in that room and added 50 watts of wasted electricity. When a human entered a room, they automatically turned the lights off, and reduced wattage by 50.<br><a href="media/rules_Cam.pdf">Read my first updated version of the rules here.</a>
+<h3 style="text-align:left;">The Rules</h3><p style="text-align:left;">I played Energy Monsters constantly, with every friend that I could recruit, and tweaked the rules. I gradually discovered that the game could be stalled out by either team, and there wasn’t enough speed to the game by having teams only play cards (often in far-away rooms) to shift the playing field. So, I implemented my first major rule change: when a monster entered the room, it automatically turned on the “lights” in that room and added 50 watts of wasted electricity. When a human entered a room, they automatically turned any “on” lights off, and reduced wattage by 50. <a href="media/rules_Cam.pdf">Read my first updated version of the rules here.</a>
 <br>
 This added chase element made the game much more exciting to play. Players always had a move they could make, even if it was just turning off or on some lights while they bided their time for a bigger play.</p>
 <br>
@@ -310,15 +310,7 @@ This added chase element made the game much more exciting to play. Players alway
                             <div class="col-md-8">
 
 <h3 style="text-align:left;">The Problem</h3>
-<p style="text-align:left;">As with most things, with the new solution came some new problems. </p>
-    <ul>
-      <li>Players had to flip over multiples tiles every turn to signify that lights were on or off.</li>
-      <li>Tile-flipping slowed the game, and was annoying to have to do.</li>
-      <li>Using tokens to signify lights instead cluttered up the board.</li>
-      <li>Players had to add and subtract small amounts of wattage to the spinner every turn, which was tedious.</li>
-    </ul>
-    <p style="text-align:left;">I set out to solve all of these problems.</p>
-                                
+<p style="text-align:left;">As with most things, with the new solution came a new problem. players were having to flip over multiples tiles every turn to signify that lights were on or off in specific rooms. This drastically slowed the game down and was annoying. Using tokens or the like to signify “lights on” was no better because it cluttered up the board. The new lights rule also meant that players had to be adding and subtracting small amounts of wattage to the spinner every turn, which was tedious. I set out to solve all of these problems.</p>
 <br>
                                 </div>
                                 <div class="col-md-4">
@@ -330,10 +322,10 @@ This added chase element made the game much more exciting to play. Players alway
 <div class="col-md-8">
 
 <h3 style="text-align:left;">The Board</h3>
-<p style="text-align:left;">I built a board for the tiles would sit on. I used magnets in the pieces to trigger LEDs to toggle depending on whether the piece was a monster or a human. In addition, the board keeps track of all wattage changes for the spinner.<br>Getting to this point was not easy. I set off learning about circuits, an area I knew nothing about, and finally came to the solution. The magnetic sensing is done with hall-effect sensors connected to an arduino, and the magnets for the different teams are orineted with different polarity. The feedback is instant and very satisfying.<br>
+<p style="text-align:left;">My idea was to build a board that the tiles would sit on. I wanted to use magnets in the pieces to trigger LEDs in the board to turn on or off depending on whether the piece was a monster or a human. I set off learning about circuits, an area I knew nothing about, and finally came to a solution. Using magnetic-field-sensing hall effect sensors connected to an arduino, and magnets in the playing pieces oriented towards different polarities, I was able to make pieces turn on and off lights in each room, and automatically track the change in wattage with the arduino. The feedback was instant and very satisfying.<br>
 
-This process was a journey though. There aren’t enough pins in the Arduino to manage all of the sensors and lights on the 5x3 board. Once I managed my goal with just a couple rooms, I had to learn about and implement multiplexors for the sensors. The LEDs needed different multiplexors because they need to hold their state even after the player’s magnetized piece moved to a different tile. Magnetizing the pieces themselves was also a challenge. I solved it by having the idea to 3d-print a hollow space into the token, drop the magnet in, and 3d-print the space closed.
-I’m being published for my work with the board, and will be demoing it at the Games+Learning+Society Conference in Madison this August.
+This process was a journey though. There aren’t enough pins in the Arduino to manage all of the sensors and lights on the 5x3 board. Once I managed my goal with just a couple rooms I had to learn about and implement multiplexors for the sensors. The LEDs needed different multiplexors because they need to hold their state even after the player’s magnetized piece moved to a different tile. Magnetizing the pieces themselves was also a challenge. I solved it by having the idea to 3d-print a hollow space into the token, drop the magnet in, and 3d-print the space closed.
+Now the board tracks players paths as they move about, and dynamically updates the house wattage from the lights. I’m being published for my work with the board, and will be demoing it at the Games+Learning+Society Conference in Madison this August.
 </p>
 <br>                             
                                 </div>
@@ -349,10 +341,10 @@ I’m being published for my work with the board, and will be demoing it at the 
                             <div class="row">
 <div class="col-md-8">
 <h3 style="text-align:left;">The Future</h3>
-<p style="text-align:left;">Another prototype is already underway that will add wifi connectivity to the board. After that, I plan on approaching a way to track the use and play of the cards themselves. I am adding RFID chips to the cards themselves. This way, when a person plays a card, the board itself will be able to determine if the play is legal. If it is, the board will be able to alter the wattage accordingly on the house. In this way, all of the wattage tracking will be taken care of automatically and digitally, and the players can focus on the fun of the game, and still get the satisfaction of spinning a real spinner, rolling real die, and moving real pieces. This connection of digital convenience with physical feedback and motion is where I think all boardgame design is destined to end up.</p>              
+<p style="text-align:left;">Another prototype is already underway that will add wifi connectivity to the board. After that, I plan on approaching a way to track the use and play of the cards themselves. Using an RFID reader and an antennae array, I hope to identify individual pieces (by adding RFID chips to them) and where they are on the board when at rest. Because RFID takes a few seconds, the hall-effect systems will still be needed to track movement. I will also add RFID chips to the cards themselves, and create a discard section of the board where cards are played. This way, when a person plays a card, the board itself will be able to determine where the respective piece is, and if the play is legal. If it is, the board will be able to alter the wattage accordingly on the house. In this way, all of the wattage tracking will be taken care of automatically and digitally, and the players can focus on the fun of the game, and still get the satisfaction of spinning a real spinner, rolling real die, and moving real pieces. This connection of digital convenience with physical feedback and motion is where I think all boardgame design is destined to end up.</p>              
                                 </div>
                                 <div class="col-md-4">
-                                 <img src="img/energymonsters/Fritz.png" class="img-responsive img-centered item-pic" alt="">
+                                 
                             </div>
                             </div>
                         </div>
@@ -362,6 +354,60 @@ I’m being published for my work with the board, and will be demoing it at the 
             </div>
         </div>
     </div>
+    <!--<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="modal-body">
+                            <h2>Invasion of the Energy Monsters</h2>
+                            <hr>
+                            <div class="col-md-8">
+                                    <p style="text-align:left;">Invasion of the Energy Monsters is a project that I’ve been working on for two years now, first as work with a professor, and now as a free-time project.</p>
+
+<h3 style="text-align:left;">The Game</h3>
+<p style="text-align:left;">Energy Monsters started as an educational game where two teams (Human Heros and Energy Monsters) faced off in a “haunted” house composed of individual room tiles. Energy Monsters played cards to attack, or turn on appliances in rooms and grow stronger on the “wasted electricity”. Humans could then turn the same appliances off to save electricity and turn the tides in their favor before their own attacks.
+The lab saw some commercial potential in the game and I was told:
+“Well right now it’s pretty fun, but it’s not really fun”. <br>I set out to make it really  fun.</p><br>
+
+<h3 style="text-align:left;">The Rules</h3><p style="text-align:left;">I played Energy Monsters constantly, with every friend that I could recruit, and tweaked the rules. I gradually discovered that the game could be stalled out by either team, and there wasn’t enough speed to the game by having teams only play cards (often in far-away rooms) to shift the playing field. So, I implemented my first major rule change: when a monster entered the room, it automatically turned on the “lights” in that room and added 50 watts of wasted electricity. When a human entered a room, they automatically turned any “on” lights off, and reduced wattage by 50. <a href="media/rules_Cam.pdf">Read my first updated version of the rules here.</a>
+<br>
+This added chase element made the game much more exciting to play. Players always had a move they could make, even if it was just turning off or on some lights while they bided their time for a bigger play.</p>
+<br>
+<h3 style="text-align:left;">The Problem</h3>
+<p style="text-align:left;">As with most things, with the new solution came a new problem. players were having to flip over multiples tiles every turn to signify that lights were on or off in specific rooms. This drastically slowed the game down and was annoying. Using tokens or the like to signify “lights on” was no better because it cluttered up the board. The new lights rule also meant that players had to be adding and subtracting small amounts of wattage to the spinner every turn, which was tedious. I set out to solve all of these problems.</p>
+<br>
+<h3 style="text-align:left;">The Board</h3>
+<p style="text-align:left;">My idea was to build a board that the tiles would sit on. I wanted to use magnets in the pieces to trigger LEDs in the board to turn on or off depending on whether the piece was a monster or a human. I set off learning about circuits, an area I knew nothing about, and finally came to a solution. Using magnetic-field-sensing hall effect sensors connected to an arduino, and magnets in the playing pieces oriented towards different polarities, I was able to make pieces turn on and off lights in each room, and automatically track the change in wattage with the arduino. The feedback was instant and very satisfying.<br>
+
+This process was a journey though. There aren’t enough pins in the Arduino to manage all of the sensors and lights on the 5x3 board. Once I managed my goal with just a couple rooms I had to learn about and implement multiplexors for the sensors. The LEDs needed different multiplexors because they need to hold their state even after the player’s magnetized piece moved to a different tile. Magnetizing the pieces themselves was also a challenge. I solved it by having the idea to 3d-print a hollow space into the token, drop the magnet in, and 3d-print the space closed.
+Now the board tracks players paths as they move about, and dynamically updates the house wattage from the lights. I’m being published for my work with the board, and will be demoing it at the Games+Learning+Society Conference in Madison this August.
+</p>
+<br>                                 
+<h3 style="text-align:left;">The Future</h3>
+<p style="text-align:left;">Another prototype is already underway that will add wifi connectivity to the board. After that, I plan on approaching a way to track the use and play of the cards themselves. Using an RFID reader and an antennae array, I hope to identify individual pieces (by adding RFID chips to them) and where they are on the board when at rest. Because RFID takes a few seconds, the hall-effect systems will still be needed to track movement. I will also add RFID chips to the cards themselves, and create a discard section of the board where cards are played. This way, when a person plays a card, the board itself will be able to determine where the respective piece is, and if the play is legal. If it is, the board will be able to alter the wattage accordingly on the house. In this way, all of the wattage tracking will be taken care of automatically and digitally, and the players can focus on the fun of the game, and still get the satisfaction of spinning a real spinner, rolling real die, and moving real pieces. This connection of digital convenience with physical feedback and motion is where I think all boardgame design is destined to end up.</p>
+                            </div>
+                            <div class="col-md-4">
+                                 <div id="EnergyMonstvideo">
+                                     <object align="right">
+                                        <video width="281.25" height="500" id="EnergyMonstersDemo" src="media/EnergyMonstersDemo.mp4" autoplay loop muted></video>
+                                     </object>
+                                 </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+    </div>
+    </div>-->
     <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
