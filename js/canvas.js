@@ -17,7 +17,7 @@ function Banner(){
 	var mouseOnScreen = false;
 	
 	var itercount = 0;
-	var itertot = 40;
+	var itertot = 200;
 	
 	this.initialize = function(canvas_id){
 		canvas = document.getElementById(canvas_id);
@@ -40,8 +40,8 @@ function Banner(){
 	
 	var start = function(){
 			
-		bgContext.fillStyle = "#FFFFFF";
-		bgContext.font = '200px Helvetica';
+		bgContext.fillStyle = "#333";
+		bgContext.font = '200px Arial';
 		bgContext.fillText(keyword, 85, 275);
         bgContext.fillText(keyword2, 85, 450);
 		
@@ -146,7 +146,10 @@ function Banner(){
 	
 	//Clear the on screen canvas
 	var clear = function(){
-		context.fillStyle = '#FFF';
+        var my_gradient = context.createLinearGradient(0, 0, 0, 500);
+        my_gradient.addColorStop(0, "black");
+        my_gradient.addColorStop(1, "white");
+		context.fillStyle = my_gradient;
 		context.beginPath();
   		context.rect(0, 0, canvas.width, canvas.height);
  		context.closePath();
