@@ -105,7 +105,7 @@ header > [class^=section]{
   width: 100%;
 }
 header > .section-one {
-  background-image: url(../img/Northwestern-University-Downtown-Chicago-Northwestern-Lakefill.png);
+/*  background-image: url(../img/Northwestern-University-Downtown-Chicago-Northwestern-Lakefill.png);*/
   left:0;
 }
 header > .section-two {

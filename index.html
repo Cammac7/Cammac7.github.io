@@ -29,13 +29,6 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <!-- Javascript -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Smooth Scroll -->
-    <script src="js/smooth-scroll.js"></script>
-
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    
 </head>
 
 <body id="page-top" class="index">
@@ -80,17 +73,8 @@
         <div class="section-one"></div>
         <!--<div class="section-two"></div>
         <div class="section-three"></div>-->
-        <div class="container cover">
-            <div class="row">
-                <div class="col-lg-12">
-                    <img class="img-responsive" src="img/realprofile.png" alt="">
-                    <div class="intro-text">
-                        <span class="name">Cameron MacArthur</span>
-                        <span class="skills">Designer - Programmer  - Musician</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <canvas id='canvas'></canvas>
+        
     </header>
 
     <!-- Portfolio Grid Section -->
@@ -639,10 +623,19 @@ Now the board tracks players paths as they move about, and dynamically updates t
                 </div>
         </div>
     </div>
-        
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <!-- Javascript -->
 
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Smooth Scroll -->
+    <script src="js/smooth-scroll.js"></script>
+    
+    <!-- Ds.js -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    
+    <!--Interactive Canvas -->
+    <script src="js/canvas.js"></script>
+        
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -657,19 +650,19 @@ Now the board tracks players paths as they move about, and dynamically updates t
 -->
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
+        
     <!-- Smooth Scroll-->
     <script>smoothScroll.init();</script>
     <!-- Twitter Bird Javascript -->
     <!--<script src="js/twitterbird.js"></script> -->
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         
-        <!--Loading SVG -->
-        <script src="js/svg.js"></script>
+    <!--SVG -->
+    <script src="js/svg.js"></script>
         
-        <!--Loading Music Block effects -->
+    <!--Music Block effects -->
     <script src="js/MusicBlocks.js"></script>
-        
-        
+    
 </body>
 
 </html>
