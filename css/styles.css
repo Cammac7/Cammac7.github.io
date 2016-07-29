@@ -96,17 +96,17 @@ header {
     position: relative;
 }
 
-header > [class^=section]{
+/*
+  header > [class^=section]{
   position: absolute;
   background: none 50% / cover;
   top: 0;
   bottom: 0;
   height: auto;
-  /*width: 33.33333%;*/
   width: 100%;
 }
 header > .section-one {
-/*  background-image: url(../img/Northwestern-University-Downtown-Chicago-Northwestern-Lakefill.png);*/
+  background-image: url(../img/Northwestern-University-Downtown-Chicago-Northwestern-Lakefill.png);
   left:0;
 }
 header > .section-two {
@@ -117,6 +117,7 @@ header > .section-three {
   background-image: url(../img/car.png);
   left: 66.66666%;
 }
+*/
 
 .btn-1 {
     color: black;
