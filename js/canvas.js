@@ -1,7 +1,7 @@
 function Banner() {
 	
-    var keyword = "Cameron";
-    var keyword2 = "MacArthur";
+    var keyword = "Interaction";
+    var keyword2 = "Designer";
     var canvas;
 	var context;
 	
@@ -43,11 +43,11 @@ function Banner() {
 	}
 	
 	var start = function(){
-			
 		bgContext.fillStyle = "#333";
-		bgContext.font = '200px Arial';
-		bgContext.fillText(keyword, 85, 275);
-        bgContext.fillText(keyword2, 85, 450);
+		//bgContext.font = '150px Arial';
+        fitTextOnCanvas("bgContext", keyword, "Arial", 450, 275);
+        fitTextOnCanvas("bgContext", keyword2, "Arial", 450, 400);
+		//bgContext.fillText(keyword2, 85, 450);
 		bgContext.beginPath();
         bgContext.lineWidth="5";
         bgContext.moveTo(960,450);
@@ -58,6 +58,10 @@ function Banner() {
         
 		clear();	
 		getCoords();
+        //context.fillStyle = "#000000";
+        //context.font = '100px Arial';
+        //fitTextOnCanvas("context", keyword, "Quicksand", 85, 275);
+        //context.fillText(keyword, 85, 275);
 	}
 	
 	var getCoords = function(){
@@ -103,6 +107,9 @@ function Banner() {
 		var i, dx, dy, sqrDist, scale;
 		itercount++;
 		clear();
+        //context.fillStyle = "#000000";
+        //context.fillText(keyword, 85, 275);
+        //fitTextOnCanvas("context", keyword, "Quicksand", 85, 275);
 		for (i = 0; i < parts.length; i++){
 					
 			//If the dot has been released
@@ -197,6 +204,34 @@ function Banner() {
     $("body > section, body > header").each(function(){
         this.addEventListener("mousemove", simulate);
     });
+    
+    function fitTextOnCanvas(contexttype, text, font, xPosition, yPosition) {
+
+        // start with a large font size
+        var fontsize = 200;
+
+        /*if(contexttype=="context"){
+            // lower the font size until the text fits the canvas
+            do {
+                fontsize--;
+                context.font = fontsize+"px"+" "+font;
+            } while (context.measureText(text).width > canvas.width*.9)
+
+            // draw the text
+            context.fillText(text, xPosition, yPosition);
+            
+        }else{*/
+            // lower the font size until the text fits the canvas
+            do {
+                fontsize--;
+                bgContext.font = fontsize+"px"+" "+font;
+            } while (bgContext.measureText(text).width > canvas.width*.5)
+
+            // draw the text
+            bgContext.fillText(text, xPosition, yPosition);
+       // }
+    }
+    
 }
 
 var banner = new Banner();

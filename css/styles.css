@@ -92,9 +92,6 @@ a:focus .tri-Up {
 .cover {
     position: relative;
 }
-header {
-    position: relative;
-}
 
 /*
   header > [class^=section]{
@@ -229,28 +226,29 @@ hr.soften-white {
   border: 0;
 }
 
-.name {
-    text-shadow: 0 0 0.2em black, 0 0 0.2em black,
-        0 0 2.0em black;
-    
-}
 header .intro-text .name {
-font-family: 'Source Code Pro',"Helvetica Neue";
-    font-weight: 600;
+    text-align: left;
+    font-family: 'Quicksand',"Helvetica Neue";
+    font-weight: 400;
+    font-size: 5.7em;
 }
-.skills {
-    text-shadow: 0 0 0.2em black, 0 0 0.2em black,
-        0 0 0.2em black;
-    font-family: 'Source Code Pro',"Helvetica Neue";
+.intro-text{
+    text-align: left;
+    padding-left: 5%;
+    font-family: 'Quicksand',"Helvetica Neue";
+}
+
+.skillz {
+    font-family: 'Quicksand',"Helvetica Neue";
     text-transform: uppercase;
+    font-size: 3.75em;
+    text-align: left;
 
 }
-header .intro-text .skills {
-            font-weight: 400;
-}
+
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Source Code Pro',"Helvetica Neue";
+    font-family: 'Quicksand',"Helvetica Neue";
     font-weight: 500;
 }
 
@@ -263,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 header { 
-     color: white; 
+     color: black; 
      height: 600px;
 }
 
