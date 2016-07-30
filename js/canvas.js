@@ -1,7 +1,7 @@
 function Banner() {
 	
-    var keyword = "Interaction Designer";
-//    var keyword2 = "MacArthur";
+    var keyword = "Cmaeron";
+    var keyword2 = "MacArthur";
     var canvas;
 	var context;
 	
@@ -47,9 +47,9 @@ function Banner() {
 	var start = function(){
 			
 		bgContext.fillStyle = "#333";
-		bgContext.font = '25px Arial';
+		bgContext.font = '400px Arial';
 		bgContext.fillText(keyword, 85, 275);
-//        bgContext.fillText(keyword2, 85, 450);
+        bgContext.fillText(keyword2, 85, 450);
 		bgContext.beginPath();
         bgContext.lineWidth="5";
         bgContext.moveTo(960,450);
