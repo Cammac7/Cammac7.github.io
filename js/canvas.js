@@ -1,7 +1,7 @@
 function Banner() {
 	
-    var keyword = "Interaction";
-    var keyword2 = "Designer";
+    var keyword = "Interaction Designer";
+   // var keyword2 = "Designer";
     var canvas;
 	var context;
 	
@@ -45,8 +45,8 @@ function Banner() {
 	var start = function(){
 		bgContext.fillStyle = "#333";
 		//bgContext.font = '150px Arial';
-        fitTextOnCanvas("bgContext", keyword, "Arial", 450, 275);
-        fitTextOnCanvas("bgContext", keyword2, "Arial", 450, 400);
+        fitTextOnCanvas("bgContext", keyword, "Arial", 50, 450);
+        //fitTextOnCanvas("bgContext", keyword2, "Arial", 450, 400);
 		//bgContext.fillText(keyword2, 85, 450);
 		bgContext.beginPath();
         bgContext.lineWidth="5";
@@ -225,7 +225,7 @@ function Banner() {
             do {
                 fontsize--;
                 bgContext.font = fontsize+"px"+" "+font;
-            } while (bgContext.measureText(text).width > canvas.width*.5)
+            } while (bgContext.measureText(text).width > canvas.width*.9)
 
             // draw the text
             bgContext.fillText(text, xPosition, yPosition);
