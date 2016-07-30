@@ -144,9 +144,10 @@ function Banner() {
 	    	//Reset particle positions
 	    	mouseOnScreen = true;
 	    	
-	    	
-	        mouse.x = e.layerX - canvas.offsetLeft;
-	        mouse.y = e.layerY - canvas.offsetTop;
+                //use offsetX instead of layerX for Firefox
+                //why was that working for Chrome?
+	        mouse.x = e.offsetX - canvas.offsetLeft;
+	        mouse.y = e.offsetY - canvas.offsetTop;
 	    }
 	}
 	
