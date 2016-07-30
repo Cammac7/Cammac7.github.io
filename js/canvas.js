@@ -1,7 +1,7 @@
 function Banner() {
 	
-    var keyword = "Cameron";
-    var keyword2 = "MacArthur";
+    var keyword = "Interaction Designer";
+//    var keyword2 = "MacArthur";
     var canvas;
 	var context;
 	
@@ -49,7 +49,7 @@ function Banner() {
 		bgContext.fillStyle = "#333";
 		bgContext.font = '200px Arial';
 		bgContext.fillText(keyword, 85, 275);
-        bgContext.fillText(keyword2, 85, 450);
+//        bgContext.fillText(keyword2, 85, 450);
 		bgContext.beginPath();
         bgContext.lineWidth="5";
         bgContext.moveTo(960,450);
@@ -159,10 +159,10 @@ function Banner() {
 	
 	//Clear the on screen canvas
 	var clear = function(){
-        var my_gradient = context.createLinearGradient(0, 0, 0, 500);
+        /*var my_gradient = context.createLinearGradient(0, 0, 0, 500);
         my_gradient.addColorStop(0, "black");
-        my_gradient.addColorStop(1, "white");
-		context.fillStyle = my_gradient;
+        my_gradient.addColorStop(1, "white");*/
+		context.fillStyle = "#ffffff";;
 		context.beginPath();
   		context.rect(0, 0, canvas.width, canvas.height);
  		context.closePath();
