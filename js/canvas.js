@@ -39,7 +39,6 @@ function Banner() {
 		canvas.addEventListener('mousemove', MouseMove, false);
 		canvas.addEventListener('mouseout', MouseOut, false);
 //        window.addEventListener('resize', resizeCanvas, false);
-			
 		start();
 	}
 	
