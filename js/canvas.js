@@ -1,7 +1,7 @@
 function Banner() {
 	
-    var keyword = "Interaction Designer";
-   // var keyword2 = "Designer";
+    var keyword = "Interaction";
+    var keyword2 = "Designer";
     var canvas;
 	var context;
 	
@@ -44,10 +44,10 @@ function Banner() {
 	
 	var start = function(){
 		bgContext.fillStyle = "#333";
-		//bgContext.font = '150px Arial';
-        fitTextOnCanvas("bgContext", keyword, "Arial", 50, 450);
+		bgContext.font = '140px Arial';
+        //fitTextOnCanvas("bgContext", keyword, "Arial", 50, 450);
         //fitTextOnCanvas("bgContext", keyword2, "Arial", 450, 400);
-		//bgContext.fillText(keyword2, 85, 450);
+		bgContext.fillText(keyword, 500, 290);
 		bgContext.beginPath();
         bgContext.lineWidth="5";
         bgContext.moveTo(960,450);
@@ -90,9 +90,12 @@ function Banner() {
 		
 		var velx = (x - startx) / itertot;
 		var vely = (y - starty) / itertot;	
+        var mycolors = ['#26F0F1', '#FF1053', '#000099','#66C9FF'];
 		
 		parts.push(
-			{c: '#' + (Math.random() * 0x949494 + 0xaaaaaa | 0).toString(16),
+			{
+             //c: '#' + (Math.random() * 0x949494 + 0xaaaaaa | 0).toString(16),
+             c: mycolors[Math.floor(Math.random() * mycolors.length)],
 			 x: x, //goal position   0xaaaaaa 0x111111
 			 y: y,
 			 x2: startx, //start position
