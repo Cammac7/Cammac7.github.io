@@ -90,7 +90,7 @@ function Banner() {
 		var vely = (y - starty) / itertot;	
 		
 		parts.push(
-			{c: '#' + (Math.random() * 0x949494 + 0x1111111 | 0).toString(16),
+			{c: '#' + (Math.random() * 0x949494 + 0x111111 | 0).toString(16),
 			 x: x, //goal position   0xaaaaaa 0x111111
 			 y: y,
 			 x2: startx, //start position
