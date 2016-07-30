@@ -19,8 +19,8 @@ function Banner() {
 	var itercount = 0;
 	var itertot = 40;
 
-	/*var cwidth = $(document).width();
-    var cheight = $(document).height();*/
+	var cwidth = $(document).width();
+    var cheight = $(document).height();
 
     
     
@@ -28,8 +28,8 @@ function Banner() {
 		canvas = document.getElementById(canvas_id);
 		context = canvas.getContext('2d');
 		
-		canvas.width = window.innerWidth;
-		canvas.height = window.innerHeight;
+		canvas.width = cwidth;
+		canvas.height = cheight;
 		
 		bgCanvas = document.createElement('canvas');
 		bgContext = bgCanvas.getContext('2d');
