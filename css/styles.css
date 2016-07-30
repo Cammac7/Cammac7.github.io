@@ -253,6 +253,17 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Source Code Pro',"Helvetica Neue";
     font-weight: 500;
 }
+/*
+#canvas-wrap { position:relative;}
+*/
+/*
+#canvas { position:absolute; top:0; left:0; z-index:-1 }
+*/
+
+/*header { 
+     height:600px; 
+}*/
+
 
 #resume {
     background-color: #73A39F;

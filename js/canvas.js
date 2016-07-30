@@ -1,8 +1,8 @@
-function Banner(){
+function Banner() {
 	
-  var keyword = "Cameron";
-  var keyword2 = "MacArthur"
-	var canvas;
+    var keyword = "Cameron";
+    var keyword2 = "MacArthur";
+    var canvas;
 	var context;
 	
 	var bgCanvas;
@@ -17,8 +17,13 @@ function Banner(){
 	var mouseOnScreen = false;
 	
 	var itercount = 0;
-	var itertot = 200;
-	
+	var itertot = 40;
+
+	/*var cwidth = $(document).width();
+    var cheight = $(document).height();*/
+
+    
+    
 	this.initialize = function(canvas_id){
 		canvas = document.getElementById(canvas_id);
 		context = canvas.getContext('2d');
@@ -34,6 +39,7 @@ function Banner(){
 	
 		canvas.addEventListener('mousemove', MouseMove, false);
 		canvas.addEventListener('mouseout', MouseOut, false);
+//        window.addEventListener('resize', resizeCanvas, false);
 			
 		start();
 	}
@@ -44,7 +50,14 @@ function Banner(){
 		bgContext.font = '200px Arial';
 		bgContext.fillText(keyword, 85, 275);
         bgContext.fillText(keyword2, 85, 450);
-		
+		bgContext.beginPath();
+        bgContext.lineWidth="5";
+        bgContext.moveTo(960,450);
+        bgContext.lineTo(960,650);
+        bgContext.lineTo(350,650);
+        bgContext.lineTo(350,885);
+        bgContext.stroke();
+        
 		clear();	
 		getCoords();
 	}
@@ -78,7 +91,7 @@ function Banner(){
 		
 		parts.push(
 			{c: '#' + (Math.random() * 0x949494 + 0xaaaaaa | 0).toString(16),
-			 x: x, //goal position
+			 x: x, //goal position   0xaaaaaa 0x111111
 			 y: y,
 			 x2: startx, //start position
 			 y2: starty,
@@ -155,6 +168,36 @@ function Banner(){
  		context.closePath();
  		context.fill();
 	}
+    
+    /*function resizeCanvas(){
+        cwidth = $(document).width();
+        cheight = $(document).height();
+        
+        var tempContext = Utils.Canvas.Create2DContext(context.bgCanvas.width, context.bgCanvas.height);
+
+        //Draw current canvas to temp canvas
+        tempContext.drawImage(context.canvas, 0, 0);
+        
+        context.canvas.width = cwidth;
+		context.canvas.height = cheight;
+        context.bgCanvas.width = cwidth;
+		context.bgCanvas.height = cheight;
+        
+        //Draw temp canvas back to the current canvas
+        context.drawImage(tempContext.canvas, 0, 0);
+    }*/
+    
+    /*function simulate(e) {
+        var evt = document.createEvent("MouseEvents");
+        evt.initMouseEvent("mousemove", true, true, window,
+    0, e.screenX, e.screenY, e.clientX, e.clientY, false, false, false, false, 0, null);
+        canvas.dispatchEvent(evt);
+        console.log("Emulated.");
+    }
+
+    $("body > div").each(function(){
+        this.addEventListener("mousemove", simulate);
+    });*/
 }
 
 var banner = new Banner();
