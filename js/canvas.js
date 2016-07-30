@@ -1,6 +1,6 @@
 function Banner() {
 	
-    var keyword = "Cmaeron";
+    var keyword = "Cameron";
     var keyword2 = "MacArthur";
     var canvas;
 	var context;
@@ -47,7 +47,7 @@ function Banner() {
 	var start = function(){
 			
 		bgContext.fillStyle = "#333";
-		bgContext.font = '400px Arial';
+		bgContext.font = '200px Arial';
 		bgContext.fillText(keyword, 85, 275);
         bgContext.fillText(keyword2, 85, 450);
 		bgContext.beginPath();
