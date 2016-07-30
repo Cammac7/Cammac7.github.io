@@ -37,8 +37,6 @@ function Banner() {
 		bgCanvas.width = cwidth;
 		bgCanvas.height = cheight;
         
-        
-	
 		canvas.addEventListener('mousemove', MouseMove, false);
 		canvas.addEventListener('mouseout', MouseOut, false);
 //        window.addEventListener('resize', resizeCanvas, false);
@@ -189,7 +187,7 @@ function Banner() {
         context.drawImage(tempContext.canvas, 0, 0);
     }*/
     
-    /*function simulate(e) {
+    function simulate(e) {
         var evt = document.createEvent("MouseEvents");
         evt.initMouseEvent("mousemove", true, true, window,
     0, e.screenX, e.screenY, e.clientX, e.clientY, false, false, false, false, 0, null);
@@ -197,9 +195,9 @@ function Banner() {
         console.log("Emulated.");
     }
 
-    $("body > div").each(function(){
+    $("body > section").each(function(){
         this.addEventListener("mousemove", simulate);
-    });*/
+    });
 }
 
 var banner = new Banner();
