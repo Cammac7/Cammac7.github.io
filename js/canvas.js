@@ -55,7 +55,7 @@ function Banner() {
         bgContext.moveTo(960,450);
         bgContext.lineTo(960,650);
         bgContext.lineTo(350,650);
-        bgContext.lineTo(350,885);
+        bgContext.lineTo(350,6000);
         bgContext.stroke();
         
 		clear();	
@@ -195,7 +195,7 @@ function Banner() {
         console.log("Emulated.");
     }
 
-    $("body > section").each(function(){
+    $("body > section, body > header").each(function(){
         this.addEventListener("mousemove", simulate);
     });
 }
