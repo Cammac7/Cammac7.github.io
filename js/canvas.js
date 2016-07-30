@@ -34,8 +34,10 @@ function Banner() {
 		bgCanvas = document.createElement('canvas');
 		bgContext = bgCanvas.getContext('2d');
 		
-		bgCanvas.width = window.innerWidth;
-		bgCanvas.height = window.innerHeight;
+		bgCanvas.width = cwidth;
+		bgCanvas.height = cheight;
+        
+        
 	
 		canvas.addEventListener('mousemove', MouseMove, false);
 		canvas.addEventListener('mouseout', MouseOut, false);
