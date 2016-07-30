@@ -23,7 +23,6 @@ function Banner() {
     var cheight = $(document).height();
 
     
-    
 	this.initialize = function(canvas_id){
 		canvas = document.getElementById(canvas_id);
 		context = canvas.getContext('2d');
@@ -162,7 +161,7 @@ function Banner() {
         /*var my_gradient = context.createLinearGradient(0, 0, 0, 500);
         my_gradient.addColorStop(0, "black");
         my_gradient.addColorStop(1, "white");*/
-		context.fillStyle = "#ffffff";;
+		context.fillStyle = "#ffffff";
 		context.beginPath();
   		context.rect(0, 0, canvas.width, canvas.height);
  		context.closePath();
