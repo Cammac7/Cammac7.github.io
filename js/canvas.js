@@ -47,7 +47,7 @@ function Banner() {
 	var start = function(){
 			
 		bgContext.fillStyle = "#333";
-		bgContext.font = '200px Arial';
+		bgContext.font = '50px Arial';
 		bgContext.fillText(keyword, 85, 275);
 //        bgContext.fillText(keyword2, 85, 450);
 		bgContext.beginPath();
