@@ -230,7 +230,7 @@ header .intro-text .name {
     text-align: left;
     font-family: 'Quicksand',"Helvetica Neue";
     font-weight: 400;
-    font-size: 5.7em;
+    font-size: 7em;
 }
 .intro-text{
     text-align: left;
@@ -239,10 +239,9 @@ header .intro-text .name {
 }
 
 .skillz {
-    width: 37%;
-    font-family: 'Quicksand',"Helvetica Neue";
+    font-family: 'Quicksand',"Helvetica Neue"
     text-transform: uppercase;
-    font-size: 3.75em;
+    font-size: 5.5em;
     text-align: left;
 
 }

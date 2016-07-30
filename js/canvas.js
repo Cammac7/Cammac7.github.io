@@ -47,8 +47,11 @@ function Banner() {
 		bgContext.font = '140px Arial';
         //fitTextOnCanvas("bgContext", keyword, "Arial", 50, 450);
         //fitTextOnCanvas("bgContext", keyword2, "Arial", 450, 400);
-		bgContext.fillText(keyword, 500, 290);
-        bgContext.fillText(keyword2, 500, 400);
+        
+		//bgContext.fillText(keyword, 500, 290);
+        //bgContext.fillText(keyword2, 500, 400);
+        bgContext.fillText(keyword, 50, 420);
+        bgContext.fillText(keyword2, 400, 550);
 		bgContext.beginPath();
         bgContext.lineWidth="5";
         bgContext.moveTo(960,450);
