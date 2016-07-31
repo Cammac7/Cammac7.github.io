@@ -1,7 +1,7 @@
 function Banner() {
 	
-    var keyword = "Interaction";
-    var keyword2 = "Designer";
+    var keyword = "INTERACTION";
+    var keyword2 = "DESIGNER";
     var canvas;
 	var context;
 	
