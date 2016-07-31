@@ -58,7 +58,7 @@ function Banner() {
         bgContext.moveTo(960,450);
         bgContext.lineTo(960,650);
         bgContext.lineTo(350,650);
-        bgContext.lineTo(350,6000);
+        bgContext.lineTo(350,1000);
         bgContext.stroke();
         
 		clear();	
