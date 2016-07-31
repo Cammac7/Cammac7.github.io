@@ -45,14 +45,14 @@ function Banner() {
 	var start = function(){
 		bgContext.fillStyle = "#333";
         bgContext.fontWeight = "Bold";
-		bgContext.font = '130px Arial';
+		bgContext.font = '120px Arial';
         //fitTextOnCanvas("bgContext", keyword, "Arial", 50, 450);
         //fitTextOnCanvas("bgContext", keyword2, "Arial", 450, 400);
         
 		//bgContext.fillText(keyword, 500, 290);
         //bgContext.fillText(keyword2, 500, 400);
-        bgContext.fillText(keyword, 55, 470);
-        bgContext.fillText(keyword2, 55, 575);
+        bgContext.fillText(keyword, 55, 370);
+        bgContext.fillText(keyword2, 55, 475);
 		bgContext.beginPath();
         bgContext.lineWidth="5";
         bgContext.moveTo(960,450);
