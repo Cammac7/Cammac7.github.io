@@ -51,8 +51,8 @@ function Banner() {
         
 		//bgContext.fillText(keyword, 500, 290);
         //bgContext.fillText(keyword2, 500, 400);
-        bgContext.fillText(keyword, 53, 370);
-        bgContext.fillText(keyword2, 55, 520);
+        bgContext.fillText(keyword, 53, 410);
+        bgContext.fillText(keyword2, 55, 550);
 		bgContext.beginPath();
         bgContext.lineWidth="5";
         bgContext.moveTo(960,450);
