@@ -44,7 +44,7 @@ function Banner() {
 	
 	var start = function(){
 		bgContext.fillStyle = "#333";
-        bgContext.fontWeight = "Bold";
+        bgContext.fontWeight = "300";
 		bgContext.font = '167px Arial';
         //fitTextOnCanvas("bgContext", keyword, "Arial", 50, 450);
         //fitTextOnCanvas("bgContext", keyword2, "Arial", 450, 400);
@@ -176,7 +176,7 @@ function Banner() {
         /*var my_gradient = context.createLinearGradient(0, 0, 0, 500);
         my_gradient.addColorStop(0, "black");
         my_gradient.addColorStop(1, "white");*/
-		context.fillStyle = "#ffffff";
+		context.fillStyle = "#000000";
 		context.beginPath();
   		context.rect(0, 0, canvas.width, canvas.height);
  		context.closePath();
