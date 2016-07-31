@@ -250,6 +250,7 @@ header .intro-text .name {
 
 
 h1, h2, h3, h4, h5, h6 {
+    color: white;
     font-family: 'Quicksand',"Helvetica Neue";
     font-weight: 500;
 }

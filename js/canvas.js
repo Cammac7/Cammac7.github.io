@@ -1,7 +1,7 @@
 function Banner() {
 	
     var keyword = "Interaction";
-    var keyword2 = "DESIGNER";
+    var keyword2 = "Designer";
     var canvas;
 	var context;
 	
@@ -95,7 +95,7 @@ function Banner() {
 		
 		var velx = (x - startx) / itertot;
 		var vely = (y - starty) / itertot;	
-        var mycolors = ['#0C6D6C', '#140152', '#000099','#00BFB2', '#1ab7ea'];
+        var mycolors = ['#541388', '#23CE6B', '#000099','#FF1053', '#FFA400'];
 		
 		parts.push(
 			{
