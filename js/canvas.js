@@ -1,6 +1,6 @@
 function Banner() {
 	
-    var keyword = "INTERACTION";
+    var keyword = "Interaction";
     var keyword2 = "DESIGNER";
     var canvas;
 	var context;
@@ -45,14 +45,14 @@ function Banner() {
 	var start = function(){
 		bgContext.fillStyle = "#333";
         bgContext.fontWeight = "Bold";
-		bgContext.font = '120px Arial';
+		bgContext.font = '167px Arial';
         //fitTextOnCanvas("bgContext", keyword, "Arial", 50, 450);
         //fitTextOnCanvas("bgContext", keyword2, "Arial", 450, 400);
         
 		//bgContext.fillText(keyword, 500, 290);
         //bgContext.fillText(keyword2, 500, 400);
-        bgContext.fillText(keyword, 55, 370);
-        bgContext.fillText(keyword2, 55, 475);
+        bgContext.fillText(keyword, 53, 370);
+        bgContext.fillText(keyword2, 55, 520);
 		bgContext.beginPath();
         bgContext.lineWidth="5";
         bgContext.moveTo(960,450);
