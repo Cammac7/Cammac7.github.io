@@ -56,8 +56,6 @@ $(document).ready(function() {
         $('#girlcrushpdf').hide();
         $('#glassleft').hide();
         $('#bubbleleft').show();
-        
-        $('#themeclip').sound.pause();
 	});
     
     $('#glassClick').on('click', function(){
@@ -76,7 +74,11 @@ $(document).ready(function() {
     
     $('.bigblock').click(function() {    
     $(this).parent().prepend($(this));
-});
+    });
+    
+    $('#closemusic').on('click', function(){
+        $('audio').trigger('pause');
+	});
     
 });
 
