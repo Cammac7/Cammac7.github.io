@@ -56,6 +56,8 @@ $(document).ready(function() {
         $('#girlcrushpdf').hide();
         $('#glassleft').hide();
         $('#bubbleleft').show();
+        
+        $('#themeclip').sound.pause();
 	});
     
     $('#glassClick').on('click', function(){
