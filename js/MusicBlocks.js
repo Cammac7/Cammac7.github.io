@@ -27,6 +27,7 @@ $(document).ready(function() {
         $('#girlcrushpdf').hide();
         $('#glassleft').hide();
         $('#bubbleleft').hide();
+        
 	});
     
     $('#girlcrushClick').on('click', function(){
@@ -73,12 +74,21 @@ $(document).ready(function() {
 	});
     
     $('.bigblock').click(function() {    
-    $(this).parent().prepend($(this));
+        $(this).parent().prepend($(this));
     });
     
     $('#closemusic').on('click', function(){
         $('audio').trigger('pause');
 	});
+    
+    window.addEventListener("play", function(evt)
+{
+    if(window.$_currentlyPlaying && window.$_currentlyPlaying != evt.target)
+    {
+        window.$_currentlyPlaying.pause();
+    } 
+    window.$_currentlyPlaying = evt.target;
+}, true);
     
 });
 

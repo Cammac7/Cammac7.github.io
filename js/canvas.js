@@ -38,7 +38,10 @@ function Banner() {
         
 		canvas.addEventListener('mousemove', MouseMove, false);
 		canvas.addEventListener('mouseout', MouseOut, false);
-//        window.addEventListener('resize', resizeCanvas, false);
+        
+        //dynamically resizing canvas
+        window.addEventListener('resize', resizeCanvas, false);
+        
 		start();
 	}
 	
@@ -183,23 +186,22 @@ function Banner() {
  		context.fill();
 	}
     
-    /*function resizeCanvas(){
+    function resizeCanvas(){
         cwidth = $(document).width();
         cheight = $(document).height();
         
-        var tempContext = Utils.Canvas.Create2DContext(context.bgCanvas.width, context.bgCanvas.height);
-
+        var tempCanvas = document.createElement('canvas');
+		var tempContext = tempCanvas.getContext('2d');
+        
         //Draw current canvas to temp canvas
         tempContext.drawImage(context.canvas, 0, 0);
         
         context.canvas.width = cwidth;
 		context.canvas.height = cheight;
-        context.bgCanvas.width = cwidth;
-		context.bgCanvas.height = cheight;
         
         //Draw temp canvas back to the current canvas
         context.drawImage(tempContext.canvas, 0, 0);
-    }*/
+    }
     
     function simulate(e) {
         var evt = document.createEvent("MouseEvents");
@@ -217,19 +219,6 @@ function Banner() {
 
         // start with a large font size
         var fontsize = 200;
-
-        /*if(contexttype=="context"){
-            // lower the font size until the text fits the canvas
-            do {
-                fontsize--;
-                context.font = fontsize+"px"+" "+font;
-            } while (context.measureText(text).width > canvas.width*.9)
-
-            // draw the text
-            context.fillText(text, xPosition, yPosition);
-            
-        }else{*/
-            // lower the font size until the text fits the canvas
             do {
                 fontsize--;
                 bgContext.font = fontsize+"px"+" "+font;
