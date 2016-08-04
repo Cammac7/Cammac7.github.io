@@ -100,8 +100,8 @@ function Banner() {
 		
 		parts.push(
 			{
-             c: '#' + (Math.random() * 0x949494 + 0xaaaaaa | 0).toString(16),
-             //c: mycolors[Math.floor(Math.random() * mycolors.length)],
+             //c: '#' + (Math.random() * 0x949494 + 0xaaaaaa | 0).toString(16),
+             c: mycolors[Math.floor(Math.random() * mycolors.length)],
 			 x: x, //goal position   0xaaaaaa 0x111111
 			 y: y,
 			 x2: startx, //start position
