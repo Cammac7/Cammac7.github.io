@@ -37,10 +37,7 @@ function Banner() {
 		bgCanvas.height = cheight;
         
 		canvas.addEventListener('mousemove', MouseMove, false);
-		canvas.addEventListener('mouseout', MouseOut, false);
-        
-        //dynamically resizing canvas
-        window.addEventListener('resize', resizeCanvas, false);
+		canvas.addEventListener('mouseout', MouseOut, false);        
         
 		start();
 	}
@@ -115,6 +112,7 @@ function Banner() {
 	}
 		
 	var update = function(){
+        window.addEventListener('resize', resizeCanvas, false);
 		var i, dx, dy, sqrDist, scale;
 		itercount++;
 		clear();

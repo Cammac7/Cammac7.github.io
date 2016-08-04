@@ -266,11 +266,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
 header { 
-     color: black; 
      height: 600px;
 }
 
-
+.modalHead {
+    color: black;
+}
 #resume {
     background-color: #73A39F;
 }
