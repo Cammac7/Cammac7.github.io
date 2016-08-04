@@ -228,6 +228,7 @@ hr.soften-white {
 
 header .intro-text .name {
     color: white;
+    white-space: nowrap;
     text-align: left;
     font-family: 'Quicksand',"Helvetica Neue";
     font-weight: 400;
@@ -237,6 +238,7 @@ header .intro-text .name {
     text-align: left;
     padding-left: 5%;
     font-family: 'Quicksand',"Helvetica Neue";
+    white-space: nowrap;
 }
 
 .skillz {
