@@ -177,7 +177,7 @@ function Banner() {
         /*var my_gradient = context.createLinearGradient(0, 0, 0, 500);
         my_gradient.addColorStop(0, "black");
         my_gradient.addColorStop(1, "white");*/
-		context.fillStyle = "#000000";
+		context.fillStyle = "#FFFFFF";
 		context.beginPath();
   		context.rect(0, 0, canvas.width, canvas.height);
  		context.closePath();
