@@ -58,8 +58,8 @@ function Banner() {
         bgContext.fillText(keyword2, 55, 550);
 		bgContext.beginPath();
         bgContext.lineWidth="5";
-        bgContext.moveTo(960,450);
-        bgContext.lineTo(960,650);
+        bgContext.moveTo(760,450);
+        bgContext.lineTo(760,650);
         bgContext.lineTo(350,650);
         bgContext.lineTo(350,1000);
         bgContext.stroke();
