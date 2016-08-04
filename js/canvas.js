@@ -96,7 +96,7 @@ function Banner() {
 		
 		var velx = (x - startx) / itertot;
 		var vely = (y - starty) / itertot;	
-        var mycolors = ['#0C6D6C', '#140152', '#000099','#00BFB2', '#1AB7EA'];
+        var mycolors = ['#6D18B2', '#23CE6B', '#0000E5','#FF1053', '#FFA400'];
 		
 		parts.push(
 			{
