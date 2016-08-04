@@ -38,6 +38,7 @@ function Banner() {
         
 		canvas.addEventListener('mousemove', MouseMove, false);
 		canvas.addEventListener('mouseout', MouseOut, false);        
+        window.addEventListener('resize', resizeCanvas, false);
         
 		start();
 	}
@@ -112,7 +113,6 @@ function Banner() {
 	}
 		
 	var update = function(){
-        window.addEventListener('resize', resizeCanvas, false);
 		var i, dx, dy, sqrDist, scale;
 		itercount++;
 		clear();
