@@ -16,7 +16,7 @@ function Banner() {
 	var mouse = {x:-100,y:-100};
 	var mouseOnScreen = false;
 	
-	var itercount = 0;
+	//var itercount = 0;
 	var itertot = 40;
 
 	var cwidth = $(document).width();
@@ -93,7 +93,9 @@ function Banner() {
 		
 		var startx = (Math.random() * canvas.width);
 		var starty = (Math.random() * canvas.height);
-		
+        
+        var itercount = 0;
+        
 		var velx = (x - startx) / itertot;
 		var vely = (y - starty) / itertot;	
         var mycolors = ['#6D18B2', '#23CE6B', '#0000E5','#FF1053', '#FFA400'];
@@ -107,20 +109,22 @@ function Banner() {
 			 x2: startx, //start position
 			 y2: starty,
 			 r: true, //Released (to fly free!)
-			 v:{x:velx , y: vely}
+			 v:{x:velx , y: vely},
+             i: itercount, //count
+             o: false //particle is off screen
 			}
 		)
 	}
 		
 	var update = function(){
 		var i, dx, dy, sqrDist, scale;
-		itercount++;
+		//itercount++;
 		clear();
         //context.fillStyle = "#000000";
         //context.fillText(keyword, 85, 275);
         //fitTextOnCanvas("context", keyword, "Quicksand", 85, 275);
 		for (i = 0; i < parts.length; i++){
-					
+            parts[i].i++;
 			//If the dot has been released
 			if (parts[i].r == true){
 				//Fly into infinity!!
@@ -128,12 +132,25 @@ function Banner() {
 		        parts[i].y2 += parts[i].v.y;
 			//Perhaps I should check if they are out of screen... and kill them?
 			}
-			if (itercount == itertot){
+                
+			if (parts[i].i == itertot){
 				parts[i].v = {x:(Math.random() * 6) * 2 - 6 , y:(Math.random() * 6) * 2 - 6};
 				parts[i].r = false;
 			}
-			
-	
+            
+            
+	       //Redraw new circle for position if old circle has left canvas
+            if ((parts[i].x2 > $(document).width()) || (parts[i].x2 < 0) || (parts[i].y2 > $(document).height()) || (parts[i].x2 < 0)){
+                
+                if(parts[i].o == false){
+                    drawCircle(parts[i].x, parts[i].y);
+                    console.log("Particle off");
+                    parts[i].o = true;
+                }
+                
+            }
+            
+            
 			//Look into using svg, so there is no mouse tracking.
 			//Find distance from mouse/draw!
 			dx = parts[i].x - mouse.x;
