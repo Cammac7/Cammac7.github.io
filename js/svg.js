@@ -84,7 +84,7 @@ defs.append('pattern')
 
 
 svg.append("a")
-    .attr('id','triblm')
+    .attr('id','trione')
     .attr("xlink:href", "#portfolioModal1")
     .append('path')
     .attr("d", "M 0,0, 57.7,-100,  183,-100, 125.5,0z")
@@ -100,7 +100,7 @@ svg.append("a")
     .attr("fill", "url(#pic2)");*/
 
 svg.append("a")
-    .attr('id','trilro')
+    .attr('id','tritwo')
     .attr("xlink:href", "#portfolioModal3")
     .append('path')
     .attr("d", "M 0,0, 57.7,-100, 115.5,0z")
@@ -108,7 +108,7 @@ svg.append("a")
     .attr("fill", "url(#pic3)");
 
 svg.append("a")
-    .attr('id','trials')
+    .attr('id','trithree')
     .attr("xlink:href", "#portfolioModal4")
     .append('path')
     .attr("d", "M 57.7,0, 0,-100, 115.5,-100z")
@@ -116,7 +116,7 @@ svg.append("a")
     .attr("fill", "url(#pic4)");
 
 svg.append("a")
-    .attr('id','trikick')
+    .attr('id','trifour')
     .attr("xlink:href", "#portfolioModal5")
     .append('path')
     .attr("d", "M 0,0, 57.7,-100, 115.5,0z")
@@ -124,14 +124,14 @@ svg.append("a")
     .attr("fill", "url(#pic5)");
 
 svg.append("a")
-    .attr('id','trimar')
+    .attr('id','trifive')
     .attr("xlink:href", "#portfolioModal6")
     .append('path')
     .attr("d", "M 57.7,0, 0,-100, 115.5,-100z")
     .attr("transform", "translate(135.5, 210)")
     .attr("fill", "url(#pic6)");
 
-var  triangle1 = document.getElementById("triblm");
+var  triangle1 = document.getElementById("trione");
             triangle1.addEventListener('click', function(evt) {
                 $('#portfolioModal1').modal('show');
             });
@@ -141,19 +141,19 @@ var  triangle1 = document.getElementById("triblm");
                 $('#portfolioModal2').modal('show');
             });*/
 
-var  triangle3 = document.getElementById("trilro");
+var  triangle3 = document.getElementById("tritwo");
             triangle3.addEventListener('click', function(evt) {
                 $('#portfolioModal3').modal('show');
             });
-var  triangle4 = document.getElementById("trials");
+var  triangle4 = document.getElementById("trithree");
             triangle4.addEventListener('click', function(evt) {
                 $('#portfolioModal4').modal('show');
             });
-var  triangle5 = document.getElementById("trikick");
+var  triangle5 = document.getElementById("trifour");
             triangle5.addEventListener('click', function(evt) {
                 $('#portfolioModal5').modal('show');
             });
-var  triangle6 = document.getElementById("trimar");
+var  triangle6 = document.getElementById("trifive");
             triangle6.addEventListener('click', function(evt) {
                 $('#portfolioModal6').modal('show');
             });

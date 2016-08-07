@@ -21,6 +21,28 @@ function Banner() {
 
 	var cwidth = $(document).width();
     var cheight = $(document).height();
+    
+    var rect = svgdivholder.getBoundingClientRect();
+        
+    //Get dynamic x/y locations of resume
+    var resumeTop = resumeImage.getBoundingClientRect().top + window.pageYOffset - resumeImage.ownerDocument.documentElement.clientTop -5;
+    var resumeLeft = resumeImage.getBoundingClientRect().left + window.pageXOffset - resumeImage.ownerDocument.documentElement.clientLeft - 8.5;
+    var resumeRight = resumeLeft + document.getElementById('resumeImage').offsetWidth+14.5;
+    var resumeBottom = resumeTop + document.getElementById('resumeImage').offsetHeight+14;
+    var resumeButtonRight = ((resumeLeft+resumeRight)/2)+125
+
+    //Get dynamic x/y locations of svgs
+    var topsvgs = svgdivholder.getBoundingClientRect().top + window.pageYOffset - svgdivholder.ownerDocument.documentElement.clientTop;
+    var bottomsvgs = topsvgs + document.getElementById('svgdivholder').offsetHeight;
+
+    var centersvgdivx = (rect.left + rect.right)/2;
+    var centersvgdivy = (topsvgs + bottomsvgs)/2;
+    
+    //Area of About div for random dot background
+    var aboutTop = about.getBoundingClientRect().top + window.pageYOffset - about.ownerDocument.documentElement.clientTop;
+    
+    //var AboutX = (Math.random() * document.getElementById('about').offsetWidth);
+    //var AboutY = (Math.random() * document.getElementById('about').offsetHeight);
 
     
 	this.initialize = function(canvas_id){
@@ -60,7 +82,31 @@ function Banner() {
         bgContext.lineTo(760,650);
         bgContext.lineTo(350,650);
         bgContext.lineTo(350,1000);
+        bgContext.lineTo(450,1000);
         bgContext.stroke();
+        
+        //from work to Resume
+        bgContext.moveTo(rect.right,centersvgdivy);
+        bgContext.lineWidth="10";
+        bgContext.lineTo(rect.right, resumeTop);
+        bgContext.moveTo(resumeLeft,resumeTop);
+        bgContext.lineTo(resumeRight, resumeTop);
+        bgContext.lineTo(resumeRight, resumeBottom);
+        bgContext.lineTo(resumeButtonRight, resumeBottom);
+        bgContext.lineTo(resumeButtonRight, resumeBottom);
+        bgContext.lineTo(resumeLeft, resumeBottom);
+        bgContext.lineTo(resumeLeft, resumeTop);
+        bgContext.moveTo(resumeLeft+80,resumeBottom);
+        bgContext.lineTo(resumeLeft+80,resumeBottom+200);
+        bgContext.stroke();
+        
+        for(d=0; d < 10; d++){
+            bgContext.beginPath();
+            //bgContext.fillRect(Math.random() * document.getElementById('about').offsetWidth,(Math.random() * document.getElementById('about').offsetHeight)+aboutTop,20,20);
+            bgContext.arc(Math.random() * document.getElementById('about').offsetWidth, (Math.random() * document.getElementById('about').offsetHeight)+aboutTop, 50, 0, 2 * Math.PI);
+            bgContext.fill();
+            bgContext.stroke();
+        }
         
 		clear();	
 		getCoords();

@@ -120,6 +120,14 @@ header > .section-three {
     color: black;
     background-color: rgb(192,192,192);
 }
+.btn {
+    color: black;
+    
+}
+.btn:hover {
+    color: gray;
+    
+}
 
 .close-modal {
     z-index: 10;
@@ -273,10 +281,11 @@ header {
     color: black;
 }
 #resume {
-    background-color: #73A39F;
+    background-color: transparent;
 }
 #about {
-    background-color: #8FC996;
+    background-color: transparent;
+    color: black;
 }
 
 body {
