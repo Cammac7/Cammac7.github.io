@@ -5,9 +5,9 @@
     
 });
 
-var rectAbout = $("#aboutBox").offset();
+var rectAbout = $("#about").offset();
 var aboutTop = rectAbout.top;
-var aboutBottom = aboutTop + document.getElementById('aboutBox').offsetHeight;
+var aboutBottom = aboutTop + document.getElementById('about').offsetHeight;
 
 function makeNewPosition(){
     

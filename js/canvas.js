@@ -9,6 +9,9 @@ function Banner() {
 	var bgContext;
 	
 	var denseness = 10;
+    
+    //Bool to check if a resize has occured
+    //var resized = false;
 	
 	//Each particle/icon
 	var parts = [];
@@ -18,12 +21,12 @@ function Banner() {
 	
 	//var itercount = 0;
 	var itertot = 40;
-
-	var cwidth = $(document).width();
-    var cheight = $(document).height();
     
+    var cwidth = $(document).width();
+    var cheight = $(document).height();
+
     var rect = svgtightbox.getBoundingClientRect();
-        
+
     //Get dynamic x/y locations of resume
     var resumeTop = resumeImage.getBoundingClientRect().top + window.pageYOffset - resumeImage.ownerDocument.documentElement.clientTop -5;
     var resumeLeft = resumeImage.getBoundingClientRect().left + window.pageXOffset - resumeImage.ownerDocument.documentElement.clientLeft - 8.5;
@@ -36,21 +39,21 @@ function Banner() {
     var bottomsvgs = topsvgs+rect.height;
     var centersvgdivx = (rect.left + rect.right)/2;
     var centersvgdivy = (topsvgs + bottomsvgs)/2;
-    
+
     var svghalf = trione.getBoundingClientRect().top + window.pageYOffset - trione.ownerDocument.documentElement.clientTop;
-    
-    
-    
+
+
+
     //Area of About div for random dot background
     var aboutTop = about.getBoundingClientRect().top + window.pageYOffset - about.ownerDocument.documentElement.clientTop;
-    
+
     //Get dynamic x/y locations of resume
     var hollerTop = hollerButton.getBoundingClientRect().top + window.pageYOffset - hollerButton.ownerDocument.documentElement.clientTop -5;
     var hollerLeft = hollerButton.getBoundingClientRect().left + window.pageXOffset - resumeImage.ownerDocument.documentElement.clientLeft - 8.5;
     var hollerRight = hollerLeft + document.getElementById('hollerButton').offsetWidth+16;
     var hollerBottom = hollerTop + document.getElementById('hollerButton').offsetHeight+14;
     var hollerMidy = (hollerBottom+hollerTop)/2;
-
+    
     
 	this.initialize = function(canvas_id){
 		canvas = document.getElementById(canvas_id);
@@ -76,68 +79,16 @@ function Banner() {
 		bgContext.fillStyle = "#333";
         bgContext.fontWeight = "300";
 		bgContext.font = '167px Arial';
-        //fitTextOnCanvas("bgContext", keyword, "Arial", 50, 450);
-        //fitTextOnCanvas("bgContext", keyword2, "Arial", 450, 400);
         
-		//bgContext.fillText(keyword, 500, 290);
-        //bgContext.fillText(keyword2, 500, 400);
         bgContext.fillText(keyword, 53, 410);
         bgContext.fillText(keyword2, 55, 550);
-		bgContext.beginPath();
-        bgContext.lineWidth="5";
-        bgContext.moveTo(760,450);
-        bgContext.lineTo(760,650);
-        bgContext.lineTo(350,650);
-        bgContext.lineTo(350,1000);
-        bgContext.lineTo(450,1000);
-        bgContext.stroke();
-        
-        //bgContext.moveTo();
-        
-        //around Work
-        bgContext.lineWidth="10";
-        bgContext.moveTo(rect.right*.85,topsvgs-10);
-        bgContext.lineTo(rect.right*.44,topsvgs-10);
-        bgContext.lineTo(rect.left-25,centersvgdivy);
-        bgContext.lineTo(rect.right*.44,bottomsvgs+15);
-        bgContext.lineTo(rect.right*.85,bottomsvgs+15);
-        bgContext.lineTo(rect.right+25,centersvgdivy);
-        bgContext.lineTo(rect.right*.85,topsvgs-10);
-        
-        bgContext.moveTo(rect.right,centersvgdivy+20);
         
         
-        
-        
-        
-        //from work to Resume
-        bgContext.moveTo(rect.right,centersvgdivy);
-        bgContext.lineTo(rect.right, resumeTop);
-        bgContext.moveTo(resumeLeft,resumeTop);
-        bgContext.lineTo(resumeRight, resumeTop);
-        bgContext.lineTo(resumeRight, resumeBottom);
-        bgContext.lineTo(resumeButtonRight, resumeBottom);
-        bgContext.lineTo(resumeButtonRight, resumeBottom);
-        bgContext.lineTo(resumeLeft, resumeBottom);
-        bgContext.lineTo(resumeLeft, resumeTop);
-        bgContext.stroke();
-        
-        //From resume to About
-        bgContext.lineWidth="10";
-        bgContext.moveTo(resumeLeft+80,resumeBottom);
-        bgContext.lineTo(resumeLeft+80,resumeBottom+100);
-        bgContext.lineTo(resumeLeft-30,resumeBottom+100);
-        bgContext.lineTo(resumeLeft-30,hollerMidy);
-        bgContext.lineTo(hollerLeft,hollerMidy);
-        
-        bgContext.moveTo(hollerLeft-5,hollerTop-5);
-        bgContext.lineTo(hollerRight+5,hollerTop-5);
-        bgContext.lineTo(hollerRight+5,hollerBottom+5);
-        bgContext.lineTo(hollerLeft-5,hollerBottom+5);
-        bgContext.lineTo(hollerLeft-5,hollerTop-5);
-        bgContext.stroke();
+		drawPaths();
                 
-        /*for(d=0; d < 10; d++){
+        /*
+        //Fun Circles in about section
+        for(d=0; d < 10; d++){
             bgContext.beginPath();
             //bgContext.fillRect(Math.random() * document.getElementById('about').offsetWidth,(Math.random() * document.getElementById('about').offsetHeight)+aboutTop,20,20);
             bgContext.arc(Math.random() * document.getElementById('about').offsetWidth, (Math.random() * document.getElementById('about').offsetHeight)+aboutTop, 50, 0, 2 * Math.PI);
@@ -284,7 +235,7 @@ function Banner() {
 	}
     
     function resizeCanvas(){
-        cwidth = $(document).width();
+        /*cwidth = $(document).width();
         cheight = $(document).height();
         
         var tempCanvas = document.createElement('canvas');
@@ -298,6 +249,63 @@ function Banner() {
         
         //Draw temp canvas back to the current canvas
         context.drawImage(tempContext.canvas, 0, 0);
+        */
+       /* bgContext.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        parts = [];
+        initialize("canvas");*/
+        
+    }
+    
+    function drawPaths(){
+        bgContext.beginPath();
+        bgContext.lineWidth="5";
+        bgContext.moveTo(760,450);
+        bgContext.lineTo(760,650);
+        bgContext.lineTo(350,650);
+        bgContext.lineTo(350,1000);
+        bgContext.lineTo(450,1000);
+        bgContext.stroke();
+        
+        //bgContext.moveTo();
+        
+        //around Work
+        bgContext.lineWidth="10";
+        bgContext.moveTo(rect.right*.85,topsvgs-10);
+        bgContext.lineTo(rect.right*.44,topsvgs-10);
+        bgContext.lineTo(rect.left-25,centersvgdivy);
+        bgContext.lineTo(rect.right*.44,bottomsvgs+15);
+        bgContext.lineTo(rect.right*.85,bottomsvgs+15);
+        bgContext.lineTo(rect.right+25,centersvgdivy);
+        bgContext.lineTo(rect.right*.85,topsvgs-10);
+                
+        
+        //from work to Resume
+        bgContext.moveTo(rect.right,centersvgdivy+30);
+        bgContext.lineTo(rect.right, resumeTop);
+        bgContext.moveTo(resumeLeft,resumeTop);
+        bgContext.lineTo(resumeRight, resumeTop);
+        bgContext.lineTo(resumeRight, resumeBottom);
+        bgContext.lineTo(resumeButtonRight, resumeBottom);
+        bgContext.lineTo(resumeButtonRight, resumeBottom);
+        bgContext.lineTo(resumeLeft, resumeBottom);
+        bgContext.lineTo(resumeLeft, resumeTop);
+        bgContext.stroke();
+        
+        //From resume to About
+        bgContext.lineWidth="10";
+        bgContext.moveTo(resumeLeft+80,resumeBottom);
+        bgContext.lineTo(resumeLeft+80,resumeBottom+100);
+        bgContext.lineTo(resumeLeft-30,resumeBottom+100);
+        bgContext.lineTo(resumeLeft-30,hollerMidy);
+        bgContext.lineTo(hollerLeft,hollerMidy);
+        
+        bgContext.moveTo(hollerLeft-5,hollerTop-5);
+        bgContext.lineTo(hollerRight+5,hollerTop-5);
+        bgContext.lineTo(hollerRight+5,hollerBottom+5);
+        bgContext.lineTo(hollerLeft-5,hollerBottom+5);
+        bgContext.lineTo(hollerLeft-5,hollerTop-5);
+        bgContext.stroke();
     }
     
     function simulate(e) {
@@ -326,6 +334,5 @@ function Banner() {
     }
     
 }
-
 var banner = new Banner();
 banner.initialize("canvas");

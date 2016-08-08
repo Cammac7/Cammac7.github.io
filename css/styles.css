@@ -162,12 +162,25 @@ header > .section-three {
       height:150px;
       width: 150px;
     }
-    .tw-click { cursor:pointer; display:block; position:absolute; width:0%; 
+    #twitter-bird, .tw-click { 
+        cursor:pointer; 
+        display:block; 
+        position:absolute; 
+        width:0%; 
         transition:0.3s ease all;
+        z-index:30;
     }
    
-    #tw .tw-click           { background:#42e7ff; opacity:0; padding:10px 10px 5px; margin-top:55px; margin-left:-40px; padding-left:30px; width:auto; 
-        border-top-right-radius:5px; border-bottom-right-radius:5px;
+    #tw .tw-click { 
+        background:#42e7ff; 
+        opacity:0; 
+        padding:10px 10px 5px; 
+        margin-top:55px; 
+        margin-left:-40px; 
+        padding-left:30px; 
+        width:auto; 
+        border-top-right-radius:5px; 
+        border-bottom-right-radius:5px;
     }
     #tw:hover #twitter-bird {
         margin-left:-100px;
@@ -180,7 +193,10 @@ header > .section-three {
 	    animation: fly 0.2s steps(3) 0s 3;
     }
 
-    #tw:hover .tw-click     { opacity:1; margin-left:-20px; }
+    #tw:hover .tw-click { 
+        opacity:1; 
+        margin-left:-20px; 
+}
     
 #twitter-bird {
   background-image: url(../media/twitter-bird-sprite.png);
@@ -192,8 +208,8 @@ header > .section-three {
 	-moz-animation: fly 0.2s steps(3) 0 infinite;
 	animation: fly 0.2s steps(3) 0 infinite;
     */
-    z-index:10; 
-    position:absolute;
+/*    position:absolute;*/
+    z-index:31;
 }
 
 @-webkit-keyframes fly {
@@ -309,6 +325,11 @@ strong {
     top: 10px;
     left: 0;
 }
+
+#resumeButton {
+    margin-top: 2%;
+}
+
 /*Holler Button CSS*/
 /* THE ROUND PSEUDO-ELEMENT HOVER STYLES */
 .round{
