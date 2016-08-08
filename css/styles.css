@@ -162,10 +162,9 @@ header > .section-three {
       height:150px;
       width: 150px;
     }
-    #twitter-bird, .tw-click { cursor:pointer; display:block; position:absolute; width:0%; 
+    .tw-click { cursor:pointer; display:block; position:absolute; width:0%; 
         transition:0.3s ease all;
     }
-#twitter-bird            {z-index:10; }
    
     #tw .tw-click           { background:#42e7ff; opacity:0; padding:10px 10px 5px; margin-top:55px; margin-left:-40px; padding-left:30px; width:auto; 
         border-top-right-radius:5px; border-bottom-right-radius:5px;
@@ -178,7 +177,7 @@ header > .section-three {
 	    animation: none*/
         -webkit-animation: fly 0.2s steps(3) 0 3;
 	    -moz-animation: fly 0.2s steps(3) 0 3;
-	    animation: fly 0.2s steps(3) 0 3;
+	    animation: fly 0.2s steps(3) 0s 3;
     }
 
     #tw:hover .tw-click     { opacity:1; margin-left:-20px; }
@@ -186,13 +185,15 @@ header > .section-three {
 #twitter-bird {
   background-image: url(../media/twitter-bird-sprite.png);
   height: 150px;
-   /* margin: 30px -30% 0 0;*/
-	width: 150px;
+    /*margin: 30px -30% 0 0;*/
+  width: 150px;
     /*Constant animation removed, only animate on hover
     -webkit-animation: fly 0.2s steps(3) 0 infinite;
 	-moz-animation: fly 0.2s steps(3) 0 infinite;
 	animation: fly 0.2s steps(3) 0 infinite;
     */
+    z-index:10; 
+    position:absolute;
 }
 
 @-webkit-keyframes fly {
@@ -211,9 +212,9 @@ header > .section-three {
 #tw {
 	cursor: pointer;
 	display: inline-block;
-    position: fixed;
-    top: 10%; /*Added to lock to corner, removed script*/
-    left: 80%; /*Added to lock to corner, removed script*/
+    position: absolute;
+    /*top: 10%; Added to lock to corner, removed script*/
+    /*left: 80%; Added to lock to corner, removed script*/
 }
 /*Header Soften*/
 hr.soften {
