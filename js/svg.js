@@ -4,8 +4,9 @@ var height = 572;
 
 var svg = d3.select(".mydiv").classed("svg-container",true).append("svg")
                              .attr("preserveAspectRatio", "xMinYMin meet")
-                             .attr("viewBox", "0 0 250 250")
-                             .classed("svg-content-responsive", true);
+                             .attr("viewBox", "0 0 251 210")
+                             .classed("svg-content-responsive", true)
+                             .attr("id", "svgtightbox");
 
 var defs= svg.append('defs')
 

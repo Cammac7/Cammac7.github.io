@@ -121,9 +121,11 @@ header > .section-three {
     background-color: rgb(192,192,192);
 }
 .btn {
+    background-color: white;
     color: black;
     
 }
+
 .btn:hover {
     color: gray;
     
@@ -265,10 +267,6 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
-/*
-#canvas-wrap { position:relative;}
-*/
-
 
 #canvas { position:absolute; top:0; left:0; z-index:-1 }
 
@@ -310,17 +308,66 @@ strong {
     top: 10px;
     left: 0;
 }
-@media (min-width: 992px) {
-#workbox.col-lg-12 {
-   padding-left: 20%;
-   padding-right: 20%;
+/*Holler Button CSS*/
+/* THE ROUND PSEUDO-ELEMENT HOVER STYLES */
+.round{
+		max-width: 960px;
+		margin:0;
 }
+
+.round .button {
+	  color: crimson;
+	  font-size: 20px;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: Helvetica;
+		text-align: center;
+		display: inline-block;
+		width: 130px;
+		height: 40px;
+		line-height: 40px;
+		margin: 20px;
+		position: relative;
+		overflow: hidden;
+		transition: color .5s;
+}
+
+.round .button:before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		background: crimson;
+		height: 150px;
+		width: 200px;
+		border-radius: 50%;
+		top: 100%;
+		left: 100%;
+		transition: all .7s;
+}
+
+.round .button:hover {
+		color: #fff;
+}
+
+.round .button:hover:before {
+		top: -30px;
+		left: -30px;
+}
+/* -------- end button CSS ---- */ 
+
+
 /*Music Modal (3) Hot click blocks*/
 .hotBlock {
     padding: 5px;
     color: white;
     background-color: #414447;
     border-radius: 10px;
+}
+
+@media (min-width: 992px) {
+#workbox.col-lg-12 {
+   padding-left: 20%;
+   padding-right: 20%;
 }
     
 }
