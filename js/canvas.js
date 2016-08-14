@@ -15,6 +15,7 @@ function Banner() {
 	
 	//Each particle/icon
 	var parts = [];
+    var coords =[];
 	
 	var mouse = {x:-100,y:-100};
 	var mouseOnScreen = false;
@@ -69,10 +70,20 @@ function Banner() {
 		bgCanvas.height = cheight;
         
 		canvas.addEventListener('mousemove', MouseMove, false);
-		canvas.addEventListener('mouseout', MouseOut, false);        
-        window.addEventListener('resize', resizeCanvas, false);
+		canvas.addEventListener('mouseout', MouseOut, false);
+        
+        $(window).bind('resize', function(e){
+            window.resizeEvt;
+            $(window).resize(function(){
+                clearTimeout(window.resizeEvt);
+                window.resizeEvt = setTimeout(function(){
+                    resizeCanvas();
+                }, 250);
+            });
+        });
         
 		start();
+        setInterval( update, 40 );
 	}
 	
 	var start = function(){
@@ -98,10 +109,10 @@ function Banner() {
         
 		clear();	
 		getCoords();
-        //context.fillStyle = "#000000";
-        //context.font = '100px Arial';
-        //fitTextOnCanvas("context", keyword, "Quicksand", 85, 275);
-        //context.fillText(keyword, 85, 275);
+        
+        for (var i = 0; i < coords.length; i++){
+            drawCircle(coords[i].x,coords[i].y);
+        }
 	}
 	
 	var getCoords = function(){
@@ -115,12 +126,18 @@ function Banner() {
                pixel = imageData.data[((width + (height * bgCanvas.width)) * 4) - 1];
                   //Pixel is black from being drawn on. 
                   if(pixel == 255) {
-                    drawCircle(width, height);
+                    //drawCircle(width, height);
+                    coords.push(
+                        {
+                         x: width, //goal position   0xaaaaaa 0x111111
+                         y: height
+                        }
+                    )
                   }
             }
         }
         
-        setInterval( update, 40 );
+        //setInterval( update, 40 );
 	}
 	
 	var drawCircle = function(x, y){
@@ -174,9 +191,11 @@ function Banner() {
             
             
 	       //Redraw new circle for position if old circle has left canvas
+            //Collapses page if you do window.width instead of doc. Problem.
             if ((parts[i].x2 > $(document).width()) || (parts[i].x2 < 0) || (parts[i].y2 > $(document).height()) || (parts[i].x2 < 0)){
                 
                 if(parts[i].o == false){
+                    //figure out how to REPLACE circle instead of adding new one (save memory)
                     drawCircle(parts[i].x, parts[i].y);
                     parts[i].o = true;
                 }
@@ -204,6 +223,40 @@ function Banner() {
 		}	
 	}
 	
+    var dynamicPathValues = function(){
+        cwidth = $(document).width();
+        cheight = $(document).height();
+
+        rect = svgtightbox.getBoundingClientRect();
+
+        //Get dynamic x/y locations of resume
+        resumeTop = resumeImage.getBoundingClientRect().top + window.pageYOffset - resumeImage.ownerDocument.documentElement.clientTop -5;
+        resumeLeft = resumeImage.getBoundingClientRect().left + window.pageXOffset - resumeImage.ownerDocument.documentElement.clientLeft - 8.5;
+        resumeRight = resumeLeft + document.getElementById('resumeImage').offsetWidth+14.5;
+        resumeBottom = resumeTop + document.getElementById('resumeImage').offsetHeight+14;
+        resumeButtonRight = ((resumeLeft+resumeRight)/2)+125;
+
+        //Get dynamic x/y locations of svgs
+        topsvgs = rect.top + window.pageYOffset - svgtightbox.ownerDocument.documentElement.clientTop;
+        bottomsvgs = topsvgs+rect.height;
+        centersvgdivx = (rect.left + rect.right)/2;
+        centersvgdivy = (topsvgs + bottomsvgs)/2;
+
+        svghalf = trione.getBoundingClientRect().top + window.pageYOffset - trione.ownerDocument.documentElement.clientTop;
+
+
+
+        //Area of About div for random dot background
+        aboutTop = about.getBoundingClientRect().top + window.pageYOffset - about.ownerDocument.documentElement.clientTop;
+
+        //Get dynamic x/y locations of resume
+        hollerTop = hollerButton.getBoundingClientRect().top + window.pageYOffset - hollerButton.ownerDocument.documentElement.clientTop -5;
+        hollerLeft = hollerButton.getBoundingClientRect().left + window.pageXOffset - resumeImage.ownerDocument.documentElement.clientLeft - 8.5;
+        hollerRight = hollerLeft + document.getElementById('hollerButton').offsetWidth+16;
+        hollerBottom = hollerTop + document.getElementById('hollerButton').offsetHeight+14;
+        hollerMidy = (hollerBottom+hollerTop)/2;
+    }
+    
 	var MouseMove = function(e) {
 	    if (e.layerX || e.layerX == 0) {
 	    	//Reset particle positions
@@ -235,6 +288,7 @@ function Banner() {
 	}
     
     function resizeCanvas(){
+        dynamicPathValues();
         /*cwidth = $(document).width();
         cheight = $(document).height();
         
@@ -250,11 +304,33 @@ function Banner() {
         //Draw temp canvas back to the current canvas
         context.drawImage(tempContext.canvas, 0, 0);
         */
-       /* bgContext.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
+        console.log("canvas sixe changed");
         context.clearRect(0, 0, canvas.width, canvas.height);
-        parts = [];
-        initialize("canvas");*/
-        
+        bgContext.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
+        coords = [];
+        parts =[];
+        start();
+        //banner.initialize("canvas");
+        /*coords = [];
+        parts =[];
+        drawPaths();
+        getCoords();
+        for (var i = 0; i < coords.length; i++){
+            drawCircle(coords[i].x,coords[i].y);
+        }
+        console.log(coords[100].x);
+        console.log(parts[100].x);
+        console.log("coords length is: " + coords.length);
+        console.log("parts length is: " + parts.length);
+        for (var j = 0; j < coords.length; j++){
+            console.log(parts[j]);
+            console.log(coords[j]);
+            parts[j].x = coords[j].x;
+            parts[j].y = coords[j].y;
+            parts[j].r = true;
+        }
+        console.log("coords length is: " + coords.length);
+        console.log("parts length is: " + parts.length);*/
     }
     
     function drawPaths(){
@@ -281,8 +357,10 @@ function Banner() {
                 
         
         //from work to Resume
+        bgContext.lineWidth="15";
         bgContext.moveTo(rect.right,centersvgdivy+30);
         bgContext.lineTo(rect.right, resumeTop);
+        bgContext.lineWidth="10";
         bgContext.moveTo(resumeLeft,resumeTop);
         bgContext.lineTo(resumeRight, resumeTop);
         bgContext.lineTo(resumeRight, resumeBottom);
@@ -319,7 +397,7 @@ function Banner() {
         this.addEventListener("mousemove", simulate);
     });
     
-    function fitTextOnCanvas(contexttype, text, font, xPosition, yPosition) {
+    /*function fitTextOnCanvas(contexttype, text, font, xPosition, yPosition) {
 
         // start with a large font size
         var fontsize = 200;
@@ -331,7 +409,7 @@ function Banner() {
             // draw the text
             bgContext.fillText(text, xPosition, yPosition);
        // }
-    }
+    }*/
     
 }
 var banner = new Banner();
