@@ -70,10 +70,20 @@ function Banner() {
 		bgCanvas.height = cheight;
         
 		canvas.addEventListener('mousemove', MouseMove, false);
-		canvas.addEventListener('mouseout', MouseOut, false);        
-        window.addEventListener('resize', resizeCanvas, false);
+		canvas.addEventListener('mouseout', MouseOut, false);
+        
+        $(window).bind('resize', function(e){
+            window.resizeEvt;
+            $(window).resize(function(){
+                clearTimeout(window.resizeEvt);
+                window.resizeEvt = setTimeout(function(){
+                    resizeCanvas();
+                }, 250);
+            });
+        });
         
 		start();
+        setInterval( update, 40 );
 	}
 	
 	var start = function(){
@@ -103,11 +113,6 @@ function Banner() {
         for (var i = 0; i < coords.length; i++){
             drawCircle(coords[i].x,coords[i].y);
         }
-        setInterval( update, 40 );
-        //context.fillStyle = "#000000";
-        //context.font = '100px Arial';
-        //fitTextOnCanvas("context", keyword, "Quicksand", 85, 275);
-        //context.fillText(keyword, 85, 275);
 	}
 	
 	var getCoords = function(){
