@@ -346,6 +346,8 @@ function Banner() {
         //bgContext.moveTo();
         
         //around Work
+        //Fix by calculating based off of rect.left+WIDTH*percent.
+        //i.e. Jason's example about massive browser window.
         bgContext.lineWidth="10";
         bgContext.moveTo(rect.right*.85,topsvgs-10);
         bgContext.lineTo(rect.right*.44,topsvgs-10);
@@ -412,5 +414,8 @@ function Banner() {
     }*/
     
 }
-var banner = new Banner();
-banner.initialize("canvas");
+
+ $(document).ready(function(){
+    var banner = new Banner();
+    banner.initialize("canvas");
+});
