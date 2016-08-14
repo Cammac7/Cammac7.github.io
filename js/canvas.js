@@ -415,7 +415,7 @@ function Banner() {
     
 }
 
- $(document).ready(function(){
+ $(window).load(function(){
     var banner = new Banner();
     banner.initialize("canvas");
 });
