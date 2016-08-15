@@ -289,48 +289,11 @@ function Banner() {
     
     function resizeCanvas(){
         dynamicPathValues();
-        /*cwidth = $(document).width();
-        cheight = $(document).height();
-        
-        var tempCanvas = document.createElement('canvas');
-		var tempContext = tempCanvas.getContext('2d');
-        
-        //Draw current canvas to temp canvas
-        tempContext.drawImage(context.canvas, 0, 0);
-        
-        context.canvas.width = cwidth;
-		context.canvas.height = cheight;
-        
-        //Draw temp canvas back to the current canvas
-        context.drawImage(tempContext.canvas, 0, 0);
-        */
-        console.log("canvas sixe changed");
         context.clearRect(0, 0, canvas.width, canvas.height);
         bgContext.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
         coords = [];
         parts =[];
         start();
-        //banner.initialize("canvas");
-        /*coords = [];
-        parts =[];
-        drawPaths();
-        getCoords();
-        for (var i = 0; i < coords.length; i++){
-            drawCircle(coords[i].x,coords[i].y);
-        }
-        console.log(coords[100].x);
-        console.log(parts[100].x);
-        console.log("coords length is: " + coords.length);
-        console.log("parts length is: " + parts.length);
-        for (var j = 0; j < coords.length; j++){
-            console.log(parts[j]);
-            console.log(coords[j]);
-            parts[j].x = coords[j].x;
-            parts[j].y = coords[j].y;
-            parts[j].r = true;
-        }
-        console.log("coords length is: " + coords.length);
-        console.log("parts length is: " + parts.length);*/
     }
     
     function drawPaths(){
