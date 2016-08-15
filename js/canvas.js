@@ -40,6 +40,7 @@ function Banner() {
     var bottomsvgs = topsvgs+rect.height;
     var centersvgdivx = (rect.left + rect.right)/2;
     var centersvgdivy = (topsvgs + bottomsvgs)/2;
+    var svgboxwidth = rect.width;
 
     var svghalf = trione.getBoundingClientRect().top + window.pageYOffset - trione.ownerDocument.documentElement.clientTop;
 
@@ -241,6 +242,7 @@ function Banner() {
         bottomsvgs = topsvgs+rect.height;
         centersvgdivx = (rect.left + rect.right)/2;
         centersvgdivy = (topsvgs + bottomsvgs)/2;
+        svgboxwidth = rect.width;
 
         svghalf = trione.getBoundingClientRect().top + window.pageYOffset - trione.ownerDocument.documentElement.clientTop;
 
@@ -312,13 +314,13 @@ function Banner() {
         //Fix by calculating based off of rect.left+WIDTH*percent.
         //i.e. Jason's example about massive browser window.
         bgContext.lineWidth="10";
-        bgContext.moveTo(rect.right*.85,topsvgs-10);
-        bgContext.lineTo(rect.right*.44,topsvgs-10);
-        bgContext.lineTo(rect.left-25,centersvgdivy);
-        bgContext.lineTo(rect.right*.44,bottomsvgs+15);
-        bgContext.lineTo(rect.right*.85,bottomsvgs+15);
-        bgContext.lineTo(rect.right+25,centersvgdivy);
-        bgContext.lineTo(rect.right*.85,topsvgs-10);
+        bgContext.moveTo(rect.left+(svgboxwidth*.21),topsvgs-10);
+        bgContext.lineTo(rect.left+(svgboxwidth*.80),topsvgs-10);
+        bgContext.lineTo(rect.left+(svgboxwidth)+18,centersvgdivy);
+        bgContext.lineTo(rect.left+(svgboxwidth*.80),bottomsvgs+15);
+        bgContext.lineTo(rect.left+(svgboxwidth*.21),bottomsvgs+15);
+        bgContext.lineTo(rect.left-18,centersvgdivy);
+        bgContext.lineTo(rect.left+(svgboxwidth*.21),topsvgs-10);
                 
         
         //from work to Resume
