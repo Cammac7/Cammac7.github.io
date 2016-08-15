@@ -1,6 +1,6 @@
 //------------------------------------------------ TWITTER BIRD ----------------------------------------------------
 
- $(document).ready(function(){
+ $(window).load(function(){
     animateDiv();
     
 });
