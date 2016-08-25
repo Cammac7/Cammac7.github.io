@@ -11,7 +11,3 @@ interval=setInterval(function(){
     document.getElementById("loadButton").style.visibility="visible";
   }
 },60);
-
-document.getElementById("loadButton").onclick=function(){
-    document.getElementById("loader-wrapper").style.display="none";
-};
