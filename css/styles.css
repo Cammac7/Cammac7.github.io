@@ -1,6 +1,9 @@
 /** Custom Stylesheet 
 Cameron MacArthur
 **/
+
+ /*Loader CSS */
+
 #loader-wrapper {
     position: fixed;
     top: 0;
@@ -8,28 +11,9 @@ Cameron MacArthur
     width: 100%;
     height: 100%;
     z-index: 1000;
+    background: #ffffff;
 }
 
-#loader {
-        display: block;
-        position: relative;
-        left: 50%;
-        top: 50%;
-        width: 150px;
-        height: 150px;
-        margin: -75px 0 0 -75px;
- 
-        border: 3px solid #3498db;
-        z-index: 1500;
-}
-
-/* Loader CSS */
-.loaded #loader {
-    opacity: 0;
-    opacity: 0;
-    -webkit-transition: all 0.3s ease-out; 
-            transition: all 0.3s ease-out;
-}
 .loaded #loader-wrapper {
     visibility: hidden;
     -webkit-transform: translateY(-100%);
@@ -48,118 +32,133 @@ Cameron MacArthur
   box-sizing: border-box;
   outline: none;
 }
-$bgColor:#020438;
-$boxColor:#020438;
-$waterFColor:#4D6DE3;
-$waterBColor:#C7EEFF;
 
-body {
-  background:$bgColor;
+#loader-wrapper {
+  background: #ffffff;
   font: 14px/1 'Open Sans', helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-.box{
+.box {
   height: 280px;
   width: 280px;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background: $boxColor;
-  border-radius:100%;
-  overflow: hidden; 
-  .percent{
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index:3;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    display: -webkit-flex;
-    align-items:center;
-    justify-content:center; 
-    color:#fff;
-    font-size:64px;
-  }
-  .water{
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index:2;
-    width: 100%;
-    height: 100%;
-    transform:translate(0,100%);
-    background:$waterFColor;
-    &_wave{
-      width: 200%;
-      position: absolute;
-      bottom: 100%;
-      &_back {
-        right: 0;
-        fill: $waterBColor;
-        animation: wave-back 1.4s infinite linear;
-      }
-      &_front {
-        left: 0;
-        fill: $waterFColor;
-        margin-bottom: -1px;
-        animation: wave-front .7s infinite linear;
-      }
-    }
-  }
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 100%;
+  overflow: hidden;
 }
-@keyframes wave-front {
+.box .percent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  font-size: 64px;
+}
+.box .water {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+  background: #4D6DE3;
+}
+.box .water_wave {
+  width: 200%;
+  position: absolute;
+  bottom: 100%;
+}
+.box .water_wave_back {
+  right: 0;
+  fill: #C7EEFF;
+  -webkit-animation: wave-back 1.4s infinite linear;
+          animation: wave-back 1.4s infinite linear;
+}
+.box .water_wave_front {
+  left: 0;
+  fill: #4D6DE3;
+  margin-bottom: -1px;
+  -webkit-animation: wave-front .7s infinite linear;
+          animation: wave-front .7s infinite linear;
+}
+
+@-webkit-keyframes wave-front {
   100% {
-    transform: translate(-50%, 0);
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
 }
 
-@keyframes wave-back {
+@keyframes wave-front {
   100% {
-    transform: translate(50%, 0);
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
   }
 }
+@-webkit-keyframes wave-back {
+  100% {
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+  }
+}
+@keyframes wave-back {
+  100% {
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+  }
+}
+
+#loadButton {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
 /*End Loader CSS -------------------------------------------------*/
 
 footer .footer-below {
         background-color: #00003D;
 }
-/*
-.tri-Up {
-    -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
-    clip-path: polygon(50% 0, 0 100%, 100% 100%);
-    transition: 2s;*/
-    /*clip-path: url(#clipUp);*/
-   /* -webkit-clip-path: url(#clipUp);
-    -moz-clip-path: url(#clipUp);
-    -o-clip-path: url(#clipUp);
-}
-
-.tri-Down {
-    -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0);
-    clip-path: polygon(0 0, 50% 100%, 100% 0);
-    transition: 2s;
-    clip-path: url(#clipDown);
-    -webkit-clip-path: url(#clipDown);
-    -moz-clip-path: url(#clipDown);
-    -o-clip-path: url(#clipDown);
-}
-a:hover .tri-Up,
-a:focus .tri-Up {
-  -webkit-clip-path:circle(50%,50%,75%);
-  clip-path: circle(50%,50%,75%);
-}*/
-/*
-.portfolio-item {
-    background-image: url(../img/portfolio/BLM.png);
-    width: 300px;
-    height: 300px;
-    background-size: cover;
-    clip-path: url("#clipUp");
-}
-*/
 
 .dontwantpadding {
     margin: 0;
@@ -171,29 +170,6 @@ a:focus .tri-Up {
 .cover {
     position: relative;
 }
-
-/*
-  header > [class^=section]{
-  position: absolute;
-  background: none 50% / cover;
-  top: 0;
-  bottom: 0;
-  height: auto;
-  width: 100%;
-}
-header > .section-one {
-  background-image: url(../img/Northwestern-University-Downtown-Chicago-Northwestern-Lakefill.png);
-  left:0;
-}
-header > .section-two {
-  background-image: url(../img/code.png);
-  left: 33.33333%;
-}
-header > .section-three {
-  background-image: url(../img/car.png);
-  left: 66.66666%;
-}
-*/
 
 .btn-1 {
     color: black;
@@ -431,6 +407,7 @@ strong {
 		position: relative;
 		overflow: hidden;
 		transition: color .5s;
+        cursor: pointer;
 }
 
 .round .button:before {

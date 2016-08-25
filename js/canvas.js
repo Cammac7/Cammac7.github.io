@@ -380,7 +380,14 @@ function Banner() {
     
 }
 
+document.getElementById("loadButton").onclick=function(){
+    var banner = new Banner();
+    banner.initialize("canvas");
+};
+
+/*
  $(window).load(function(){
     var banner = new Banner();
     banner.initialize("canvas");
 });
+*/

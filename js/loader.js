@@ -7,12 +7,11 @@ interval=setInterval(function(){
   cnt.innerHTML = percent; 
   water.style.transform='translate(0'+','+(100-percent)+'%)';
   if(percent==100){
-    document.getElementById("loadButton").style.visibility = "visible";
     clearInterval(interval);
+    document.getElementById("loadButton").style.visibility="visible";
   }
 },60);
 
 document.getElementById("loadButton").onclick=function(){
-    var d = document.getElementsByTagName('body');
-    d.className += " loaded";
+    document.getElementById("loader-wrapper").style.display="none";
 };
