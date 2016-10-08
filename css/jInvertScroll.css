@@ -14,3 +14,23 @@ body
     top: 0;
     left: 0;
 }
+
+#scrollbox{
+    position: fixed;
+    top: 0;
+    width: 5000px;
+    z-index: inherit;
+}
+
+#header{
+    float: left;
+}
+#portfolio{
+    float: left;
+}
+#resume{
+    float: left;
+}
+#about{
+    float: left;
+}

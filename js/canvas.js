@@ -299,32 +299,32 @@ function Banner() {
     }
     
     function drawPaths(){
-        bgContext.beginPath();
+        /*bgContext.beginPath();
         bgContext.lineWidth="5";
         bgContext.moveTo(760,450);
         bgContext.lineTo(760,650);
         bgContext.lineTo(350,650);
         bgContext.lineTo(350,1000);
         bgContext.lineTo(450,1000);
-        bgContext.stroke();
+        bgContext.stroke();*/
         
         //bgContext.moveTo();
         
         //around Work
         //Fix by calculating based off of rect.left+WIDTH*percent.
         //i.e. Jason's example about massive browser window.
-        bgContext.lineWidth="10";
+       /* bgContext.lineWidth="10";
         bgContext.moveTo(rect.left+(svgboxwidth*.21),topsvgs-10);
         bgContext.lineTo(rect.left+(svgboxwidth*.80),topsvgs-10);
         bgContext.lineTo(rect.left+(svgboxwidth)+18,centersvgdivy);
         bgContext.lineTo(rect.left+(svgboxwidth*.80),bottomsvgs+15);
         bgContext.lineTo(rect.left+(svgboxwidth*.21),bottomsvgs+15);
         bgContext.lineTo(rect.left-18,centersvgdivy);
-        bgContext.lineTo(rect.left+(svgboxwidth*.21),topsvgs-10);
+        bgContext.lineTo(rect.left+(svgboxwidth*.21),topsvgs-10);*/
                 
         
         //from work to Resume
-        bgContext.lineWidth="15";
+       /* bgContext.lineWidth="15";
         bgContext.moveTo(rect.right,centersvgdivy+30);
         bgContext.lineTo(rect.right, resumeTop);
         bgContext.lineWidth="10";
@@ -335,10 +335,10 @@ function Banner() {
         bgContext.lineTo(resumeButtonRight, resumeBottom);
         bgContext.lineTo(resumeLeft, resumeBottom);
         bgContext.lineTo(resumeLeft, resumeTop);
-        bgContext.stroke();
+        bgContext.stroke();*/
         
         //From resume to About
-        bgContext.lineWidth="10";
+        /*bgContext.lineWidth="10";
         bgContext.moveTo(resumeLeft+80,resumeBottom);
         bgContext.lineTo(resumeLeft+80,resumeBottom+100);
         bgContext.lineTo(resumeLeft-30,resumeBottom+100);
@@ -350,7 +350,7 @@ function Banner() {
         bgContext.lineTo(hollerRight+5,hollerBottom+5);
         bgContext.lineTo(hollerLeft-5,hollerBottom+5);
         bgContext.lineTo(hollerLeft-5,hollerTop-5);
-        bgContext.stroke();
+        bgContext.stroke();*/
     }
     
     function simulate(e) {
