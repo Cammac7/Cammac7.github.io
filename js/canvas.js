@@ -25,7 +25,7 @@ function Banner() {
     
     var cwidth = $(document).width();
     var cheight = $(document).height();
-
+    console.log($(document).width());
     var rect = svgtightbox.getBoundingClientRect();
 
     //Get dynamic x/y locations of resume
