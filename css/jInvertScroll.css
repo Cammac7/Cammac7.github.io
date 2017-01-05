@@ -18,7 +18,6 @@ body
 #scrollbox{
     position: fixed;
     top: 0;
-    width: 5000px;
     z-index: inherit;
 }
 
