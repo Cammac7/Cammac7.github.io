@@ -23,8 +23,13 @@ function Banner() {
 	//var itercount = 0;
 	var itertot = 40;
     
-    var cwidth = $(document).width();
-    var cheight = $(document).height();
+    //Get the scrollbox width and height
+    var sbox = document.getElementById("scrollbox");
+    var scrollrect = sbox.getBoundingClientRect();
+    
+    //set cwidth and cheight to scrollbox width and height
+    var cwidth = scrollrect.width;
+    var cheight = scrollrect.height;
 
     var rect = svgtightbox.getBoundingClientRect();
 
@@ -96,7 +101,7 @@ function Banner() {
         bgContext.fillText(keyword2, 55, 550);
         
         
-		drawPaths();
+		//drawPaths();
                 
         /*
         //Fun Circles in about section
@@ -290,7 +295,7 @@ function Banner() {
 	}
     
     function resizeCanvas(){
-        dynamicPathValues();
+        //dynamicPathValues();
         context.clearRect(0, 0, canvas.width, canvas.height);
         bgContext.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
         coords = [];
