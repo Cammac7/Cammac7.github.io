@@ -1,6 +1,6 @@
 function Banner() {
 	
-    var keyword = "Interaction";
+    var keyword = "i";
     var keyword2 = "Designer";
     var canvas;
 	var context;
@@ -23,9 +23,9 @@ function Banner() {
 	//var itercount = 0;
 	var itertot = 40;
     
-    var cwidth = $(document).width();
-    var cheight = $(document).height();
-
+    var cwidth = $(scrollbox).width();
+    var cheight = $(scrollbox).height();
+    console.log($(document).width());
     var rect = svgtightbox.getBoundingClientRect();
 
     //Get dynamic x/y locations of resume
@@ -73,7 +73,7 @@ function Banner() {
 		canvas.addEventListener('mousemove', MouseMove, false);
 		canvas.addEventListener('mouseout', MouseOut, false);
         
-        $(window).bind('resize', function(e){
+        /*$(window).bind('resize', function(e){
             window.resizeEvt;
             $(window).resize(function(){
                 clearTimeout(window.resizeEvt);
@@ -81,22 +81,21 @@ function Banner() {
                     resizeCanvas();
                 }, 250);
             });
-        });
+        });*/
         
 		start();
-        setInterval( update, 40 );
+        setInterval( update, 40);
 	}
 	
 	var start = function(){
 		bgContext.fillStyle = "#333";
         bgContext.fontWeight = "300";
 		bgContext.font = '167px Arial';
-        
         bgContext.fillText(keyword, 53, 410);
-        bgContext.fillText(keyword2, 55, 550);
+//        bgContext.fillText(keyword2, 55, 550);
         
         
-		drawPaths();
+//		drawPaths();
                 
         /*
         //Fun Circles in about section
@@ -110,7 +109,7 @@ function Banner() {
         
 		clear();	
 		getCoords();
-        
+        alert(coords.length);
         for (var i = 0; i < coords.length; i++){
             drawCircle(coords[i].x,coords[i].y);
         }
@@ -138,7 +137,6 @@ function Banner() {
             }
         }
         
-        //setInterval( update, 40 );
 	}
 	
 	var drawCircle = function(x, y){
@@ -225,8 +223,8 @@ function Banner() {
 	}
 	
     var dynamicPathValues = function(){
-        cwidth = $(document).width();
-        cheight = $(document).height();
+        cwidth = $(scrollbox).width();
+        cheight = $(scrollbox).height();
 
         rect = svgtightbox.getBoundingClientRect();
 
@@ -289,42 +287,42 @@ function Banner() {
  		context.fill();
 	}
     
-    function resizeCanvas(){
+    /*function resizeCanvas(){
         dynamicPathValues();
         context.clearRect(0, 0, canvas.width, canvas.height);
         bgContext.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
         coords = [];
         parts =[];
         start();
-    }
+    }*/
     
     function drawPaths(){
-        bgContext.beginPath();
+        /*bgContext.beginPath();
         bgContext.lineWidth="5";
         bgContext.moveTo(760,450);
         bgContext.lineTo(760,650);
         bgContext.lineTo(350,650);
         bgContext.lineTo(350,1000);
         bgContext.lineTo(450,1000);
-        bgContext.stroke();
+        bgContext.stroke();*/
         
         //bgContext.moveTo();
         
         //around Work
         //Fix by calculating based off of rect.left+WIDTH*percent.
         //i.e. Jason's example about massive browser window.
-        bgContext.lineWidth="10";
+       /* bgContext.lineWidth="10";
         bgContext.moveTo(rect.left+(svgboxwidth*.21),topsvgs-10);
         bgContext.lineTo(rect.left+(svgboxwidth*.80),topsvgs-10);
         bgContext.lineTo(rect.left+(svgboxwidth)+18,centersvgdivy);
         bgContext.lineTo(rect.left+(svgboxwidth*.80),bottomsvgs+15);
         bgContext.lineTo(rect.left+(svgboxwidth*.21),bottomsvgs+15);
         bgContext.lineTo(rect.left-18,centersvgdivy);
-        bgContext.lineTo(rect.left+(svgboxwidth*.21),topsvgs-10);
+        bgContext.lineTo(rect.left+(svgboxwidth*.21),topsvgs-10);*/
                 
         
         //from work to Resume
-        bgContext.lineWidth="15";
+       /* bgContext.lineWidth="15";
         bgContext.moveTo(rect.right,centersvgdivy+30);
         bgContext.lineTo(rect.right, resumeTop);
         bgContext.lineWidth="10";
@@ -335,10 +333,10 @@ function Banner() {
         bgContext.lineTo(resumeButtonRight, resumeBottom);
         bgContext.lineTo(resumeLeft, resumeBottom);
         bgContext.lineTo(resumeLeft, resumeTop);
-        bgContext.stroke();
+        bgContext.stroke();*/
         
         //From resume to About
-        bgContext.lineWidth="10";
+        /*bgContext.lineWidth="10";
         bgContext.moveTo(resumeLeft+80,resumeBottom);
         bgContext.lineTo(resumeLeft+80,resumeBottom+100);
         bgContext.lineTo(resumeLeft-30,resumeBottom+100);
@@ -350,7 +348,7 @@ function Banner() {
         bgContext.lineTo(hollerRight+5,hollerBottom+5);
         bgContext.lineTo(hollerLeft-5,hollerBottom+5);
         bgContext.lineTo(hollerLeft-5,hollerTop-5);
-        bgContext.stroke();
+        bgContext.stroke();*/
     }
     
     function simulate(e) {
@@ -365,12 +363,14 @@ function Banner() {
     });
     
     /*function fitTextOnCanvas(contexttype, text, font, xPosition, yPosition) {
+
         // start with a large font size
         var fontsize = 200;
             do {
                 fontsize--;
                 bgContext.font = fontsize+"px"+" "+font;
             } while (bgContext.measureText(text).width > canvas.width*.9)
+
             // draw the text
             bgContext.fillText(text, xPosition, yPosition);
        // }
@@ -383,3 +383,4 @@ document.getElementById("loadButton").onclick=function(){
     var banner = new Banner();
     banner.initialize("canvas");
 };
+
