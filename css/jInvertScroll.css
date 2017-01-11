@@ -20,16 +20,3 @@ body
     top: 0;
     z-index: inherit;
 }
-
-#header{
-    float: left;
-}
-#portfolio{
-    float: left;
-}
-#resume{
-    float: left;
-}
-#about{
-    float: left;
-}
