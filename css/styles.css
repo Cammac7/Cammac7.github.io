@@ -120,7 +120,6 @@ Cameron MacArthur
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 3;
     width: 100%;
     height: 100%;
     display: -webkit-box;
@@ -339,10 +338,10 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #canvas { 
-    position:absolute; 
-    top:0; 
+    position:fixed;
+    top:0;
     left:0;
-    z-index: 0;
+    z-index:0
 }
 
 .modalHead {
@@ -366,6 +365,7 @@ body {
 section {
     margin-left: 200px;
     margin-right: 200px;
+    pointer-events: all;
 }
 strong {
     font-weight: bold;
@@ -439,6 +439,11 @@ strong {
 
 #scrollbox {
     display:flex;
+    position:fixed;
+    top:0;
+    left:0;
+    width:4148px;
+    pointer-events:none;
 }
 /*Music Modal (3) Hot click blocks*/
 .hotBlock {
@@ -455,5 +460,3 @@ strong {
    padding-left: 20%;
    padding-right: 20%;
 }*/
-    
-}

@@ -24,42 +24,44 @@ function Banner() {
 	var itertot = 40;
     
     //Get the scrollbox width and height
-    var sbox = document.getElementById("scrollbox");
-    var scrollrect = sbox.getBoundingClientRect();
+    
+    
+    /*^^&&var sbox = document.getElementById("scrollbox");
+    var scrollrect = sbox.getBoundingClientRect();*/
     
     //set cwidth and cheight to scrollbox width and height
-    var cwidth = scrollrect.width;
-    var cheight = scrollrect.height;
+    var cwidth = $("#scrollbox").width();
+    var cheight = $("#scrollbox").height();
 
-    var rect = svgtightbox.getBoundingClientRect();
+    /*^^&&var rect = svgtightbox.getBoundingClientRect();*/
 
     //Get dynamic x/y locations of resume
-    var resumeTop = resumeImage.getBoundingClientRect().top + window.pageYOffset - resumeImage.ownerDocument.documentElement.clientTop -5;
+    /*^^&&var resumeTop = resumeImage.getBoundingClientRect().top + window.pageYOffset - resumeImage.ownerDocument.documentElement.clientTop -5;
     var resumeLeft = resumeImage.getBoundingClientRect().left + window.pageXOffset - resumeImage.ownerDocument.documentElement.clientLeft - 8.5;
     var resumeRight = resumeLeft + document.getElementById('resumeImage').offsetWidth+14.5;
     var resumeBottom = resumeTop + document.getElementById('resumeImage').offsetHeight+14;
-    var resumeButtonRight = ((resumeLeft+resumeRight)/2)+125;
+    var resumeButtonRight = ((resumeLeft+resumeRight)/2)+125;*/
 
     //Get dynamic x/y locations of svgs
-    var topsvgs = rect.top + window.pageYOffset - svgtightbox.ownerDocument.documentElement.clientTop;
+    /*^^&&var topsvgs = rect.top + window.pageYOffset - svgtightbox.ownerDocument.documentElement.clientTop;
     var bottomsvgs = topsvgs+rect.height;
     var centersvgdivx = (rect.left + rect.right)/2;
     var centersvgdivy = (topsvgs + bottomsvgs)/2;
     var svgboxwidth = rect.width;
 
-    var svghalf = trione.getBoundingClientRect().top + window.pageYOffset - trione.ownerDocument.documentElement.clientTop;
+    var svghalf = trione.getBoundingClientRect().top + window.pageYOffset - trione.ownerDocument.documentElement.clientTop;*/
 
 
 
     //Area of About div for random dot background
-    var aboutTop = about.getBoundingClientRect().top + window.pageYOffset - about.ownerDocument.documentElement.clientTop;
+    /*^^&&var aboutTop = about.getBoundingClientRect().top + window.pageYOffset - about.ownerDocument.documentElement.clientTop;*/
 
     //Get dynamic x/y locations of resume
-    var hollerTop = hollerButton.getBoundingClientRect().top + window.pageYOffset - hollerButton.ownerDocument.documentElement.clientTop -5;
+    /*^^&&var hollerTop = hollerButton.getBoundingClientRect().top + window.pageYOffset - hollerButton.ownerDocument.documentElement.clientTop -5;
     var hollerLeft = hollerButton.getBoundingClientRect().left + window.pageXOffset - resumeImage.ownerDocument.documentElement.clientLeft - 8.5;
     var hollerRight = hollerLeft + document.getElementById('hollerButton').offsetWidth+16;
     var hollerBottom = hollerTop + document.getElementById('hollerButton').offsetHeight+14;
-    var hollerMidy = (hollerBottom+hollerTop)/2;
+    var hollerMidy = (hollerBottom+hollerTop)/2;*/
     
     
 	this.initialize = function(canvas_id){
@@ -78,6 +80,7 @@ function Banner() {
 		canvas.addEventListener('mousemove', MouseMove, false);
 		canvas.addEventListener('mouseout', MouseOut, false);
         
+        /*^^&&*/
         $(window).bind('resize', function(e){
             window.resizeEvt;
             $(window).resize(function(){
@@ -98,7 +101,7 @@ function Banner() {
 		bgContext.font = '167px Arial';
         
         bgContext.fillText(keyword, 53, 410);
-        bgContext.fillText(keyword2, 55, 550);
+        //^^&&bgContext.fillText(keyword2, 55, 550);
         
         
 		//drawPaths();
@@ -198,16 +201,13 @@ function Banner() {
             
 	       //Redraw new circle for position if old circle has left canvas
             //Collapses page if you do window.width instead of doc. Problem.
-            if ((parts[i].x2 > $(document).width()) || (parts[i].x2 < 0) || (parts[i].y2 > $(document).height()) || (parts[i].x2 < 0)){
-                
+            if ((parts[i].x2 > $("#scrollbox").width()) || (parts[i].x2 < 0) || (parts[i].y2 > $("#scrollbox").height()) || (parts[i].x2 < 0)){
                 if(parts[i].o == false){
                     //figure out how to REPLACE circle instead of adding new one (save memory)
                     drawCircle(parts[i].x, parts[i].y);
                     parts[i].o = true;
                 }
-                
             }
-            
             
 			//Look into using svg, so there is no mouse tracking.
 			//Find distance from mouse/draw!
@@ -229,32 +229,32 @@ function Banner() {
 		}	
 	}
 	
-    var dynamicPathValues = function(){
+    /*^^&&var dynamicPathValues = function(){
         cwidth = $(document).width();
         cheight = $(document).height();
 
-        rect = svgtightbox.getBoundingClientRect();
+        rect = svgtightbox.getBoundingClientRect();*/
 
         //Get dynamic x/y locations of resume
-        resumeTop = resumeImage.getBoundingClientRect().top + window.pageYOffset - resumeImage.ownerDocument.documentElement.clientTop -5;
+        /*^^&&resumeTop = resumeImage.getBoundingClientRect().top + window.pageYOffset - resumeImage.ownerDocument.documentElement.clientTop -5;
         resumeLeft = resumeImage.getBoundingClientRect().left + window.pageXOffset - resumeImage.ownerDocument.documentElement.clientLeft - 8.5;
         resumeRight = resumeLeft + document.getElementById('resumeImage').offsetWidth+14.5;
         resumeBottom = resumeTop + document.getElementById('resumeImage').offsetHeight+14;
-        resumeButtonRight = ((resumeLeft+resumeRight)/2)+125;
+        resumeButtonRight = ((resumeLeft+resumeRight)/2)+125;*/
 
         //Get dynamic x/y locations of svgs
-        topsvgs = rect.top + window.pageYOffset - svgtightbox.ownerDocument.documentElement.clientTop;
+        /*^^&&topsvgs = rect.top + window.pageYOffset - svgtightbox.ownerDocument.documentElement.clientTop;
         bottomsvgs = topsvgs+rect.height;
         centersvgdivx = (rect.left + rect.right)/2;
         centersvgdivy = (topsvgs + bottomsvgs)/2;
         svgboxwidth = rect.width;
 
         svghalf = trione.getBoundingClientRect().top + window.pageYOffset - trione.ownerDocument.documentElement.clientTop;
-
+*/
 
 
         //Area of About div for random dot background
-        aboutTop = about.getBoundingClientRect().top + window.pageYOffset - about.ownerDocument.documentElement.clientTop;
+        /*^^&&aboutTop = about.getBoundingClientRect().top + window.pageYOffset - about.ownerDocument.documentElement.clientTop;
 
         //Get dynamic x/y locations of resume
         hollerTop = hollerButton.getBoundingClientRect().top + window.pageYOffset - hollerButton.ownerDocument.documentElement.clientTop -5;
@@ -262,16 +262,16 @@ function Banner() {
         hollerRight = hollerLeft + document.getElementById('hollerButton').offsetWidth+16;
         hollerBottom = hollerTop + document.getElementById('hollerButton').offsetHeight+14;
         hollerMidy = (hollerBottom+hollerTop)/2;
-    }
+    }*/
     
 	var MouseMove = function(e) {
-	    if (e.layerX || e.layerX == 0) {
+	    if (e.offsetX || e.offsetX == 0) {
 	    	//Reset particle positions
 	    	mouseOnScreen = true;
 	    	
                 //use offsetX instead of layerX for Firefox
                 //why was that working for Chrome?
-	        mouse.x = e.offsetX - canvas.offsetLeft;
+	        mouse.x = e.offsetX;
 	        mouse.y = e.offsetY - canvas.offsetTop;
 	    }
 	}
@@ -306,30 +306,36 @@ function Banner() {
     function drawPaths(){
         bgContext.beginPath();
         bgContext.lineWidth="5";
+        
         bgContext.moveTo(760,450);
+        bgContext.lineTo(3000,450);
+        
+        bgContext.stroke();
+        
+        /*bgContext.moveTo(760,450);
         bgContext.lineTo(760,650);
         bgContext.lineTo(350,650);
         bgContext.lineTo(350,1000);
         bgContext.lineTo(450,1000);
-        bgContext.stroke();
+        bgContext.stroke();*/
         
         //bgContext.moveTo();
         
         //around Work
         //Fix by calculating based off of rect.left+WIDTH*percent.
         //i.e. Jason's example about massive browser window.
-        bgContext.lineWidth="10";
+        /*bgContext.lineWidth="10";
         bgContext.moveTo(rect.left+(svgboxwidth*.21),topsvgs-10);
         bgContext.lineTo(rect.left+(svgboxwidth*.80),topsvgs-10);
         bgContext.lineTo(rect.left+(svgboxwidth)+18,centersvgdivy);
         bgContext.lineTo(rect.left+(svgboxwidth*.80),bottomsvgs+15);
         bgContext.lineTo(rect.left+(svgboxwidth*.21),bottomsvgs+15);
         bgContext.lineTo(rect.left-18,centersvgdivy);
-        bgContext.lineTo(rect.left+(svgboxwidth*.21),topsvgs-10);
+        bgContext.lineTo(rect.left+(svgboxwidth*.21),topsvgs-10);*/
                 
         
         //from work to Resume
-        bgContext.lineWidth="15";
+        /*bgContext.lineWidth="15";
         bgContext.moveTo(rect.right,centersvgdivy+30);
         bgContext.lineTo(rect.right, resumeTop);
         bgContext.lineWidth="10";
@@ -340,10 +346,10 @@ function Banner() {
         bgContext.lineTo(resumeButtonRight, resumeBottom);
         bgContext.lineTo(resumeLeft, resumeBottom);
         bgContext.lineTo(resumeLeft, resumeTop);
-        bgContext.stroke();
+        bgContext.stroke();*/
         
         //From resume to About
-        bgContext.lineWidth="10";
+       /* bgContext.lineWidth="10";
         bgContext.moveTo(resumeLeft+80,resumeBottom);
         bgContext.lineTo(resumeLeft+80,resumeBottom+100);
         bgContext.lineTo(resumeLeft-30,resumeBottom+100);
@@ -355,7 +361,7 @@ function Banner() {
         bgContext.lineTo(hollerRight+5,hollerBottom+5);
         bgContext.lineTo(hollerLeft-5,hollerBottom+5);
         bgContext.lineTo(hollerLeft-5,hollerTop-5);
-        bgContext.stroke();
+        bgContext.stroke();*/
     }
     
     function simulate(e) {
@@ -383,8 +389,8 @@ function Banner() {
     
 }
 
-document.getElementById("loadButton").onclick=function(){
-    document.getElementById("loader-wrapper").style.display="none";
+/*document.getElementById("loadButton").onclick=function(){
+    document.getElementById("loader-wrapper").style.display="none";*/
     var banner = new Banner();
     banner.initialize("canvas");
-};
+/*};*/

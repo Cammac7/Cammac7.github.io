@@ -98,3 +98,4 @@
 }(jQuery));
 
 $.jInvertScroll(['#scrollbox']);
+$.jInvertScroll(['#canvas']);
