@@ -307,8 +307,8 @@ function Banner() {
         bgContext.beginPath();
         bgContext.lineWidth="5";
         
-        bgContext.moveTo(760,400);
-        bgContext.lineTo(800,450);
+        bgContext.moveTo(800,400);
+        bgContext.lineTo(rect.left,400);
         
         bgContext.stroke();
         
@@ -324,37 +324,31 @@ function Banner() {
         //around Work
         //Fix by calculating based off of rect.left+WIDTH*percent.
         //i.e. Jason's example about massive browser window.
-        bgContext.lineWidth="10";
-        bgContext.moveTo(rect.left+(svgboxwidth*.30),topsvgs-10);
-        bgContext.lineTo(rect.left+(svgboxwidth*.90),topsvgs-10);
+        bgContext.lineWidth="10"
+        bgContext.moveTo(rect.left+(svgboxwidth*.21),topsvgs-10);
+        bgContext.lineTo(rect.left+(svgboxwidth*.80),topsvgs-10);
         bgContext.lineTo(rect.left+(svgboxwidth)+18,centersvgdivy);
-        /*bgContext.lineTo(rect.left+(svgboxwidth*.80),bottomsvgs+15);
+        bgContext.lineTo(rect.left+(svgboxwidth*.80),bottomsvgs+15);
         bgContext.lineTo(rect.left+(svgboxwidth*.21),bottomsvgs+15);
         bgContext.lineTo(rect.left-18,centersvgdivy);
-        bgContext.lineTo(rect.left+(svgboxwidth*.21),topsvgs-10);*/
+        bgContext.lineTo(rect.left+(svgboxwidth*.21),topsvgs-10);
         bgContext.stroke();
                 
         
         //from work to Resume
-        /*bgContext.lineWidth="15";
         bgContext.moveTo(rect.right,centersvgdivy+30);
-        bgContext.lineTo(rect.right, resumeTop);
-        bgContext.lineWidth="10";
-        bgContext.moveTo(resumeLeft,resumeTop);
-        bgContext.lineTo(resumeRight, resumeTop);
-        bgContext.lineTo(resumeRight, resumeBottom);
+        bgContext.lineTo(resumeLeft,centersvgdivy+30);
+        bgContext.lineTo(resumeLeft, resumeTop-10);
+        bgContext.lineTo(resumeRight+8, resumeTop-10);
+        bgContext.lineTo(resumeRight+8, resumeBottom);
         bgContext.lineTo(resumeButtonRight, resumeBottom);
         bgContext.lineTo(resumeButtonRight, resumeBottom);
         bgContext.lineTo(resumeLeft, resumeBottom);
         bgContext.lineTo(resumeLeft, resumeTop);
-        bgContext.stroke();*/
+        bgContext.stroke();
         
         //From resume to About
-        /*bgContext.lineWidth="10";
-        bgContext.moveTo(resumeLeft+80,resumeBottom);
-        bgContext.lineTo(resumeLeft+80,resumeBottom+100);
-        bgContext.lineTo(resumeLeft-30,resumeBottom+100);
-        bgContext.lineTo(resumeLeft-30,hollerMidy);
+        bgContext.moveTo(resumeRight+8,hollerMidy);
         bgContext.lineTo(hollerLeft,hollerMidy);
         
         bgContext.moveTo(hollerLeft-5,hollerTop-5);
@@ -362,7 +356,7 @@ function Banner() {
         bgContext.lineTo(hollerRight+5,hollerBottom+5);
         bgContext.lineTo(hollerLeft-5,hollerBottom+5);
         bgContext.lineTo(hollerLeft-5,hollerTop-5);
-        bgContext.stroke();*/
+        bgContext.stroke();
     }
     
     function simulate(e) {
@@ -391,8 +385,8 @@ function Banner() {
 }
 document.getElementById("loadButton").onclick=function(){
     document.getElementById("loader-wrapper").style.display="none";
+    var banner = new Banner();
+    banner.initialize("canvas");
     $.jInvertScroll(['#scrollbox']);
     $.jInvertScroll(['#canvas']);
 }
-var banner = new Banner();
-banner.initialize("canvas");
