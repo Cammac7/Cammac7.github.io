@@ -33,35 +33,35 @@ function Banner() {
     var cwidth = $("#scrollbox").width();
     var cheight = $("#scrollbox").height();
 
-    /*^^&&var rect = svgtightbox.getBoundingClientRect();*/
+    var rect = svgtightbox.getBoundingClientRect();
 
     //Get dynamic x/y locations of resume
-    /*^^&&var resumeTop = resumeImage.getBoundingClientRect().top + window.pageYOffset - resumeImage.ownerDocument.documentElement.clientTop -5;
+    var resumeTop = resumeImage.getBoundingClientRect().top + window.pageYOffset - resumeImage.ownerDocument.documentElement.clientTop -5;
     var resumeLeft = resumeImage.getBoundingClientRect().left + window.pageXOffset - resumeImage.ownerDocument.documentElement.clientLeft - 8.5;
     var resumeRight = resumeLeft + document.getElementById('resumeImage').offsetWidth+14.5;
     var resumeBottom = resumeTop + document.getElementById('resumeImage').offsetHeight+14;
-    var resumeButtonRight = ((resumeLeft+resumeRight)/2)+125;*/
+    var resumeButtonRight = ((resumeLeft+resumeRight)/2)+125;
 
     //Get dynamic x/y locations of svgs
-    /*^^&&var topsvgs = rect.top + window.pageYOffset - svgtightbox.ownerDocument.documentElement.clientTop;
+    var topsvgs = rect.top + window.pageYOffset - svgtightbox.ownerDocument.documentElement.clientTop;
     var bottomsvgs = topsvgs+rect.height;
     var centersvgdivx = (rect.left + rect.right)/2;
     var centersvgdivy = (topsvgs + bottomsvgs)/2;
     var svgboxwidth = rect.width;
 
-    var svghalf = trione.getBoundingClientRect().top + window.pageYOffset - trione.ownerDocument.documentElement.clientTop;*/
+    var svghalf = trione.getBoundingClientRect().top + window.pageYOffset - trione.ownerDocument.documentElement.clientTop;
 
 
 
     //Area of About div for random dot background
     /*^^&&var aboutTop = about.getBoundingClientRect().top + window.pageYOffset - about.ownerDocument.documentElement.clientTop;*/
 
-    //Get dynamic x/y locations of resume
-    /*^^&&var hollerTop = hollerButton.getBoundingClientRect().top + window.pageYOffset - hollerButton.ownerDocument.documentElement.clientTop -5;
+    //Get dynamic x/y locations of holler button
+    var hollerTop = hollerButton.getBoundingClientRect().top + window.pageYOffset - hollerButton.ownerDocument.documentElement.clientTop -5;
     var hollerLeft = hollerButton.getBoundingClientRect().left + window.pageXOffset - resumeImage.ownerDocument.documentElement.clientLeft - 8.5;
     var hollerRight = hollerLeft + document.getElementById('hollerButton').offsetWidth+16;
     var hollerBottom = hollerTop + document.getElementById('hollerButton').offsetHeight+14;
-    var hollerMidy = (hollerBottom+hollerTop)/2;*/
+    var hollerMidy = (hollerBottom+hollerTop)/2;
     
     
 	this.initialize = function(canvas_id){
@@ -81,7 +81,7 @@ function Banner() {
 		canvas.addEventListener('mouseout', MouseOut, false);
         
         /*^^&&*/
-        $(window).bind('resize', function(e){
+        /*$(window).bind('resize', function(e){
             window.resizeEvt;
             $(window).resize(function(){
                 clearTimeout(window.resizeEvt);
@@ -89,7 +89,7 @@ function Banner() {
                     resizeCanvas();
                 }, 250);
             });
-        });
+        });*/
         
 		start();
         setInterval( update, 40 );
@@ -101,10 +101,10 @@ function Banner() {
 		bgContext.font = '167px Arial';
         
         bgContext.fillText(keyword, 53, 410);
-        //^^&&bgContext.fillText(keyword2, 55, 550);
+        bgContext.fillText(keyword2, 55, 550);
         
         
-		//drawPaths();
+		drawPaths();
                 
         /*
         //Fun Circles in about section
@@ -307,8 +307,8 @@ function Banner() {
         bgContext.beginPath();
         bgContext.lineWidth="5";
         
-        bgContext.moveTo(760,450);
-        bgContext.lineTo(3000,450);
+        bgContext.moveTo(760,400);
+        bgContext.lineTo(800,450);
         
         bgContext.stroke();
         
@@ -324,14 +324,15 @@ function Banner() {
         //around Work
         //Fix by calculating based off of rect.left+WIDTH*percent.
         //i.e. Jason's example about massive browser window.
-        /*bgContext.lineWidth="10";
-        bgContext.moveTo(rect.left+(svgboxwidth*.21),topsvgs-10);
-        bgContext.lineTo(rect.left+(svgboxwidth*.80),topsvgs-10);
+        bgContext.lineWidth="10";
+        bgContext.moveTo(rect.left+(svgboxwidth*.30),topsvgs-10);
+        bgContext.lineTo(rect.left+(svgboxwidth*.90),topsvgs-10);
         bgContext.lineTo(rect.left+(svgboxwidth)+18,centersvgdivy);
-        bgContext.lineTo(rect.left+(svgboxwidth*.80),bottomsvgs+15);
+        /*bgContext.lineTo(rect.left+(svgboxwidth*.80),bottomsvgs+15);
         bgContext.lineTo(rect.left+(svgboxwidth*.21),bottomsvgs+15);
         bgContext.lineTo(rect.left-18,centersvgdivy);
         bgContext.lineTo(rect.left+(svgboxwidth*.21),topsvgs-10);*/
+        bgContext.stroke();
                 
         
         //from work to Resume
@@ -349,7 +350,7 @@ function Banner() {
         bgContext.stroke();*/
         
         //From resume to About
-       /* bgContext.lineWidth="10";
+        /*bgContext.lineWidth="10";
         bgContext.moveTo(resumeLeft+80,resumeBottom);
         bgContext.lineTo(resumeLeft+80,resumeBottom+100);
         bgContext.lineTo(resumeLeft-30,resumeBottom+100);
@@ -388,9 +389,10 @@ function Banner() {
     }*/
     
 }
-
-/*document.getElementById("loadButton").onclick=function(){
-    document.getElementById("loader-wrapper").style.display="none";*/
-    var banner = new Banner();
-    banner.initialize("canvas");
-/*};*/
+document.getElementById("loadButton").onclick=function(){
+    document.getElementById("loader-wrapper").style.display="none";
+    $.jInvertScroll(['#scrollbox']);
+    $.jInvertScroll(['#canvas']);
+}
+var banner = new Banner();
+banner.initialize("canvas");

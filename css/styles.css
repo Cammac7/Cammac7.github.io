@@ -205,6 +205,10 @@ footer .footer-below {
     position: relative;
     left: -15%;
 }
+
+.workitem {
+    pointer-events: all;
+}
 /*Twitter Bird!!*/
     #tw {
       height:150px;
@@ -365,7 +369,6 @@ body {
 section {
     margin-left: 200px;
     margin-right: 200px;
-    pointer-events: all;
 }
 strong {
     font-weight: bold;
@@ -394,6 +397,10 @@ strong {
 /* THE ROUND PSEUDO-ELEMENT HOVER STYLES */
 .round{
 		margin:0;
+}
+
+.button {
+    pointer-events: all;
 }
 
 .round .button {
