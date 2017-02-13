@@ -305,10 +305,10 @@ function Banner() {
     
     function drawPaths(){
         bgContext.beginPath();
-        bgContext.lineWidth="5";
+        bgContext.lineWidth="10";
         
         bgContext.moveTo(800,400);
-        bgContext.lineTo(rect.left,400);
+        bgContext.lineTo(rect.left-10,400);
         
         bgContext.stroke();
         
@@ -336,15 +336,15 @@ function Banner() {
                 
         
         //from work to Resume
-        bgContext.moveTo(rect.right,centersvgdivy+30);
-        bgContext.lineTo(resumeLeft,centersvgdivy+30);
+        bgContext.moveTo(rect.right,centersvgdivy+31);
+        bgContext.lineTo(resumeLeft,centersvgdivy+31);
         bgContext.lineTo(resumeLeft, resumeTop-10);
-        bgContext.lineTo(resumeRight+8, resumeTop-10);
-        bgContext.lineTo(resumeRight+8, resumeBottom);
-        bgContext.lineTo(resumeButtonRight, resumeBottom);
-        bgContext.lineTo(resumeButtonRight, resumeBottom);
-        bgContext.lineTo(resumeLeft, resumeBottom);
-        bgContext.lineTo(resumeLeft, resumeTop);
+        bgContext.lineTo(resumeRight+7, resumeTop-10);
+        bgContext.lineTo(resumeRight+7, resumeBottom);
+        //bgContext.lineTo(resumeButtonRight, resumeBottom);
+        //bgContext.lineTo(resumeButtonRight, resumeBottom);
+        bgContext.lineTo(resumeLeft-1, resumeBottom);
+        bgContext.lineTo(resumeLeft-1, resumeTop);
         bgContext.stroke();
         
         //From resume to About
@@ -352,10 +352,10 @@ function Banner() {
         bgContext.lineTo(hollerLeft,hollerMidy);
         
         bgContext.moveTo(hollerLeft-5,hollerTop-5);
-        bgContext.lineTo(hollerRight+5,hollerTop-5);
-        bgContext.lineTo(hollerRight+5,hollerBottom+5);
-        bgContext.lineTo(hollerLeft-5,hollerBottom+5);
-        bgContext.lineTo(hollerLeft-5,hollerTop-5);
+        bgContext.lineTo(hollerRight+6,hollerTop-5);
+        bgContext.lineTo(hollerRight+6,hollerBottom+5);
+        bgContext.lineTo(hollerLeft-6,hollerBottom+5);
+        bgContext.lineTo(hollerLeft-6,hollerTop-5);
         bgContext.stroke();
     }
     

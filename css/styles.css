@@ -307,6 +307,7 @@ hr.soften-white {
 
 header {
     height: 30px;
+    padding-right: 200px;
 }
 
 header .intro-text .name {
@@ -351,25 +352,34 @@ h1, h2, h3, h4, h5, h6 {
 .modalHead {
     color: black;
 }
+section {
+    margin-left: 200px;
+    margin-right: 200px;
+}
 #resume {
     background-color: transparent;
     width:700px;
+    margin-right: 0px
+}
+#resumeImage {
+    pointer-events: all;
+}
+#download {
+    margin-left: 0px;
+    margin-right: 0px;
+    background: transparent;
 }
 #about {
     background-color: transparent;
     color: black;
-    padding-right:200px;
-    width: 800px;
+    width: 600px;
 }
 
 body {
     font-family: 'Open Sans';
     color: black;
 }
-section {
-    margin-left: 200px;
-    margin-right: 200px;
-}
+
 strong {
     font-weight: bold;
 }
@@ -390,7 +400,10 @@ strong {
 }
 
 #resumeButton {
-    margin-top: 2%;
+    margin-top: 550px;
+    padding: 0px;
+    margin-left: 25px;
+    pointer-events: all;
 }
 
 /*Holler Button CSS*/
