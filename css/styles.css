@@ -486,6 +486,7 @@ strong {
 
 #call-out-scroll-title {
     bottom: 30px;
+    left: 43%;
     position: fixed;
     text-transform: uppercase;
     color: #b91a2f;
