@@ -391,7 +391,7 @@ document.getElementById("loadButton").onclick=function(){
     $.jInvertScroll(['#canvas']);
 }
 
-var div = $('#call-out-scroll-down');
+var div = $('#call-out-scroll-title');
 $(window).scroll(function(){
   div.fadeOut("slow");
 });
