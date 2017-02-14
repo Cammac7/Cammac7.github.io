@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="googlebot" content="noindex" />
@@ -17,6 +17,7 @@
 
     <!-- Custom CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
+    <!--<link href="css/jInvertScroll.css" rel="stylesheet">-->
     <link href="css/styles.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -35,39 +36,6 @@
 </head>
 
 <body id="page-top" class="index">
-    <!-- Navigation -->
-    <!--<nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">-->
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <!--<div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
-            </div>
--->
-            <!-- Collect the nav links, forms, and other content for toggling -->
-           <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="page-scroll">
-                        <a data-scroll href="#portfolio">&nbsp;Work&nbsp;</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a data-scroll href="#resume">Résumé</a>
-                    </li>
-                    <li class="page-scroll">
-                        <a data-scroll href="#about">About&nbsp;</a>
-                    </li>
-                </ul>
-            </div>-->
-            <!-- /.navbar-collapse -->
-<!--        </div>-->
-        <!-- /.container-fluid -->
-<!--    </nav>-->
-
     <!-- Header -->
         <div id="loader-wrapper">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" style="display: none;">
@@ -78,26 +46,29 @@
                     <path d="M140,20c-21.5-0.4-38.8-2.5-51.1-4.5c-13.4-2.2-26.5-5.2-27.3-5.4C46,6.5,42,4.7,31.5,2.7C24.3,1.4,13.6-0.1,0,0c0,0,0,0,0,0l0,20H140z"></path>
                 </symbol>
             </svg>
-            <h3 style="text-align:center; padding-top: 10%;">Good things take time</h3>
-            <div class="box">
-              <div class="percent">
-                <div class="percentNum" id="count">0</div>
-                <div class="percentB">%</div>
-              </div>
-		          <a id="loadButton" class="button" style="visibility:hidden">Come on in</a>
-              <div id="water" class="water">
-                <svg viewBox="0 0 560 20" class="water_wave water_wave_back">
-                  <use xlink:href="#wave"></use>
-                </svg>
-                <svg viewBox="0 0 560 20" class="water_wave water_wave_front">
-                  <use xlink:href="#wave"></use>
-                </svg>
-              </div>
-            </div>
+                <div class="outerLoadbox">
+                <h3 class="loadtitle" style="text-align:center;">Good things take time</h3>
+                <div class="box">
+                  <div class="percent">
+                    <div class="percentNum" id="count">0</div>
+                    <div class="percentB">%</div>
+                  </div>
+                      <a id="loadButton" class="button" style="visibility:hidden;">Come on in</a>
+                  <div id="water" class="water">
+                    <svg viewBox="0 0 560 20" class="water_wave water_wave_back">
+                      <use xlink:href="#wave"></use>
+                    </svg>
+                    <svg viewBox="0 0 560 20" class="water_wave water_wave_front">
+                      <use xlink:href="#wave"></use>
+                    </svg>
+                  </div>
+                </div>
+                </div>
         </div>
     <!-- Preloader page -->
     <script src="js/loader.js"></script>
     <canvas id='canvas'></canvas>
+<div id="scrollbox">
     <header>
         <br><br><br>
                     <div class="intro-text">
@@ -107,7 +78,7 @@
     </header>
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
-        <div class="container">
+        <div class="maincontainer">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Work</h2>
@@ -124,7 +95,7 @@
     
         <!-- Resume Section -->
     <section class="success" id="resume">
-        <div class="container">
+        <div class="maincontainer">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Résumé</h2>
@@ -134,28 +105,31 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <img id="resumeImage" src="img/CameronMacArthurR%C3%A9sum%C3%A9.png" class="img-responsive img-centered item-pic" alt="">
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a id="resumeButton" href="media/CameronMacArthurR%C3%A9sum%C3%A9.pdf" class="btn btn-lg btn-outline" download>
-                        <i class="fa fa-download"></i> Download PDF
-                    </a>
+                <div class="col-lg-12 text-center">
+                    <object id="resumeImage" width="700" height="500" type="application/pdf" data="media/CameronMacArthurResume.pdf">
+                            <p>PDF cannot be displayed on Chrome Mobile Broswer</p>
+                    </object>
                 </div>
             </div>
         </div>
+    </section>
+    
+    <section class="success" id="download">
+            <a id="resumeButton" href="media/CameronMacArthurResume.pdf" class="btn btn-lg btn-outline" target="_blank" download>
+                <i class="fa fa-download"></i> Download PDF
+            </a>
     </section>
 
     
     <!-- About Section -->
     <section class="success" id="about">
-         <div id="tw">
+         <!--<div id="tw">
           <div id="twitter-bird"></div>
             <div class="tw-click">
                 <a href="https://twitter.com/CamUbelieveit" class="twitter-follow-button" data-show-count="false">Follow @CamUBelieveIt</a>
             </div>
-        </div>
-        <div class="container">
+        </div>-->
+        <div class="maincontainer">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>About</h2>
@@ -163,7 +137,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
+                <div class="col-lg-12 text-center">
                     <p>I'm a recent Northwestern graduate with a double major in Computer Science and Communications Studies. I'm an eclectic creative with a love for product management and design.</p>
                     <div class="round">
 		                  <a id="hollerButton" class="button" href="mailto:cam.mac@gmx.com">Holler</a>
@@ -229,41 +203,7 @@
     </section>-->
 
     <!-- Footer -->
-    <footer class="text-center">
-        <!--<div class="footer-above">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col col-md-4">
-                        <h3>Location</h3>
-                        <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
-                        <h3>About Freelancer</h3>
-                        <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
-                    </div>
-                </div>
-            </div>
-        </div>-->
+<!--    <footer class="text-center">
         <div class="footer-below" id="footer">
             <div class="container">
                 <div class="row">
@@ -273,15 +213,10 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer>-->
 
-    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visble-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-
+    
+</div> <!--this is the close div of scrolldiv -->
     <!-- Portfolio Modals -->
     <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
@@ -570,20 +505,9 @@ Now the board tracks players paths as they move about, and dynamically updates t
                             </div>
                     </div>
                 </div>
-                  <!--<ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong>Black Label Media
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong>Summer 2014
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong>Web Development
-                                    </strong>
-                                </li>
-                            </ul>-->
+                  <ul class="list-inline item-details">
+                                
+                            </ul>
                 </div>
             </div>
         </div>
@@ -654,12 +578,16 @@ Now the board tracks players paths as they move about, and dynamically updates t
                 </div>
         </div>
     </div>
+    </div>
     <!-- Javascript -->
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<<<<<<< HEAD
     <!-- Smooth Scroll -->
    <!-- <script src="js/smooth-scroll.js"></script>-->
+=======
+>>>>>>> HorizontalSite
     
     <!-- d3.js -->
     <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -672,27 +600,34 @@ Now the board tracks players paths as they move about, and dynamically updates t
     
     <!--Interactive Canvas -->
     <script src="js/canvas.js"></script>
+    
+    <!-- Horizontal Scroll -->
+    <script src="js/jquery.jInvertScroll.js"></script>
                 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
+<<<<<<< HEAD
     <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
+=======
+<!--    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
+    <!--<script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>-->
+>>>>>>> HorizontalSite
 
     <!-- Contact Form JavaScript 
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 -->
-    <!-- Custom Theme JavaScript -->
-    <script src="js/freelancer.js"></script>
         
     <!-- Smooth Scroll-->
-    <script>smoothScroll.init();</script>
+<!--    <script>smoothScroll.init();</script>-->
     <!-- Twitter Bird Javascript -->
-    <script src="js/twitterbird.js"></script>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <!--<script src="js/twitterbird.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>-->
 
     
 </body>

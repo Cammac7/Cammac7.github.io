@@ -38,15 +38,21 @@ Cameron MacArthur
   font: 14px/1 'Open Sans', helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
-
-.box {
-  height: 280px;
-  width: 280px;
+.outerLoadbox {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+.box {
+  height: 280px;
+  width: 280px;
+  /*position: absolute;
+  top: 50%;
+  left: 50%;*/
+  -webkit-transform: translate(-0%, -0%);
+          transform: translate(-0%, -0%);
   background: #ffffff;
   border-radius: 100%;
   overflow: hidden;
@@ -114,7 +120,6 @@ Cameron MacArthur
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 3;
     width: 100%;
     height: 100%;
     display: -webkit-box;
@@ -187,6 +192,9 @@ footer .footer-below {
 #portfolio .portfolio-item {
     margin-bottom: 0px;
 }
+#portfolio {
+    width: 600px;
+}
 
 #trione {
     position: relative;
@@ -196,6 +204,10 @@ footer .footer-below {
 #trithree {
     position: relative;
     left: -15%;
+}
+
+.workitem {
+    pointer-events: all;
 }
 /*Twitter Bird!!*/
     #tw {
@@ -293,6 +305,11 @@ hr.soften-white {
   border: 0;
 }
 
+header {
+    height: 30px;
+    padding-right: 200px;
+}
+
 header .intro-text .name {
     color: black;
     white-space: nowrap;
@@ -325,28 +342,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-#canvas { position:absolute; top:0; left:0; z-index:-1 }
-
-
-header { 
-     height: 600px;
+#canvas { 
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:0
 }
 
 .modalHead {
     color: black;
 }
+section {
+    margin-left: 200px;
+    margin-right: 200px;
+}
 #resume {
     background-color: transparent;
+    width:700px;
+    margin-right: 0px
+}
+#resumeImage {
+    pointer-events: all;
+}
+#download {
+    margin-left: 0px;
+    margin-right: 0px;
+    background: transparent;
 }
 #about {
     background-color: transparent;
     color: black;
+    width: 600px;
 }
 
 body {
     font-family: 'Open Sans';
     color: black;
 }
+
 strong {
     font-weight: bold;
 }
@@ -367,14 +400,20 @@ strong {
 }
 
 #resumeButton {
-    margin-top: 2%;
+    margin-top: 550px;
+    padding: 0px;
+    margin-left: 25px;
+    pointer-events: all;
 }
 
 /*Holler Button CSS*/
 /* THE ROUND PSEUDO-ELEMENT HOVER STYLES */
 .round{
-		max-width: 960px;
 		margin:0;
+}
+
+.button {
+    pointer-events: all;
 }
 
 .round .button {
@@ -419,7 +458,14 @@ strong {
 }
 /* -------- end button CSS ---- */ 
 
-
+#scrollbox {
+    display:flex;
+    position:fixed;
+    top:0;
+    left:0;
+    width:4148px;
+    pointer-events:none;
+}
 /*Music Modal (3) Hot click blocks*/
 .hotBlock {
     padding: 5px;
@@ -428,10 +474,10 @@ strong {
     border-radius: 10px;
 }
 
-@media (min-width: 992px) {
+/*Responsive CSS*/
+/*.container { width: 940px !important; }*/
+/*@media (min-width: 992px) {
 #workbox.col-lg-12 {
    padding-left: 20%;
    padding-right: 20%;
-}
-    
-}
+}*/
