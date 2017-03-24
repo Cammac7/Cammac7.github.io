@@ -394,4 +394,9 @@ document.getElementById("loadButton").onclick=function(){
 var div = $('#call-out-scroll-title');
 $(window).scroll(function(){
   div.fadeOut("slow");
+
+//More Segment exploration #breakEverything
+  analytics.track('User Scrolled', { location: 'mainpage', type: 'scrollEvent' });
+//end of more segment exploration
+    
 });
