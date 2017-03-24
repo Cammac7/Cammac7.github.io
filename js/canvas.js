@@ -396,7 +396,7 @@ $(window).scroll(function(){
   div.fadeOut("slow");
 
 //More Segment exploration #breakEverything
-  analytics.track('User Scrolled', { location: 'mainpage', type: 'scrollEvent' });
+//  analytics.track('User Scrolled', { location: 'mainpage', type: 'scrollEvent' });
 //end of more segment exploration
     
 });
