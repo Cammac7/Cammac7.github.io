@@ -193,97 +193,24 @@ footer .footer-below {
     margin-bottom: 0px;
 }
 #portfolio {
-    width: 600px;
+    width: 1600px;
 }
 
-#trione {
-    position: relative;
-    left: 15%;
+#workbox {
+    display:flex;
+    justify-content: center;
+    width: 800px;
+    flex-wrap:wrap;
+    background-color: gray;
+}
+.projectItem {
+    height: 90px;
+    margin: 5px;
+    width: 200px;
+    background-color:white;
+    border-radius:3px;
 }
 
-#trithree {
-    position: relative;
-    left: -15%;
-}
-
-.workitem {
-    pointer-events: all;
-}
-/*Twitter Bird!!*/
-    #tw {
-      height:150px;
-      width: 150px;
-    }
-    #twitter-bird, .tw-click { 
-        cursor:pointer; 
-        display:block; 
-        position:absolute; 
-        width:0%; 
-        transition:0.3s ease all;
-        z-index:30;
-    }
-   
-    #tw .tw-click { 
-        background:#42e7ff; 
-        opacity:0; 
-        padding:10px 10px 5px; 
-        margin-top:55px; 
-        margin-left:-40px; 
-        padding-left:30px; 
-        width:auto; 
-        border-top-right-radius:5px; 
-        border-bottom-right-radius:5px;
-    }
-    #tw:hover #twitter-bird {
-        margin-left:-100px;
-        /*Animate only on hover
-        -webkit-animation: none;
-	    -moz-animation: none;
-	    animation: none*/
-        -webkit-animation: fly 0.2s steps(3) 0 3;
-	    -moz-animation: fly 0.2s steps(3) 0 3;
-	    animation: fly 0.2s steps(3) 0s 3;
-    }
-
-    #tw:hover .tw-click { 
-        opacity:1; 
-        margin-left:-20px; 
-}
-    
-#twitter-bird {
-  background-image: url(../media/twitter-bird-sprite.png);
-  height: 150px;
-    /*margin: 30px -30% 0 0;*/
-  width: 150px;
-    /*Constant animation removed, only animate on hover
-    -webkit-animation: fly 0.2s steps(3) 0 infinite;
-	-moz-animation: fly 0.2s steps(3) 0 infinite;
-	animation: fly 0.2s steps(3) 0 infinite;
-    */
-/*    position:absolute;*/
-    z-index:31;
-}
-
-@-webkit-keyframes fly {
-	from { background-position: 0 0; }
-    to { background-position: -450px 0; }
-}
-@-moz-keyframes fly {
-	from { background-position: 0 0; }
-    to { background-position: -450px 0; }
-}
-@keyframes fly {
-	from { background-position: 0 0; }
-    to { background-position: -450px 0; }
-}
-
-#tw {
-	cursor: pointer;
-	display: inline-block;
-    position: absolute;
-    /*top: 10%; Added to lock to corner, removed script*/
-    /*left: 80%; Added to lock to corner, removed script*/
-}
 /*Header Soften*/
 hr.soften {
   height: 3px;
@@ -384,21 +311,6 @@ strong {
     font-weight: bold;
 }
 
-.svg-container {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%; /* aspect ratio */
-    vertical-align: top;
-    overflow: hidden;
-}
-.svg-content-responsive {
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-    left: 0;
-}
-
 #resumeButton {
     margin-top: 550px;
     padding: 0px;
@@ -464,6 +376,7 @@ strong {
     top:0;
     left:0;
     width:4148px;
+    height: 100%;
     pointer-events:none;
 }
 /*Music Modal (3) Hot click blocks*/

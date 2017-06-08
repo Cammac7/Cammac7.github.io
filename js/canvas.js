@@ -33,7 +33,7 @@ function Banner() {
     var cwidth = $("#scrollbox").width();
     var cheight = $("#scrollbox").height();
 
-    var rect = svgtightbox.getBoundingClientRect();
+    //var rect = svgtightbox.getBoundingClientRect();
 
     //Get dynamic x/y locations of resume
     var resumeTop = resumeImage.getBoundingClientRect().top + window.pageYOffset - resumeImage.ownerDocument.documentElement.clientTop -5;
@@ -43,13 +43,13 @@ function Banner() {
     var resumeButtonRight = ((resumeLeft+resumeRight)/2)+125;
 
     //Get dynamic x/y locations of svgs
-    var topsvgs = rect.top + window.pageYOffset - svgtightbox.ownerDocument.documentElement.clientTop;
+    /*var topsvgs = rect.top + window.pageYOffset - svgtightbox.ownerDocument.documentElement.clientTop;
     var bottomsvgs = topsvgs+rect.height;
     var centersvgdivx = (rect.left + rect.right)/2;
     var centersvgdivy = (topsvgs + bottomsvgs)/2;
-    var svgboxwidth = rect.width;
+    var svgboxwidth = rect.width;*/
 
-    var svghalf = trione.getBoundingClientRect().top + window.pageYOffset - trione.ownerDocument.documentElement.clientTop;
+    /*var svghalf = trione.getBoundingClientRect().top + window.pageYOffset - trione.ownerDocument.documentElement.clientTop;*/
 
 
 
@@ -308,23 +308,15 @@ function Banner() {
         bgContext.lineWidth="10";
         
         bgContext.moveTo(800,400);
-        bgContext.lineTo(rect.left-10,400);
+        //bgContext.lineTo(rect.left-10,400);
         
         bgContext.stroke();
         
-        /*bgContext.moveTo(760,450);
-        bgContext.lineTo(760,650);
-        bgContext.lineTo(350,650);
-        bgContext.lineTo(350,1000);
-        bgContext.lineTo(450,1000);
-        bgContext.stroke();*/
-        
-        //bgContext.moveTo();
         
         //around Work
         //Fix by calculating based off of rect.left+WIDTH*percent.
         //i.e. Jason's example about massive browser window.
-        bgContext.lineWidth="10"
+        /*bgContext.lineWidth="10"
         bgContext.moveTo(rect.left+(svgboxwidth*.21),topsvgs-10);
         bgContext.lineTo(rect.left+(svgboxwidth*.80),topsvgs-10);
         bgContext.lineTo(rect.left+(svgboxwidth)+18,centersvgdivy);
@@ -332,12 +324,13 @@ function Banner() {
         bgContext.lineTo(rect.left+(svgboxwidth*.21),bottomsvgs+15);
         bgContext.lineTo(rect.left-18,centersvgdivy);
         bgContext.lineTo(rect.left+(svgboxwidth*.21),topsvgs-10);
-        bgContext.stroke();
+        bgContext.stroke();*/
                 
         
         //from work to Resume
-        bgContext.moveTo(rect.right,centersvgdivy+31);
-        bgContext.lineTo(resumeLeft,centersvgdivy+31);
+        //bgContext.moveTo(rect.right,centersvgdivy+31);
+        //bgContext.lineTo(resumeLeft,centersvgdivy+31);
+        //bgContext.moveTo(resumeLeft, resumeTop-10);
         bgContext.lineTo(resumeLeft, resumeTop-10);
         bgContext.lineTo(resumeRight+7, resumeTop-10);
         bgContext.lineTo(resumeRight+7, resumeBottom);
