@@ -146,21 +146,6 @@ Cameron MacArthur
 
 /*End Loader CSS -------------------------------------------------*/
 
-footer .footer-below {
-        background-color: #00003D;
-}
-
-.dontwantpadding {
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 10px;
-}
-    
-.cover {
-    position: relative;
-}
-
 .btn-1 {
     color: black;
     background-color: rgb(192,192,192);
@@ -199,18 +184,52 @@ footer .footer-below {
 #workbox {
     display:flex;
     justify-content: center;
-    width: 800px;
+    /*width: 800px;*/
+    width: 1200px;
     flex-wrap:wrap;
-    background-color: gray;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px;
 }
 .projectItem {
-    height: 90px;
+    /*height: 90px;
     margin: 5px;
-    width: 200px;
+    width: 200px;*/
+    height: 135px;
+    width: 300px;
+    margin: 8px;
     background-color:white;
     border-radius:3px;
+    background-size: cover;
 }
-
+#emonsters {
+    background-image: url(../img/portfolio/tower.png);
+}
+#music {
+    background-image: url(../img/portfolio/LRO.png)
+}
+#pianimals {
+    background-image: url(../img/portfolio/mat.png)
+}
+#websites {
+    background-image: url(../img/portfolio/logo.png)
+}
+#babyninja {
+    background-image: url(../img/portfolio/babyninjatest.png)
+}
+#ncaabracket {
+    background-image: url(../img/portfolio/ncaa.png)
+}
+#vimcolorscheme {
+    background-image: url(../img/portfolio/vimcolor.png)
+}
+/*Music Modal (3) Hot click blocks*/
+.hotBlock {
+    padding: 5px;
+    color: white;
+    background-color: #414447;
+    border-radius: 10px;
+}
 /*Header Soften*/
 hr.soften {
   height: 3px;
@@ -378,13 +397,6 @@ strong {
     width:4148px;
     height: 100%;
     pointer-events:none;
-}
-/*Music Modal (3) Hot click blocks*/
-.hotBlock {
-    padding: 5px;
-    color: white;
-    background-color: #414447;
-    border-radius: 10px;
 }
 
 /*Responsive CSS*/
