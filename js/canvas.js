@@ -33,7 +33,7 @@ function Banner() {
     var cwidth = $("#scrollbox").width();
     var cheight = $("#scrollbox").height();
 
-    var rect = svgtightbox.getBoundingClientRect();
+    //var rect = svgtightbox.getBoundingClientRect();
 
     //Get dynamic x/y locations of resume
     var resumeTop = resumeImage.getBoundingClientRect().top + window.pageYOffset - resumeImage.ownerDocument.documentElement.clientTop -5;
@@ -42,15 +42,33 @@ function Banner() {
     var resumeBottom = resumeTop + document.getElementById('resumeImage').offsetHeight+14;
     var resumeButtonRight = ((resumeLeft+resumeRight)/2)+125;
 
-    //Get dynamic x/y locations of svgs
-    var topsvgs = rect.top + window.pageYOffset - svgtightbox.ownerDocument.documentElement.clientTop;
+    //Get dynamic x/y locations of work boxes
+    var leftTileLeft = pianimals.getBoundingClientRect().left + window.pageXOffset - pianimals.ownerDocument.documentElement.clientLeft - 8.5;
+    var leftTileTop = pianimals.getBoundingClientRect().top;
+    console.log(leftTileTop);
+    /*var topsvgs = rect.top + window.pageYOffset - svgtightbox.ownerDocument.documentElement.clientTop;
     var bottomsvgs = topsvgs+rect.height;
     var centersvgdivx = (rect.left + rect.right)/2;
     var centersvgdivy = (topsvgs + bottomsvgs)/2;
-    var svgboxwidth = rect.width;
+    var svgboxwidth = rect.width;*/
 
-    var svghalf = trione.getBoundingClientRect().top + window.pageYOffset - trione.ownerDocument.documentElement.clientTop;
-
+    /*var svghalf = trione.getBoundingClientRect().top + window.pageYOffset - trione.ownerDocument.documentElement.clientTop;*/
+    
+    //Northwestern Box
+    var NUboxTop = websites.getBoundingClientRect().top + window.pageYOffset - websites.ownerDocument.documentElement.clientTop -5;
+    var NUboxLeft = websites.getBoundingClientRect().left + window.pageXOffset - websites.ownerDocument.documentElement.clientLeft - 8.5;
+    var NUboxRight = NUboxLeft + document.getElementById('websites').offsetWidth+16;
+    var NUboxBottom = NUboxTop + document.getElementById('websites').offsetHeight+14;
+    //Pianimals Box
+    var pianimalsLeft = pianimals.getBoundingClientRect().left + window.pageXOffset - pianimals.ownerDocument.documentElement.clientLeft - 8.5;
+    var pianimalsTop = pianimals.getBoundingClientRect().top + window.pageYOffset - pianimals.ownerDocument.documentElement.clientTop -5;
+    var pianimalsBottom = pianimalsTop + document.getElementById('pianimals').offsetHeight+14;
+    
+    //MarchMadness
+    var ncaabracketLeft = ncaabracket.getBoundingClientRect().left + window.pageXOffset - ncaabracket.ownerDocument.documentElement.clientLeft - 8.5;
+    var ncaabracketTop = ncaabracket.getBoundingClientRect().top + window.pageYOffset - ncaabracket.ownerDocument.documentElement.clientTop -5;
+    var ncaabracketRight = ncaabracketLeft + document.getElementById('ncaabracket').offsetWidth+16;
+    var ncaabracketBottom = ncaabracketTop + document.getElementById('ncaabracket').offsetHeight+14;
 
 
     //Area of About div for random dot background
@@ -229,40 +247,6 @@ function Banner() {
 		}	
 	}
 	
-    /*^^&&var dynamicPathValues = function(){
-        cwidth = $(document).width();
-        cheight = $(document).height();
-
-        rect = svgtightbox.getBoundingClientRect();*/
-
-        //Get dynamic x/y locations of resume
-        /*^^&&resumeTop = resumeImage.getBoundingClientRect().top + window.pageYOffset - resumeImage.ownerDocument.documentElement.clientTop -5;
-        resumeLeft = resumeImage.getBoundingClientRect().left + window.pageXOffset - resumeImage.ownerDocument.documentElement.clientLeft - 8.5;
-        resumeRight = resumeLeft + document.getElementById('resumeImage').offsetWidth+14.5;
-        resumeBottom = resumeTop + document.getElementById('resumeImage').offsetHeight+14;
-        resumeButtonRight = ((resumeLeft+resumeRight)/2)+125;*/
-
-        //Get dynamic x/y locations of svgs
-        /*^^&&topsvgs = rect.top + window.pageYOffset - svgtightbox.ownerDocument.documentElement.clientTop;
-        bottomsvgs = topsvgs+rect.height;
-        centersvgdivx = (rect.left + rect.right)/2;
-        centersvgdivy = (topsvgs + bottomsvgs)/2;
-        svgboxwidth = rect.width;
-
-        svghalf = trione.getBoundingClientRect().top + window.pageYOffset - trione.ownerDocument.documentElement.clientTop;
-*/
-
-
-        //Area of About div for random dot background
-        /*^^&&aboutTop = about.getBoundingClientRect().top + window.pageYOffset - about.ownerDocument.documentElement.clientTop;
-
-        //Get dynamic x/y locations of resume
-        hollerTop = hollerButton.getBoundingClientRect().top + window.pageYOffset - hollerButton.ownerDocument.documentElement.clientTop -5;
-        hollerLeft = hollerButton.getBoundingClientRect().left + window.pageXOffset - resumeImage.ownerDocument.documentElement.clientLeft - 8.5;
-        hollerRight = hollerLeft + document.getElementById('hollerButton').offsetWidth+16;
-        hollerBottom = hollerTop + document.getElementById('hollerButton').offsetHeight+14;
-        hollerMidy = (hollerBottom+hollerTop)/2;
-    }*/
     
 	var MouseMove = function(e) {
 	    if (e.offsetX || e.offsetX == 0) {
@@ -305,48 +289,32 @@ function Banner() {
     
     function drawPaths(){
         bgContext.beginPath();
-        bgContext.lineWidth="10";
         
         bgContext.moveTo(800,400);
-        bgContext.lineTo(rect.left-10,400);
-        
-        bgContext.stroke();
-        
-        /*bgContext.moveTo(760,450);
-        bgContext.lineTo(760,650);
-        bgContext.lineTo(350,650);
-        bgContext.lineTo(350,1000);
-        bgContext.lineTo(450,1000);
-        bgContext.stroke();*/
-        
-        //bgContext.moveTo();
+        //bgContext.lineTo(rect.left-10,400);        
         
         //around Work
         //Fix by calculating based off of rect.left+WIDTH*percent.
         //i.e. Jason's example about massive browser window.
-        bgContext.lineWidth="10"
-        bgContext.moveTo(rect.left+(svgboxwidth*.21),topsvgs-10);
-        bgContext.lineTo(rect.left+(svgboxwidth*.80),topsvgs-10);
-        bgContext.lineTo(rect.left+(svgboxwidth)+18,centersvgdivy);
-        bgContext.lineTo(rect.left+(svgboxwidth*.80),bottomsvgs+15);
-        bgContext.lineTo(rect.left+(svgboxwidth*.21),bottomsvgs+15);
-        bgContext.lineTo(rect.left-18,centersvgdivy);
-        bgContext.lineTo(rect.left+(svgboxwidth*.21),topsvgs-10);
-        bgContext.stroke();
-                
+        bgContext.lineWidth="10";
+        bgContext.lineTo(pianimalsLeft,400);
+        bgContext.lineTo(pianimalsLeft,pianimalsBottom);
+        bgContext.lineTo(ncaabracketLeft,ncaabracketTop);
+        bgContext.lineTo(ncaabracketLeft,ncaabracketBottom);
+        bgContext.lineTo(ncaabracketRight,ncaabracketBottom);
+        bgContext.lineTo(ncaabracketRight,ncaabracketTop);
+        bgContext.lineTo(NUboxRight,ncaabracketTop);
+        bgContext.lineTo(NUboxRight,NUboxTop);
         
         //from work to Resume
-        bgContext.moveTo(rect.right,centersvgdivy+31);
-        bgContext.lineTo(resumeLeft,centersvgdivy+31);
+        bgContext.lineTo(resumeLeft,NUboxTop);
         bgContext.lineTo(resumeLeft, resumeTop-10);
         bgContext.lineTo(resumeRight+7, resumeTop-10);
         bgContext.lineTo(resumeRight+7, resumeBottom);
-        //bgContext.lineTo(resumeButtonRight, resumeBottom);
-        //bgContext.lineTo(resumeButtonRight, resumeBottom);
         bgContext.lineTo(resumeLeft-1, resumeBottom);
         bgContext.lineTo(resumeLeft-1, resumeTop);
         bgContext.stroke();
-        
+        bgContext.lineWidth="10";
         //From resume to About
         bgContext.moveTo(resumeRight+8,hollerMidy);
         bgContext.lineTo(hollerLeft,hollerMidy);

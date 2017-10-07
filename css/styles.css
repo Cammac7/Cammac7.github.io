@@ -146,21 +146,6 @@ Cameron MacArthur
 
 /*End Loader CSS -------------------------------------------------*/
 
-footer .footer-below {
-        background-color: #00003D;
-}
-
-.dontwantpadding {
-    margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 10px;
-}
-    
-.cover {
-    position: relative;
-}
-
 .btn-1 {
     color: black;
     background-color: rgb(192,192,192);
@@ -193,96 +178,59 @@ footer .footer-below {
     margin-bottom: 0px;
 }
 #portfolio {
-    width: 600px;
+    width: 1600px;
 }
 
-#trione {
-    position: relative;
-    left: 15%;
+#workbox {
+    display:flex;
+    justify-content: center;
+    /*width: 800px;*/
+    width: 1200px;
+    flex-wrap:wrap;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
 }
-
-#trithree {
-    position: relative;
-    left: -15%;
-}
-
-.workitem {
+.projectItem {
+    /*height: 90px;
+    margin: 5px;
+    width: 200px;*/
+    height: 135px;
+    width: 300px;
+    margin: 8px;
+    background-color:white;
+    border-radius:3px;
+    background-size: cover;
+    cursor: pointer;
     pointer-events: all;
 }
-/*Twitter Bird!!*/
-    #tw {
-      height:150px;
-      width: 150px;
-    }
-    #twitter-bird, .tw-click { 
-        cursor:pointer; 
-        display:block; 
-        position:absolute; 
-        width:0%; 
-        transition:0.3s ease all;
-        z-index:30;
-    }
-   
-    #tw .tw-click { 
-        background:#42e7ff; 
-        opacity:0; 
-        padding:10px 10px 5px; 
-        margin-top:55px; 
-        margin-left:-40px; 
-        padding-left:30px; 
-        width:auto; 
-        border-top-right-radius:5px; 
-        border-bottom-right-radius:5px;
-    }
-    #tw:hover #twitter-bird {
-        margin-left:-100px;
-        /*Animate only on hover
-        -webkit-animation: none;
-	    -moz-animation: none;
-	    animation: none*/
-        -webkit-animation: fly 0.2s steps(3) 0 3;
-	    -moz-animation: fly 0.2s steps(3) 0 3;
-	    animation: fly 0.2s steps(3) 0s 3;
-    }
-
-    #tw:hover .tw-click { 
-        opacity:1; 
-        margin-left:-20px; 
+#emonsters {
+    background-image: url(../img/portfolio/tower.png);
 }
-    
-#twitter-bird {
-  background-image: url(../media/twitter-bird-sprite.png);
-  height: 150px;
-    /*margin: 30px -30% 0 0;*/
-  width: 150px;
-    /*Constant animation removed, only animate on hover
-    -webkit-animation: fly 0.2s steps(3) 0 infinite;
-	-moz-animation: fly 0.2s steps(3) 0 infinite;
-	animation: fly 0.2s steps(3) 0 infinite;
-    */
-/*    position:absolute;*/
-    z-index:31;
+#music {
+    background-image: url(../img/portfolio/LRO.png)
 }
-
-@-webkit-keyframes fly {
-	from { background-position: 0 0; }
-    to { background-position: -450px 0; }
+#pianimals {
+    background-image: url(../img/portfolio/mat.png)
 }
-@-moz-keyframes fly {
-	from { background-position: 0 0; }
-    to { background-position: -450px 0; }
+#websites {
+    background-image: url(../img/portfolio/logo.png)
 }
-@keyframes fly {
-	from { background-position: 0 0; }
-    to { background-position: -450px 0; }
+#babyninja {
+    background-image: url(../img/portfolio/babyninjatest.png)
 }
-
-#tw {
-	cursor: pointer;
-	display: inline-block;
-    position: absolute;
-    /*top: 10%; Added to lock to corner, removed script*/
-    /*left: 80%; Added to lock to corner, removed script*/
+#ncaabracket {
+    background-image: url(../img/portfolio/ncaa.png)
+}
+#vimcolorscheme {
+    background-image: url(../img/portfolio/vimcolor.png)
+}
+/*Music Modal (3) Hot click blocks*/
+.hotBlock {
+    padding: 5px;
+    color: white;
+    background-color: #414447;
+    border-radius: 10px;
 }
 /*Header Soften*/
 hr.soften {
@@ -384,21 +332,6 @@ strong {
     font-weight: bold;
 }
 
-.svg-container {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%; /* aspect ratio */
-    vertical-align: top;
-    overflow: hidden;
-}
-.svg-content-responsive {
-    display: inline-block;
-    position: absolute;
-    top: 10px;
-    left: 0;
-}
-
 #resumeButton {
     margin-top: 550px;
     padding: 0px;
@@ -463,15 +396,9 @@ strong {
     position:fixed;
     top:0;
     left:0;
-    width:4148px;
+    width:5148px;
+    height: 100%;
     pointer-events:none;
-}
-/*Music Modal (3) Hot click blocks*/
-.hotBlock {
-    padding: 5px;
-    color: white;
-    background-color: #414447;
-    border-radius: 10px;
 }
 
 /*Responsive CSS*/

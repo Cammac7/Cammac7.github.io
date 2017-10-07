@@ -25,19 +25,6 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     
     <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300' rel='stylesheet' type='text/css'>
-    
-    
-    
-    <!--vvvvvvvvvvvvvv--Learning Segment. Non-permanent-- vvvvvvvvvvvvvvv-->
-    <!--<script type="text/javascript">
-  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
-  analytics.load("s0eGEEUnSKpfNHolxBUpkFdVJPn3Ai07");
-  analytics.page();
-  }}();
-</script>-->
-    <!--^^^^^^^^^^^^^--Learning Segment. Non-permanent--^^^^^^^^^^^^^^^^-->
-    
-    
 </head>
 
 <body id="page-top" class="index">
@@ -87,19 +74,23 @@
     </header>
     <!-- Portfolio Grid Section -->
     <section id="portfolio">
-        <div class="maincontainer">
-            <div class="row">
+            <div>
                 <div class="col-lg-12 text-center">
                     <h2>Work</h2>
                     <hr class="soften-white">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12" id=workbox>
-                    <div id="svgdivholder" class="mydiv"></div>
+            <div>
+                <div id=workbox>
+                    <div id="emonsters" class="projectItem" style="margin-left:150px;"></div>
+                    <div id="music" class="projectItem" style="margin-right:150px;"></div>
+                    <div id="pianimals" class="projectItem"></div>
+                    <div id="websites" class="projectItem"></div>
+                    <div id="babyninja" class="projectItem"></div>
+                    <div id="ncaabracket" class="projectItem"></div>
+                    <div id="vimcolorscheme" class="projectItem"></div>
                 </div>
             </div>
-        </div>
     </section>
     
         <!-- Resume Section -->
@@ -140,7 +131,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>I'm a recent Northwestern graduate with a double major in Computer Science and Communications Studies. I'm an eclectic creative with a love for product management and design.</p>
+                    <p>I'm a Northwestern graduate with a double major in Computer Science and Communications Studies. I'm an eclectic creative with a love for product management, programming, and design.</p>
                     <div class="round">
 		                  <a id="hollerButton" class="button" href="mailto:cam.mac@gmx.com">Holler</a>
                     </div>
@@ -247,8 +238,7 @@ Now the board tracks players paths as they move about, and dynamically updates t
             </div>
         </div>
     </div>
-    
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div id="closemusic" class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -399,7 +389,7 @@ Now the board tracks players paths as they move about, and dynamically updates t
                 </div>
             </div>
         </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -446,7 +436,7 @@ Now the board tracks players paths as they move about, and dynamically updates t
             </div>
         </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -477,7 +467,7 @@ Now the board tracks players paths as they move about, and dynamically updates t
             </div>
         </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
                 <div class="lr">
@@ -513,22 +503,81 @@ Now the board tracks players paths as they move about, and dynamically updates t
         </div>
     </div>
     </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="modal-body">
+                            <h2 class="modalHead">NCAA Bracket Builder</h2>
+                            <hr>
+                            <div class="col-md-4">
+                            <img src="img/bracketsnippet.png" class="img-responsive img-centered item-pic" alt="">
+                                <button type="button" cslass="btn-1 btn btn-default" data-dismiss="modal" onclick="window.open('https://github.com/Cammac7/bracket-filler')">Explore the Github Repo</button>
+                                </div>
+                            <div class="col-md-8">
+                            <p style="text-align: left;">Desperate to win my March Madness Bracket against my buddies from college, I decided to see if I could get an edge through some programming. Knowing how much statistical data there is on NCAA basketball games, I figured I could use machine learning to find new insights and make better choices on who would win my March Madness Games.</p>
+                            <p style="text-align: left;">I worked with a friend who had some experience in the space, and he recommended starting with a simple Elo Scoring system, feeding in all of the game history, and getting a baseline ranking. This was successfully done! By the time the elo scoring model was functional, I had to make my pics (I didn't get last place, so something worked). Since then I've started the work on using some simple machine learning algorithms along with all game data and all player stats for all games, to hopefully find some unique correlations to affect my choices for this March. Here's to first place. Check out the code repo on the left.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="modal-body">
+                            <h2 class="modalHead">Vim Color Scheme</h2>
+                            <hr>
+                            <div class="col-md-12">
+                                <p style="text-align: left;">When I first started work at IBM, I decided to start using Vim. My thought process was: all the best programmers I've seen use Vim, not an IDE, so the first step to becoming a pro is to switch to Vim. Maybe not the most sound logic, but I was undeterred.</p>
+                                <p style="text-align: left;">I was coming from using the Brackets IDE, which I had become accostomed to the color scheme of. So I went about making a custom Vim color scheme to match it! The color scheme is downloadable from my github and easily switched to by adding a line to your .vimrc file.</p>
+                            </div>
+                            <div class="col-md-12">
+                                <img src="img/colorscheme.png" class="img-responsive img-centered item-pic" alt="">
+                                <button type="button" cslass="btn-1 btn btn-default" data-dismiss="modal" onclick="window.open('https://github.com/Cammac7/brackets_ColorScheme/tree/master')">Explore the Github Repo</button>
+                            </div>
+                    </div>
+                </div>
+                  <ul class="list-inline item-details">
+                                
+                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Javascript -->
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     
     <!-- d3.js -->
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-        
-    <!--SVG -->
-    <script src="js/svg.js"></script>
+    <!--<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>-->
         
     <!--Music Block effects -->
     <script src="js/MusicBlocks.js"></script>
     
     <!--Interactive Canvas -->
     <script src="js/canvas.js"></script>
+    
+    <!--general -->
+    <script src="js/general.js"></script>
     
     <!-- Horizontal Scroll -->
     <script src="js/jquery.jInvertScroll.js"></script>
