@@ -142,10 +142,10 @@ var  triangle1 = document.getElementById("trione");
                 $('#portfolioModal1').modal('show');
             });
 
-/*var  triangle2 = document.getElementById("tribub");
+var  triangle2 = document.getElementById("tribub");
             triangle2.addEventListener('click', function(evt) {
                 $('#portfolioModal2').modal('show');
-            });*/
+            });
 
 var  triangle3 = document.getElementById("tritwo");
             triangle3.addEventListener('click', function(evt) {

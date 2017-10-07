@@ -189,7 +189,7 @@ Cameron MacArthur
     flex-wrap:wrap;
     margin-left: auto;
     margin-right: auto;
-    border: 1px;
+    margin-top: 25px;
 }
 .projectItem {
     /*height: 90px;
@@ -201,6 +201,8 @@ Cameron MacArthur
     background-color:white;
     border-radius:3px;
     background-size: cover;
+    cursor: pointer;
+    pointer-events: all;
 }
 #emonsters {
     background-image: url(../img/portfolio/tower.png);
@@ -394,7 +396,7 @@ strong {
     position:fixed;
     top:0;
     left:0;
-    width:4148px;
+    width:5148px;
     height: 100%;
     pointer-events:none;
 }
