@@ -85,6 +85,7 @@
                     <div id="firstBoxLocation" class="blankItem"></div>
                     <div id="emonsters" class="projectItem"></div>
                     <div id="music" class="projectItem"></div>
+                    <div id="catan" class="projectItem"></div>
                 </div>
                 <div class="row">
                     <div id="pianimals" class="projectItem"></div>
@@ -95,6 +96,7 @@
                     <div class="blankItem"></div>
                     <div id="ncaabracket" class="projectItem"></div>
                     <div id="vimcolorscheme" class="projectItem"></div>
+                    <div id="campystructs" class="projectItem"></div>
                 </div>
             </div>
     </section>
@@ -211,31 +213,30 @@ This added chase element made the game much more exciting to play. Players alway
 <div class="col-md-8">
 
 <h3 style="text-align:left;">The Board</h3>
-    <p>I am currently beginning the patent disclosure process for my work on this project, so it has been temporarily removed from the public domain.</p>
-<!--<p style="text-align:left;">My idea was to build a board that the tiles would sit on. I wanted to use magnets in the pieces to trigger LEDs in the board to turn on or off depending on whether the piece was a monster or a human. I set off learning about circuits, an area I knew nothing about, and finally came to a solution. Using magnetic-field-sensing hall effect sensors connected to an arduino, and magnets in the playing pieces oriented towards different polarities, I was able to make pieces turn on and off lights in each room, and automatically track the change in wattage with the arduino. The feedback was instant and very satisfying.<br>
+<p style="text-align:left;">My idea was to build a board that the tiles would sit on. I wanted to use magnets in the pieces to trigger LEDs in the board to turn on or off depending on whether the piece was a monster or a human. I set off learning about circuits, an area I knew nothing about, and finally came to a solution. Using magnetic-field-sensing hall effect sensors connected to an arduino, and magnets in the playing pieces oriented towards different polarities, I was able to make pieces turn on and off lights in each room, and automatically track the change in wattage with the arduino. The feedback was instant and very satisfying.<br>
 
 This process was a journey though. There aren’t enough pins in the Arduino to manage all of the sensors and lights on the 5x3 board. Once I managed my goal with just a couple rooms I had to learn about and implement multiplexors for the sensors. The LEDs needed different multiplexors because they need to hold their state even after the player’s magnetized piece moved to a different tile. Magnetizing the pieces themselves was also a challenge. I solved it by 3d-printing a hollow space into the token, droping the magnet in, and 3d-printing the space closed.
 Now the board tracks players paths as they move about, and dynamically updates the house wattage from the lights. I was published for my work with the board, and demoed it at the Games+Learning+Society Conference in Madison this past August, where our team won 1st prize.
-</p>-->
+</p>
 <br>                             
                                 </div>
-                                <!--<div class="col-md-4">
+                                <div class="col-md-4">
                                  <div style="padding-top:65px;" id="EnergyMonstvideo">
                                      <object align="right">
                                         <video width="281.25" height="500" id="EnergyMonstersDemo" src="media/EnergyMonstersDemo.mp4" autoplay loop muted></video>
                                      </object>
                                  </div>
-                            </div>-->
+                            </div>
                             </div>
                             
                             <div class="row">
 <div class="col-md-8">
-<!--<h3 style="text-align:left;">The Future</h3>
-<p style="text-align:left;">Another prototype is already underway that will add wifi connectivity to the board. After that, I plan on approaching a way to track the use and play of the cards themselves. Using an RFID reader and an antennae array, I hope to identify individual pieces (by adding RFID chips to them) and where they are on the board when at rest. Because RFID takes a few seconds, the hall-effect systems will still be needed to track movement. I will also add RFID chips to the cards themselves, and create a discard section of the board where cards are played. This way, when a person plays a card, the board itself will be able to determine where the respective piece is, and if the play is legal. If it is, the board will be able to alter the wattage accordingly on the house. In this way, all of the wattage tracking will be taken care of automatically and digitally, and the players can focus on the fun of the game, and still get the satisfaction of spinning a real spinner, rolling real die, and moving real pieces. This connection of digital convenience with physical feedback and motion is where I think all boardgame design is destined to end up.</p> -->             
+<h3 style="text-align:left;">The Future</h3>
+<p style="text-align:left;">Another prototype is already underway that will add wifi connectivity to the board. After that, I plan on approaching a way to track the use and play of the cards themselves. Using an RFID reader and an antennae array, I hope to identify individual pieces (by adding RFID chips to them) and where they are on the board when at rest. Because RFID takes a few seconds, the hall-effect systems will still be needed to track movement. I will also add RFID chips to the cards themselves, and create a discard section of the board where cards are played. This way, when a person plays a card, the board itself will be able to determine where the respective piece is, and if the play is legal. If it is, the board will be able to alter the wattage accordingly on the house. In this way, all of the wattage tracking will be taken care of automatically and digitally, and the players can focus on the fun of the game, and still get the satisfaction of spinning a real spinner, rolling real die, and moving real pieces. This connection of digital convenience with physical feedback and motion is where I think all boardgame design is destined to end up.</p>            
                                 </div>
-                                <!--<div class="col-md-4">
+                                <div class="col-md-4">
                                  <img src="img/energymonsters/Fritz.png" class="img-responsive img-centered item-pic" alt="" style="padding-top:50%;">
-                            </div>-->
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -565,6 +566,51 @@ Now the board tracks players paths as they move about, and dynamically updates t
                                 
                             </ul>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="modal-body">
+                            <h2 class="modalHead">A.A.R.O.N., a Catan AI</h2>
+                            <hr>
+                            <div class="row">
+                            <div class="col-md-8">
+                                    <p style="text-align:left;">As a commited member of the nerd community, I love Settlers of Catan. After playing with my friends one night I was struck with the idea that a computer could do it better. I recruited my buddy <a href="https://github.com/slanger" target="_blank">Mark Langer</a>, and together we began the Catan-AI project.</p><br>
+
+<h3 style="text-align:left;">Gameplay</h3>
+<p style="text-align:left;">Long before beginning any actual artificial intelligence, we needed to code in actual gameplay. We really wanted to make an AI that we could use to play <i>actual</i> Catan against human players at a table (not making people play Catan on a screen). So we've been building out the system as a state machine. As things happen on the board, we inform A.A.R.O.N. of them via terminal inputs. Then, when it's the AI's turn it will output a move (or purchase, trade proposal, etc.) A major challenge of this was coding in the board (which changes every game). We settled on a grid system with nodes at each location so that we could quickly type in a set of tiles (read from left to right and top down) which would inform properties of each node connected to the tile.</p><p>We recetly iterated on this node design and are putting another grid overtop of it, a broader ABC123 similar to Chess, to make entering updates easier on us.</p><br>
+                                </div>
+                                <div class="col-md-4">
+                                 <img src="img/catan/grid2.png" class="img-responsive img-centered item-pic" alt="">
+                                <a href="https://github.com/Cammac7/catan-player" target="_blank">
+                                <div>
+                                 <img src="img/github-octocat.png" class="img-responsive img-centered item-pic" alt="" style="height:150px;margin-bottom:0px;">
+                                    <p style="text-align:left; font-size:10px; width:80%;padding-left:80px;">Check out the Github repository</p>
+                                </div>
+                                </a>
+                                
+                            </div>
+                            </div>
+                            <div class="row">
+<div class="col-md-12">
+<h3 style="text-align:left;">Current Work</h3>
+<p style="text-align:left;">The structure of the board and the objects that will be used have all been built. We're now nearing the end of programming in all actions that people can take. This is easier said than done. We need to be able to tell the AI when trades have been made, when exchanges happen, when longest road or largest army change hands, etc. The more we code the more we are learning the number of human nuances and actions in this game that we take for granted and aren't in the rules. All the more challenging and exciting though.</p>            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>

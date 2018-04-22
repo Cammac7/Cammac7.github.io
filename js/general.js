@@ -30,6 +30,14 @@ var  project7 = document.getElementById("vimcolorscheme");
             project7.addEventListener('click', function(evt) {
                 $('#portfolioModal7').modal('show');
             });
+var  project8 = document.getElementById("catan");
+            project7.addEventListener('click', function(evt) {
+                $('#portfolioModal8').modal('show');
+            });
+var  project9 = document.getElementById("campystructs");
+            project7.addEventListener('click', function(evt) {
+                $('#portfolioModal9').modal('show');
+            });
 
 //var left = $('#worktext').offset().left - parseFloat($('#worktext').css('marginLeft').replace(/auto/, 0));
 var left = firstBoxLocation.getBoundingClientRect().left + window.pageXOffset - firstBoxLocation.ownerDocument.documentElement.clientLeft;

@@ -228,6 +228,12 @@ Cameron MacArthur
 #vimcolorscheme {
     background-image: url(../img/portfolio/vimcolor.png)
 }
+#catan {
+    background-image: url(../img/portfolio/catan.png)
+}
+#campystructs {
+    background-image: url(../img/portfolio/campystructs.png)
+}
 #workWrapper { 
   position: absolute;
 }
