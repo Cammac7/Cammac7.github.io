@@ -31,11 +31,11 @@ var  project7 = document.getElementById("vimcolorscheme");
                 $('#portfolioModal7').modal('show');
             });
 var  project8 = document.getElementById("catan");
-            project7.addEventListener('click', function(evt) {
+            project8.addEventListener('click', function(evt) {
                 $('#portfolioModal8').modal('show');
             });
 var  project9 = document.getElementById("campystructs");
-            project7.addEventListener('click', function(evt) {
+            project9.addEventListener('click', function(evt) {
                 $('#portfolioModal9').modal('show');
             });
 
@@ -46,8 +46,6 @@ var babyRight = babyEnd + document.getElementById('babyninja').offsetWidth;
 $(window).scroll(function (event) {
 // what the y position of the scroll is
 var xScroll = $(this).scrollTop();
-console.log(babyRight);
-console.log(xScroll);
 // whether that's below the form
 if ((xScroll >= left) && (xScroll < babyRight)) {
   // if so, ad the fixed class

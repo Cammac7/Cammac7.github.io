@@ -588,7 +588,7 @@ Now the board tracks players paths as they move about, and dynamically updates t
                                     <p style="text-align:left;">As a commited member of the nerd community, I love Settlers of Catan. After playing with my friends one night I was struck with the idea that a computer could do it better. I recruited my buddy <a href="https://github.com/slanger" target="_blank">Mark Langer</a>, and together we began the Catan-AI project.</p><br>
 
 <h3 style="text-align:left;">Gameplay</h3>
-<p style="text-align:left;">Long before beginning any actual artificial intelligence, we needed to code in actual gameplay. We really wanted to make an AI that we could use to play <i>actual</i> Catan against human players at a table (not making people play Catan on a screen). So we've been building out the system as a state machine. As things happen on the board, we inform A.A.R.O.N. of them via terminal inputs. Then, when it's the AI's turn it will output a move (or purchase, trade proposal, etc.) A major challenge of this was coding in the board (which changes every game). We settled on a grid system with nodes at each location so that we could quickly type in a set of tiles (read from left to right and top down) which would inform properties of each node connected to the tile.</p><p>We recetly iterated on this node design and are putting another grid overtop of it, a broader ABC123 similar to Chess, to make entering updates easier on us.</p><br>
+<p style="text-align:left;">Long before beginning any actual artificial intelligence, we needed to code in actual gameplay. We really wanted to make an AI that we could use to play <i>actual</i> Catan against human players at a table (not making people play Catan on a screen). So we've been building out the system as a state machine. As things happen on the board, we inform A.A.R.O.N. of them via terminal inputs. Then, when it's the AI's turn it will output a move (or purchase, trade proposal, etc.) A major challenge of this was coding in the board (which changes every game). We settled on a grid system with nodes at each location so that we could quickly type in a set of tiles (read from left to right and top down) which would inform properties of each node connected to the tile.</p><p style="text-align:left;">We recetly iterated on this node design and are putting another grid overtop of it, a broader ABC123 similar to Chess, to make entering updates easier on us.</p><br>
                                 </div>
                                 <div class="col-md-4">
                                  <img src="img/catan/grid2.png" class="img-responsive img-centered item-pic" alt="">
@@ -604,13 +604,64 @@ Now the board tracks players paths as they move about, and dynamically updates t
                             <div class="row">
 <div class="col-md-12">
 <h3 style="text-align:left;">Current Work</h3>
-<p style="text-align:left;">The structure of the board and the objects that will be used have all been built. We're now nearing the end of programming in all actions that people can take. This is easier said than done. We need to be able to tell the AI when trades have been made, when exchanges happen, when longest road or largest army change hands, etc. The more we code the more we are learning the number of human nuances and actions in this game that we take for granted and aren't in the rules. All the more challenging and exciting though.</p>            
+<p style="text-align:left;">The structure of the board and the objects that will be used have all been built. We're now nearing the end of programming in all actions that people can take. This is easier said than done. We need to be able to tell the AI when trades have been made, when exchanges happen, when longest road or largest army change hands, etc. The more we code the more we are learning the number of human nuances and actions in this game that we take for granted and aren't in the rules. All the more challenging and exciting.</p>            
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-lg-offset-1">
+                        <div class="modal-body">
+                            <h2 class="modalHead">campyStructs</h2>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a href="https://github.com/Cammac7/catan-player" target="_blank">
+                                        <div>
+                                            <img src="img/github-octocat.png" class="img-responsive img-centered item-pic" alt="" style="height:150px;margin-bottom:0px;margin-top:2em;">
+                                            <p style="text-align:left; font-size:10px; width:80%;padding-left:80px;">Check out the Github repository</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-8">
+                                    <h3 style="text-align:left;">The Pain Point</h3>
+                                    <p style="text-align: left;">To me, programming has always been about making machines do things for us so that we don't need to do them for ourselves. When I was studying for, and taking, coding interviews, I fould myself constantly referencing and re-building the same basic data structures, such as graphs or trees. I got tired of building the same directed graph class over and over again to solve a variety of differnt interview questions, so decided to make a package for it.</p>
+
+                                    <h3 style="text-align:left;">The Reasoning</h3>
+                                    <p style="text-align: left;">This immediately begs the question: "why didn't you just download one of the many existing data structures packages for python?" The answer is that they are all much too complicated for coding interviews. I wanted just the bare-bones objects that I could modify for each different question, and easily explain every part of to an interviewer. This is what I got with campyStructs.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h3 style="text-align:left;">The Results</h3>
+                                    <p style="text-align: left;">I thought some interviewers wouldn't allow it, but it turns out most good interviewers tend to be more focused on the fact that you know the structure to use and how to use it than that you can build a Graph class as quickly as possible before actually solving the problem.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="https://github.com/Cammac7/catan-player" target="_blank">
+                                        <div>
+                                            <img src="img/pypi/pypilogo.png" class="img-responsive img-centered item-pic" alt="" style="height:150px;margin-bottom:0px;margin-top:2em;">
+                                            <p style="text-align:left; font-size:10px; width:80%;padding-left:80px;">View the Package on PyPi</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
