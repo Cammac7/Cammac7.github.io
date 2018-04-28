@@ -30,3 +30,28 @@ var  project7 = document.getElementById("vimcolorscheme");
             project7.addEventListener('click', function(evt) {
                 $('#portfolioModal7').modal('show');
             });
+var  project8 = document.getElementById("catan");
+            project8.addEventListener('click', function(evt) {
+                $('#portfolioModal8').modal('show');
+            });
+var  project9 = document.getElementById("campystructs");
+            project9.addEventListener('click', function(evt) {
+                $('#portfolioModal9').modal('show');
+            });
+
+//var left = $('#worktext').offset().left - parseFloat($('#worktext').css('marginLeft').replace(/auto/, 0));
+var left = firstBoxLocation.getBoundingClientRect().left + window.pageXOffset - firstBoxLocation.ownerDocument.documentElement.clientLeft;
+var babyEnd = babyninja.getBoundingClientRect().left + window.pageXOffset - babyninja.ownerDocument.documentElement.clientLeft;
+var babyRight = babyEnd + document.getElementById('babyninja').offsetWidth;
+$(window).scroll(function (event) {
+// what the y position of the scroll is
+var xScroll = $(this).scrollTop();
+// whether that's below the form
+if ((xScroll >= left) && (xScroll < babyRight)) {
+  // if so, ad the fixed class
+  $('#worktext').addClass('fixed');
+} else {
+  // otherwise remove it
+  $('#worktext').removeClass('fixed');
+}
+});

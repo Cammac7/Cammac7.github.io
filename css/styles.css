@@ -182,27 +182,30 @@ Cameron MacArthur
 }
 
 #workbox {
-    display:flex;
-    justify-content: center;
-    /*width: 800px;*/
     width: 1200px;
-    flex-wrap:wrap;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 25px;
+    margin-top: 65px;
 }
 .projectItem {
-    /*height: 90px;
-    margin: 5px;
-    width: 200px;*/
     height: 135px;
     width: 300px;
+    display: inline-block;
     margin: 8px;
     background-color:white;
     border-radius:3px;
     background-size: cover;
     cursor: pointer;
     pointer-events: all;
+}
+.blankItem {
+    height: 135px;
+    width: 150px;
+    display: inline-block;
+    margin: 8px;
+    border-radius:3px;
+    background-size: cover;
+    pointer-events: none;
 }
 #emonsters {
     background-image: url(../img/portfolio/tower.png);
@@ -225,6 +228,28 @@ Cameron MacArthur
 #vimcolorscheme {
     background-image: url(../img/portfolio/vimcolor.png)
 }
+#catan {
+    background-image: url(../img/portfolio/catan.png)
+}
+#campystructs {
+    background-image: url(../img/portfolio/campystructs.png)
+}
+#workWrapper { 
+  position: absolute;
+}
+
+#worktext {
+  position: absolute;
+  left: 0;
+  /* just used to show how to include the margin in the effect */
+  padding-left: 208px;
+}
+
+#worktext.fixed {
+  position: fixed;
+  left: 0;
+}
+
 /*Music Modal (3) Hot click blocks*/
 .hotBlock {
     padding: 5px;
